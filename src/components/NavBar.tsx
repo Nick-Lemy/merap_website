@@ -48,11 +48,8 @@ const NavBar: React.FC = () => {
     { href: "/service", label: "Services" },
     { href: "/references", label: "References" },
     { href: "/mission", label: "Missions" },
-    { href: "/temoignages", label: "Temoignages" },
-    { href: "/clients", label: "Clients" },
     { href: "/partenaire", label: "Partenaires" },
-    { href: "/newsletter", label: "Newsletter" },
-    { href: "/nous-joindre", label: "Nous Joindre" },
+    { href: "/nous-joindre", label: "Nous Contacter" },
   ];
 
   const toggleMenu = () => {

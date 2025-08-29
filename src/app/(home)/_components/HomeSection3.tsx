@@ -4,13 +4,15 @@ import ProjectImage from "@/assets/project-card.png";
 
 export default function HomeSection3() {
   return (
-    <section className="lg:px-20">
-      <div className="px-30.5 py-28.5 gap-6 flex-8 flex flex-col items-center justify-center">
+    <section className=" lg:px-20">
+      <div className=" lg:px-30.5 py-28.5 gap-6 flex-8 flex flex-col items-center justify-center">
         <div className="flex items-center flex-col justify-center">
-          <h1 className="text-[42px] font-bold">Projects Recents</h1>
+          <h1 className="text-3xl lg:text-[42px] font-bold">
+            Projects Recents
+          </h1>
           <div className="w-25 h-2.5 bg-[#FFB400] " />
         </div>
-        <div className="flex text-lg gap-10 text-[#666666] *:flex-1">
+        <div className="px-6 lg:px-0 grid grid-cols-1 lg:grid-cols-3 text-lg gap-10 text-[#666666] *:flex-1">
           <ProjectCard />
           <ProjectCard />
           <ProjectCard />
@@ -33,7 +35,7 @@ function ProjectCard() {
         width={500}
         height={500}
       />
-      <div className="border-3 flex gap-10 flex-col py-10 px-7 border-[#666666]">
+      <div className="border-3 flex gap-10 flex-col lg:py-10 lg:px-7 px-5 py-9 border-[#666666]">
         <div className="space-y-5">
           <h3 className="text-black text-xl font-[520]">Project Title</h3>
 

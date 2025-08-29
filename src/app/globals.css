@@ -3,3 +3,8 @@
 @theme {
   --font-sans: "Poppins", sans-serif;
 }
+
+input,
+textarea {
+  background-color: white;
+}

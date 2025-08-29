@@ -61,7 +61,8 @@ const NavBar: React.FC = () => {
   return (
     <header className="container mx-auto flex justify-between items-center px-4 sm:px-6 py-4 sm:py-6 relative">
       <h1 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 truncate pr-4">
-        Construction Company Landing
+        <span className="text-[#FFB400]">MERAP</span>
+        {" Construction"}
       </h1>
 
       {/* Desktop Navigation */}
@@ -87,17 +88,17 @@ const NavBar: React.FC = () => {
         aria-label="Toggle menu"
       >
         <span
-          className={`block w-6 h-0.5 bg-gray-900 transition-all duration-300 ${
+          className={`block w-6 h-0.75 bg-gray-900 transition-all duration-300 ${
             isMenuOpen ? "rotate-45 translate-y-1.5" : ""
           }`}
         />
         <span
-          className={`block w-6 h-0.5 bg-gray-900 transition-all duration-300 ${
+          className={`block w-6 h-0.75 bg-gray-900 transition-all duration-300 ${
             isMenuOpen ? "opacity-0" : ""
           }`}
         />
         <span
-          className={`block w-6 h-0.5 bg-gray-900 transition-all duration-300 ${
+          className={`block w-6 h-0.75 bg-gray-900 transition-all duration-300 ${
             isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
           }`}
         />

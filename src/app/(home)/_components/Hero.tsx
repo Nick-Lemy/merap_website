@@ -1,31 +1,11 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import BuildingIcon from "@/components/icons/BuildingIcon";
+import BricksIcon from "@/components/icons/BricksIcon";
+import ConstructionIcon from "@/components/icons/ConstructionIcon";
 
 // Simple icon components as placeholders
-const BuildingIcon = ({ className }: { className?: string }) => (
-  <div
-    className={`${className} bg-white bg-opacity-20 rounded flex items-center justify-center`}
-  >
-    <span className="text-white font-bold text-xs">🏗️</span>
-  </div>
-);
-
-const BricksIcon = ({ className }: { className?: string }) => (
-  <div
-    className={`${className} bg-white bg-opacity-20 rounded flex items-center justify-center`}
-  >
-    <span className="text-white font-bold text-xs">🧱</span>
-  </div>
-);
-
-const ConstructionIcon = ({ className }: { className?: string }) => (
-  <div
-    className={`${className} bg-white bg-opacity-20 rounded flex items-center justify-center`}
-  >
-    <span className="text-white font-bold text-xs">⚒️</span>
-  </div>
-);
 
 const Hero = () => {
   return (

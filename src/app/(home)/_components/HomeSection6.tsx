@@ -67,11 +67,6 @@ function TestimonialCard({ quote, author, rating }: TestimonialCardProps) {
   return (
     <motion.div
       className="bg-white border border-gray-200 p-6 lg:p-8 flex flex-col gap-6 transition-shadow duration-300 hover:shadow-md"
-      whileHover={{
-        scale: 1.02,
-        y: -5,
-        boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
-      }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
       {/* Star Rating */}

@@ -4,6 +4,7 @@ import HomeSection2 from "./_components/HomeSection2";
 import HomeSection3 from "./_components/HomeSection3";
 import HomeSection4 from "./_components/HomeSection4";
 import HomeSection5 from "./_components/HomeSection5";
+import HomeSection6 from "./_components/HomeSection6";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <HomeSection3 />
       <HomeSection4 />
       <HomeSection5 />
+      <HomeSection6 />
     </main>
   );
 }

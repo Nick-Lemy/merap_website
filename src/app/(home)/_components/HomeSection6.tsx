@@ -1,27 +1,58 @@
+"use client";
 import React from "react";
 import { Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function HomeSection6() {
   return (
     <section className="bg-gray-50 lg:px-20">
-      <div className="lg:px-30.5 py-16 sm:py-20 lg:py-28.5 gap-6 lg:gap-8 flex-8 flex flex-col items-center justify-center">
-        <div className="flex items-center flex-col justify-center">
+      <motion.div
+        className="lg:px-30.5 py-16 sm:py-20 lg:py-28.5 gap-6 lg:gap-8 flex-8 flex flex-col items-center justify-center"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+      >
+        <motion.div
+          className="flex items-center flex-col justify-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <h1 className="text-2xl sm:text-4xl lg:text-[42px] font-bold text-gray-900 text-center">
             Client Testimonials
           </h1>
-          <div className="w-16 sm:w-20 lg:w-25 h-2 lg:h-2.5 bg-[#FFB400] mt-4" />
-        </div>
+          <motion.div
+            className="w-16 sm:w-20 lg:w-25 h-2 lg:h-2.5 bg-[#FFB400] mt-4"
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          />
+        </motion.div>
         <div className="px-4 sm:px-6 lg:px-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-10 w-full max-w-7xl mt-3 lg:mt-8">
           {Array.from({ length: 3 }).map((_, index) => (
-            <TestimonialCard
+            <motion.div
               key={index}
-              quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, dignissim tristique tellus sed faucibus nullam."
-              author="John Smith"
-              rating={5}
-            />
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.2 + 0.4,
+                ease: "easeOut",
+              }}
+            >
+              <TestimonialCard
+                quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, dignissim tristique tellus sed faucibus nullam."
+                author="John Smith"
+                rating={5}
+              />
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
@@ -34,18 +65,32 @@ interface TestimonialCardProps {
 
 function TestimonialCard({ quote, author, rating }: TestimonialCardProps) {
   return (
-    <div className="bg-white border border-gray-200 p-6 lg:p-8 flex flex-col gap-6 transition-shadow duration-300 hover:shadow-md">
+    <motion.div
+      className="bg-white border border-gray-200 p-6 lg:p-8 flex flex-col gap-6 transition-shadow duration-300 hover:shadow-md"
+      whileHover={{
+        scale: 1.02,
+        y: -5,
+        boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+      }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+    >
       {/* Star Rating */}
       <div className="flex gap-1">
         {Array.from({ length: 5 }).map((_, index) => (
-          <Star
+          <motion.div
             key={index}
-            className={`w-5 h-5 ${
-              index < rating
-                ? "text-[#FFB400] fill-[#FFB400]"
-                : "text-gray-300 fill-gray-300"
-            }`}
-          />
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: index * 0.1, duration: 0.3 }}
+          >
+            <Star
+              className={`w-5 h-5 ${
+                index < rating
+                  ? "text-[#FFB400] fill-[#FFB400]"
+                  : "text-gray-300 fill-gray-300"
+              }`}
+            />
+          </motion.div>
         ))}
       </div>
 
@@ -58,6 +103,6 @@ function TestimonialCard({ quote, author, rating }: TestimonialCardProps) {
       <div className="mt-auto">
         <p className="text-gray-900 font-semibold text-sm">{author}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }

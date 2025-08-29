@@ -1,7 +1,31 @@
-import BricksIcon from "@/components/icons/BricksIcon";
-import BuildingIcon from "@/components/icons/BuildingIcon";
-import ConstructionIcon from "@/components/icons/ConstructionIcon";
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
+
+// Simple icon components as placeholders
+const BuildingIcon = ({ className }: { className?: string }) => (
+  <div
+    className={`${className} bg-white bg-opacity-20 rounded flex items-center justify-center`}
+  >
+    <span className="text-white font-bold text-xs">🏗️</span>
+  </div>
+);
+
+const BricksIcon = ({ className }: { className?: string }) => (
+  <div
+    className={`${className} bg-white bg-opacity-20 rounded flex items-center justify-center`}
+  >
+    <span className="text-white font-bold text-xs">🧱</span>
+  </div>
+);
+
+const ConstructionIcon = ({ className }: { className?: string }) => (
+  <div
+    className={`${className} bg-white bg-opacity-20 rounded flex items-center justify-center`}
+  >
+    <span className="text-white font-bold text-xs">⚒️</span>
+  </div>
+);
 
 const Hero = () => {
   return (
@@ -32,22 +56,49 @@ function LeftContent() {
     <div className="flex-1 lg:flex-10 flex items-center px-4 sm:px-6 lg:px-16 py-12">
       <div className="max-w-3xl mx-auto lg:mx-0 w-full">
         {/* Yellow accent bar */}
-        <div className="flex items-center mb-7 gap-3 sm:gap-5">
-          <div className="w-2 sm:w-3 h-10 sm:h-18 lg:h-25 bg-[#FFB400]" />
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">
+        <motion.div
+          className="flex items-center mb-7 gap-3 sm:gap-5"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.div
+            className="w-2 sm:w-3 h-10 sm:h-18 lg:h-25 bg-[#FFB400]"
+            initial={{ scaleY: 0 }}
+            animate={{ scaleY: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          />
+          <motion.h1
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
             Construction
-          </h1>
-        </div>
+          </motion.h1>
+        </motion.div>
 
-        <p className="text-gray-200 text-base sm:text-lg lg:text-xl mb-8 leading-relaxed">
+        <motion.p
+          className="text-gray-200 text-base sm:text-lg lg:text-xl mb-6 lg:mb-8 leading-relaxed"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+        >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis
           egestas pellentesque libero dolor in diam consequat ut. Mi nibh amet
           viverra id aliquet neque odio.
-        </p>
+        </motion.p>
 
-        <button className="bg-[#FFB400] hover:bg-yellow-600 text-white cursor-pointer font-semibold px-6 sm:px-8 py-3 transition-colors duration-300 uppercase tracking-wide text-sm">
+        <motion.button
+          className="bg-[#FFB400] hover:bg-yellow-600 text-white cursor-pointer font-semibold px-6 sm:px-8 py-3 sm:py-4 transition-colors duration-300 uppercase tracking-wide text-sm sm:text-base"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
           VIEW OUR WORK
-        </button>
+        </motion.button>
       </div>
     </div>
   );
@@ -55,15 +106,30 @@ function LeftContent() {
 
 function RightContent() {
   return (
-    <div className="bg-[#FFB400] flex-1 lg:flex-4 p-5 flex flex-col gap-6 lg:gap-8 justify-center lg:py-30">
-      <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-[#404040] leading-tight">
+    <motion.div
+      className="bg-[#FFB400] flex-1 lg:flex-4 p-5 flex flex-col gap-6 lg:gap-8 justify-center lg:py-30"
+      initial={{ opacity: 0, x: 100 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1, delay: 0.8 }}
+    >
+      <motion.h2
+        className="text-2xl md:text-3xl lg:text-5xl font-bold text-[#404040] leading-tight"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1 }}
+      >
         Our Services
-      </h2>
+      </motion.h2>
 
       <div className="space-y-6 lg:space-y-10">
         {/* Building Construction */}
-        <div className="flex items-center space-x-3 sm:space-x-4">
-          {/* image */}
+        <motion.div
+          className="flex items-center space-x-3 sm:space-x-4"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 1.2 }}
+          whileHover={{ scale: 1.02, x: 10 }}
+        >
           <BuildingIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
             <h3 className="text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
@@ -73,10 +139,16 @@ function RightContent() {
               Lorem ipsum dolor sit consectetur adipiscing elit.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Foundation Work */}
-        <div className="flex items-start space-x-3 sm:space-x-4">
+        <motion.div
+          className="flex items-start space-x-3 sm:space-x-4"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 1.4 }}
+          whileHover={{ scale: 1.02, x: 10 }}
+        >
           <BricksIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
             <h3 className="text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
@@ -86,10 +158,16 @@ function RightContent() {
               Lorem ipsum dolor sit consectetur adipiscing elit.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         {/* Site Management */}
-        <div className="flex items-start space-x-3 sm:space-x-4">
+        <motion.div
+          className="flex items-start space-x-3 sm:space-x-4"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 1.6 }}
+          whileHover={{ scale: 1.02, x: 10 }}
+        >
           <ConstructionIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
             <h3 className="text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
@@ -99,9 +177,9 @@ function RightContent() {
               Lorem ipsum dolor sit consectetur adipiscing elit.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

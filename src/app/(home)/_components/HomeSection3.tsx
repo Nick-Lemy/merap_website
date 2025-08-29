@@ -55,9 +55,7 @@ export default function HomeSection3() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          transition={{ duration: 0.2 }}
         >
           VIEW ALL
         </motion.button>
@@ -74,14 +72,12 @@ function ProjectCard() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      whileHover={{ y: -10 }}
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        whileHover={{ scale: 1.05 }}
       >
         <Image
           src={ProjectImage}
@@ -108,9 +104,9 @@ function ProjectCard() {
           </p>
         </div>
         <motion.button
-          className="w-fit justify-center text-xs border-3 cursor-pointer  transition-all transform duration-200 flex items-center gap-4 font-bold px-4 py-2 border-[#666666] text-[#666666]"
-          whileHover={{ scale: 1.05, borderColor: "#FFB400", color: "#FFB400" }}
-          whileTap={{ scale: 0.95 }}
+          className="w-fit justify-center text-xs border-3 cursor-pointer  transition-all transform duration-100 flex items-center gap-4 font-bold px-4 py-2 border-[#666666] text-[#666666]"
+          whileHover={{ borderColor: "#FFB400", color: "#FFB400" }}
+          transition={{ duration: 0.1 }}
         >
           VIEW PROJECT
         </motion.button>

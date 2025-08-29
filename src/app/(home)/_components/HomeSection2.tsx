@@ -104,7 +104,6 @@ export default function HomeSection2() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              whileHover={{ scale: 1.05 }}
             >
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">12</h1>
               <p className="font-extrabold text-xs sm:text-sm text-center px-2">
@@ -117,7 +116,6 @@ export default function HomeSection2() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              whileHover={{ scale: 1.05 }}
             >
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
                 250

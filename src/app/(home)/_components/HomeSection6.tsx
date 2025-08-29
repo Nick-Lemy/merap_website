@@ -31,7 +31,7 @@ export default function HomeSection6() {
             transition={{ duration: 0.6, delay: 0.4 }}
           />
         </motion.div>
-        <div className="px-4 sm:px-6 lg:px-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-10 w-full max-w-7xl mt-3 lg:mt-8">
+        <div className="px-4 sm:px-6 lg:px-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-7 w-full max-w-7xl mt-3 lg:mt-8">
           {Array.from({ length: 3 }).map((_, index) => (
             <motion.div
               key={index}

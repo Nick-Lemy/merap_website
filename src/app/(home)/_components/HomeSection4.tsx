@@ -7,15 +7,12 @@ export default function HomeSection4() {
       <div className="flex h-full justify-stretch items-stretch">
         <div className="flex flex-col w-full flex-4">
           <div className="px-10 py-30 space-y-15 bg-[#2D2D2D] text-white">
-            <h1 className="text-[42px] font-bold leading-tight">
-              We&apos;ve Been
-              <br />
-              Building For Over
-              <br />
-              10 Years
-            </h1>
-
-            <div className="w-25 h-2.5 bg-[#FFB400]" />
+            <div className="space-y-8">
+              <h1 className="text-[42px] font-bold">
+                We&apos;ve Been Building For Over 10 Years
+              </h1>
+              <div className="w-25 h-2.5 bg-[#FFB400]" />
+            </div>
 
             <div className="text-lg text-gray-300 max-w-md">
               <p>

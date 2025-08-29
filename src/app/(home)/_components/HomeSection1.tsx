@@ -4,7 +4,7 @@ import { PhoneIcon } from "lucide-react";
 export default function HomeSection1() {
   return (
     <section className="py-10">
-      <div className="flex flex-col items-center text-center gap-3 lg:justify-evenly lg:gap-50">
+      <div className="flex flex-col lg:flex-row items-center text-center gap-3 lg:justify-evenly lg:gap-50">
         <h1 className="text-2xl lg:text-3xl font-bold">
           Appellez Nous Pour Plus D&apos;infomation
         </h1>

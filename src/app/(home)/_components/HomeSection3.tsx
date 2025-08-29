@@ -7,7 +7,7 @@ export default function HomeSection3() {
     <section className=" lg:px-20">
       <div className=" lg:px-30.5 py-28.5 gap-6 flex-8 flex flex-col items-center justify-center">
         <div className="flex items-center flex-col justify-center">
-          <h1 className="text-3xl lg:text-[42px] font-bold">
+          <h1 className="text-2xl lg:text-[42px] font-bold">
             Projects Recents
           </h1>
           <div className="w-25 h-2.5 bg-[#FFB400] " />

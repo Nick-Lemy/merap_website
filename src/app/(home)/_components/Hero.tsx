@@ -29,23 +29,23 @@ const Hero = () => {
 
 function LeftContent() {
   return (
-    <div className="flex-1 lg:flex-10 flex items-center px-4 sm:px-6 lg:px-16 py-8 lg:py-12">
+    <div className="flex-1 lg:flex-10 flex items-center px-4 sm:px-6 lg:px-16 py-12">
       <div className="max-w-3xl mx-auto lg:mx-0 w-full">
         {/* Yellow accent bar */}
-        <div className="flex items-center mb-5 gap-3 sm:gap-5">
+        <div className="flex items-center mb-7 gap-3 sm:gap-5">
           <div className="w-2 sm:w-3 h-10 sm:h-18 lg:h-25 bg-[#FFB400]" />
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">
             Construction
           </h1>
         </div>
 
-        <p className="text-gray-200 text-base sm:text-lg lg:text-xl mb-6 lg:mb-8 leading-relaxed">
+        <p className="text-gray-200 text-base sm:text-lg lg:text-xl mb-8 leading-relaxed">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis
           egestas pellentesque libero dolor in diam consequat ut. Mi nibh amet
           viverra id aliquet neque odio.
         </p>
 
-        <button className=" bg-[#FFB400] hover:bg-yellow-600 text-white cursor-pointer font-semibold px-6 sm:px-8 py-3 sm:py-4 transition-colors duration-300 uppercase tracking-wide text-sm">
+        <button className="bg-[#FFB400] hover:bg-yellow-600 text-white cursor-pointer font-semibold px-6 sm:px-8 py-3 transition-colors duration-300 uppercase tracking-wide text-sm">
           VIEW OUR WORK
         </button>
       </div>
@@ -55,7 +55,7 @@ function LeftContent() {
 
 function RightContent() {
   return (
-    <div className="bg-[#FFB400] flex-1 lg:flex-4 p-4 sm:p-6 lg:p-12 flex flex-col gap-6 lg:gap-8 justify-center lg:py-30">
+    <div className="bg-[#FFB400] flex-1 lg:flex-4 p-5 flex flex-col gap-6 lg:gap-8 justify-center lg:py-30">
       <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-[#404040] leading-tight">
         Our Services
       </h2>

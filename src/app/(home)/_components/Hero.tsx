@@ -33,7 +33,7 @@ function LeftContent() {
       <div className="max-w-3xl mx-auto lg:mx-0 w-full">
         {/* Yellow accent bar */}
         <div className="flex items-center mb-5 gap-3 sm:gap-5">
-          <div className="w-2 sm:w-3 h-10 sm:h-20 lg:h-25 bg-[#FFB400]" />
+          <div className="w-2 sm:w-3 h-10 sm:h-18 lg:h-25 bg-[#FFB400]" />
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">
             Construction
           </h1>
@@ -56,7 +56,7 @@ function LeftContent() {
 function RightContent() {
   return (
     <div className="bg-[#FFB400] flex-1 lg:flex-4 p-4 sm:p-6 lg:p-12 flex flex-col gap-6 lg:gap-8 justify-center lg:py-30">
-      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold text-[#404040] leading-tight">
+      <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-[#404040] leading-tight">
         Our Services
       </h2>
 
@@ -66,10 +66,10 @@ function RightContent() {
           {/* image */}
           <BuildingIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
-            <h3 className="text-sm sm:text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
+            <h3 className="text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
               Building Construction
             </h3>
-            <p className="text-white text-xs sm:text-base lg:text-lg">
+            <p className="text-white text-base lg:text-lg">
               Lorem ipsum dolor sit consectetur adipiscing elit.
             </p>
           </div>
@@ -79,10 +79,10 @@ function RightContent() {
         <div className="flex items-start space-x-3 sm:space-x-4">
           <BricksIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
-            <h3 className="text-sm sm:text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
+            <h3 className="text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
               Foundation Work
             </h3>
-            <p className="text-white text-xs sm:text-base lg:text-lg">
+            <p className="text-white text-base lg:text-lg">
               Lorem ipsum dolor sit consectetur adipiscing elit.
             </p>
           </div>
@@ -92,10 +92,10 @@ function RightContent() {
         <div className="flex items-start space-x-3 sm:space-x-4">
           <ConstructionIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
-            <h3 className="text-sm sm:text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
+            <h3 className="text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
               Site Management
             </h3>
-            <p className="text-white text-xs sm:text-base lg:text-lg">
+            <p className="text-white text-base lg:text-lg">
               Lorem ipsum dolor sit consectetur adipiscing elit.
             </p>
           </div>

@@ -11,7 +11,7 @@ export default function HomeSection6() {
           </h1>
           <div className="w-16 sm:w-20 lg:w-25 h-2 lg:h-2.5 bg-[#FFB400] mt-4" />
         </div>
-        <div className="px-4 sm:px-6 lg:px-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10 w-full max-w-7xl mt-8 lg:mt-8">
+        <div className="px-4 sm:px-6 lg:px-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-10 w-full max-w-7xl mt-3 lg:mt-8">
           {Array.from({ length: 3 }).map((_, index) => (
             <TestimonialCard
               key={index}

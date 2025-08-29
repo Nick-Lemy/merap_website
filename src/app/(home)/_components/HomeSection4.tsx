@@ -62,7 +62,7 @@ export default function HomeSection4() {
               <p className="text-2xl font-bold">(346) 234-6973</p>
             </div>
             <div className="bg-white flex flex-col items-center justify-center gap-2 text-black flex-1 h-full">
-              <button className="border-2 border-black px-6 py-3 font-bold hover:bg-black hover:text-white transition-all duration-200">
+              <button className="text-sm border-2 border-black px-6 py-3 font-bold hover:bg-black hover:text-white transition-all duration-200">
                 ONLINE ESTIMATE FORM
               </button>
             </div>

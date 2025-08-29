@@ -3,6 +3,7 @@ import Link, { LinkProps } from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
 import clsx from "clsx"; // Install with `npm install clsx`
+import { motion, AnimatePresence } from "framer-motion";
 
 // Reusable NavLink Component
 export interface NavLinkProps extends LinkProps {
@@ -105,23 +106,41 @@ const NavBar: React.FC = () => {
       </button>
 
       {/* Mobile Navigation Menu */}
-      {isMenuOpen && (
-        <nav className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50">
-          <ul className="flex flex-col py-4">
-            {navItems.map(({ href, label }) => (
-              <li key={href}>
-                <NavLink
-                  className="font-medium px-4 sm:px-6 py-3 block hover:bg-gray-50 text-sm"
-                  href={href}
-                  onClick={() => setIsMenuOpen(false)}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.nav
+            className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-50"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+            <motion.ul
+              className="flex flex-col py-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+            >
+              {navItems.map(({ href, label }, index) => (
+                <motion.li
+                  key={href}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.05 + 0.15 }}
                 >
-                  {label}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
+                  <NavLink
+                    className="font-medium px-4 sm:px-6 py-3 block hover:bg-gray-50 text-sm"
+                    href={href}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {label}
+                  </NavLink>
+                </motion.li>
+              ))}
+            </motion.ul>
+          </motion.nav>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

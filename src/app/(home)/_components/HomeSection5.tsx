@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 // Left Section Component
 const LeftSection = () => {
@@ -43,28 +44,55 @@ const FAQItem = ({
   onToggle: () => void;
 }) => {
   return (
-    <div className="border-b border-gray-200">
-      <button
+    <motion.div
+      className="border-b border-gray-200"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
+      <motion.button
         className="w-full flex items-center justify-between py-4 sm:py-6 text-left hover:bg-gray-50 transition-colors duration-200"
         onClick={onToggle}
+        whileHover={{ x: 5 }}
+        transition={{ type: "spring", stiffness: 300, damping: 30 }}
       >
         <h3 className="text-base lg:text-lg font-semibold text-gray-900 pr-4 leading-tight">
           {question}
         </h3>
-        <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-[#FFB400] rounded-full flex items-center justify-center">
-          {isOpen ? (
-            <Minus className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
-          ) : (
-            <Plus className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
-          )}
-        </div>
-      </button>
-      {isOpen && (
-        <div className="pb-4 sm:pb-6 text-sm sm:text-base text-gray-600 leading-relaxed">
-          {answer}
-        </div>
-      )}
-    </div>
+        <motion.div
+          className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-[#FFB400] rounded-full flex items-center justify-center"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <motion.div
+            animate={{ rotate: isOpen ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            {isOpen ? (
+              <Minus className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+            ) : (
+              <Plus className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+            )}
+          </motion.div>
+        </motion.div>
+      </motion.button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <div className="pb-4 sm:pb-6 text-sm sm:text-base text-gray-600 leading-relaxed">
+              {answer}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 };
 

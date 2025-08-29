@@ -33,7 +33,7 @@ function LeftContent() {
       <div className="max-w-3xl mx-auto lg:mx-0 w-full">
         {/* Yellow accent bar */}
         <div className="flex items-center mb-5 gap-3 sm:gap-5">
-          <div className="w-2 sm:w-3 h-16 sm:h-20 lg:h-25 bg-[#FFB400]" />
+          <div className="w-2 sm:w-3 h-10 sm:h-20 lg:h-25 bg-[#FFB400]" />
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight">
             Construction
           </h1>
@@ -45,7 +45,7 @@ function LeftContent() {
           viverra id aliquet neque odio.
         </p>
 
-        <button className="bg-[#FFB400] hover:bg-yellow-600 text-white cursor-pointer font-semibold px-6 sm:px-8 py-3 sm:py-4 transition-colors duration-300 uppercase tracking-wide text-sm sm:text-base">
+        <button className=" bg-[#FFB400] hover:bg-yellow-600 text-white cursor-pointer font-semibold px-6 sm:px-8 py-3 sm:py-4 transition-colors duration-300 uppercase tracking-wide text-sm">
           VIEW OUR WORK
         </button>
       </div>

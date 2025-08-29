@@ -1,5 +1,6 @@
 import React from "react";
 import { Play } from "lucide-react";
+import Image from "next/image";
 
 export default function HomeSection4() {
   return (
@@ -31,13 +32,16 @@ export default function HomeSection4() {
 
         <div className="flex-1 lg:flex-10 flex flex-col relative order-1 lg:order-2">
           {/* Background Image with overlay */}
-          <div
-            className="w-full h-64 sm:h-80 lg:h-full flex-1 lg:flex-10 bg-cover bg-center bg-no-repeat relative"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')",
-            }}
-          >
+          <div className="w-full h-full bg-none lg:bg-[url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] flex-1 lg:flex-10 bg-cover bg-center bg-no-repeat relative">
+            <Image
+              width={500}
+              height={500}
+              src={
+                "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+              }
+              alt={"Image"}
+              className="object-cover aspect-[2/1.5] lg:hidden"
+            />
             {/* Dark overlay */}
             <div className="absolute inset-0 bg-black/80"></div>
 
@@ -51,16 +55,16 @@ export default function HomeSection4() {
               </button>
             </div>
           </div>
-          <div className="flex w-full flex-1 lg:flex-2">
+          <div className="flex w-full flex-col lg:flex-row flex-1 h-full lg:flex-2">
             <div className="bg-[#FFB400] flex flex-col items-center justify-center gap-1 sm:gap-2 text-black flex-1 h-full py-4 lg:py-0">
               <h2 className="text-lg sm:text-2xl lg:text-3xl font-bold text-center px-2">
                 Call for a Quote
               </h2>
-              <p className="text-lg sm:text-xl lg:text-2xl font-bold">
+              <p className="text-sm sm:text-xl lg:text-2xl font-bold">
                 (346) 234-6973
               </p>
             </div>
-            <div className="bg-white flex flex-col items-center justify-center gap-1 sm:gap-2 text-black flex-1 h-full py-4 lg:py-0">
+            <div className=" bg-white flex flex-col items-center justify-center gap-1 sm:gap-2 text-black flex-1 h-full py-5 lg:py-0">
               <button className="text-xs sm:text-sm border-2 border-black px-3 sm:px-4 lg:px-6 py-2 lg:py-3 font-bold hover:bg-black hover:text-white transition-all duration-200 text-center">
                 ONLINE ESTIMATE FORM
               </button>

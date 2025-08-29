@@ -10,7 +10,7 @@ export default function HomeSection2() {
           <Image
             src={Section2Img}
             alt="Section 2"
-            className="w-full h-auto lg:h-full object-cover"
+            className="w-full aspect-[2/1.5] lg:aspect-auto h-auto lg:h-full object-cover"
           />
         </div>
         <div className="flex flex-col w-full flex-1 lg:flex-10 order-1 lg:order-2">
@@ -46,14 +46,14 @@ export default function HomeSection2() {
               </div>
             </div>
           </div>
-          <div className="flex w-full flex-1 lg:flex-3">
-            <div className="bg-[#FFB400] flex flex-col items-center justify-center gap-1 lg:gap-2 text-black flex-1 h-full py-6 lg:py-0">
+          <div className="flex w-full flex-col lg:flex-row flex-1 lg:flex-3">
+            <div className="bg-[#FFB400] flex flex-col items-center justify-center gap-1 lg:gap-2 text-black flex-1 h-full py-12 lg:py-0">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">12</h1>
               <p className="font-extrabold text-xs sm:text-sm text-center px-2">
                 YEARS ESTABLISHED
               </p>
             </div>
-            <div className="bg-[#404040] flex flex-col items-center justify-center gap-1 lg:gap-2 text-white flex-1 h-full py-6 lg:py-0">
+            <div className="bg-[#404040] flex flex-col items-center justify-center gap-1 lg:gap-2 text-white flex-1 h-full py-12 lg:py-0">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
                 250
               </h1>

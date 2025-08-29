@@ -6,7 +6,7 @@ import { Plus, Minus } from "lucide-react";
 const LeftSection = () => {
   return (
     <div className="flex flex-col w-full flex-1 lg:flex-6">
-      <div className="px-4 sm:px-6 lg:px-10 py-8 sm:py-12 lg:py-30 space-y-6 sm:space-y-8 lg:space-y-15">
+      <div className="px-4 sm:px-6 lg:px-10 py-12 lg:py-30 space-y-6 sm:space-y-8 lg:space-y-15">
         <div className="space-y-4 sm:space-y-6 lg:space-y-8">
           <h1 className="text-2xl sm:text-3xl lg:text-[42px] font-bold text-gray-900 leading-tight">
             Let&apos;s Build Something Together
@@ -48,7 +48,7 @@ const FAQItem = ({
         className="w-full flex items-center justify-between py-4 sm:py-6 text-left hover:bg-gray-50 transition-colors duration-200"
         onClick={onToggle}
       >
-        <h3 className="text-sm sm:text-base lg:text-lg font-semibold text-gray-900 pr-4 leading-tight">
+        <h3 className="text-base lg:text-lg font-semibold text-gray-900 pr-4 leading-tight">
           {question}
         </h3>
         <div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-[#FFB400] rounded-full flex items-center justify-center">

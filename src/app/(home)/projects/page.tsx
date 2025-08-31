@@ -10,7 +10,6 @@ import ProjectImage from "@/assets/project-card.png";
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen">
-      <NavBar />
       <main>
         <HeroSection />
         <ProjectsGrid />

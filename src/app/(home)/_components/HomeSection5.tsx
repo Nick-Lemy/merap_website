@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 // Left Section Component
 const LeftSection = () => {
@@ -23,9 +24,11 @@ const LeftSection = () => {
           </p>
         </div>
 
-        <button className="border-2 lg:border-3 w-fit text-sm justify-center cursor-pointer hover:bg-[#FFB400] hover:text-white transition-all transform duration-200 flex items-center gap-2 lg:gap-4 font-bold px-4 lg:px-5 py-3 border-[#FFB400] text-[#FFB400] mt-6 lg:mt-8">
-          <span>NOUS CONTACTER</span>
-        </button>
+        <Link href="/contact">
+          <button className="border-2 lg:border-3 w-fit text-sm justify-center cursor-pointer hover:bg-[#FFB400] hover:text-white transition-all transform duration-200 flex items-center gap-2 lg:gap-4 font-bold px-4 lg:px-5 py-3 border-[#FFB400] text-[#FFB400] mt-6 lg:mt-8">
+            <span>NOUS CONTACTER</span>
+          </button>
+        </Link>
       </div>
     </div>
   );

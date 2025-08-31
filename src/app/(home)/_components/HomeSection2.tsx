@@ -3,6 +3,7 @@ import React from "react";
 import Section2Img from "@/assets/home-section2.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function HomeSection2() {
   return (
@@ -85,7 +86,7 @@ export default function HomeSection2() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 1.2 }}
                 >
-                  <span>EN SAVOIR PLUS</span>
+                  <Link href="/about">EN SAVOIR PLUS</Link>
                 </motion.button>
               </div>
             </motion.div>

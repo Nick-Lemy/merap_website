@@ -6,22 +6,21 @@ import HomeSection4 from "./_components/HomeSection4";
 import HomeSection5 from "./_components/HomeSection5";
 import HomeSection6 from "./_components/HomeSection6";
 import HomeSection7 from "./_components/HomeSection7";
-import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
     <>
       <main>
         <Hero />
-        <div className="container mx-auto px-6">
-          <HomeSection1 />
-        </div>
         <HomeSection2 />
         <HomeSection3 />
         <HomeSection4 />
         <HomeSection5 />
         <HomeSection6 />
-        <HomeSection7 />
+        {/* <HomeSection7 /> */}
+        <div className="container mx-auto px-6">
+          <HomeSection1 />
+        </div>
       </main>
     </>
   );

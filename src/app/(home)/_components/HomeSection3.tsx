@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import ProjectImage from "@/assets/project-card.png";
+import Link from "next/link";
 
 export default function HomeSection3() {
   return (
@@ -50,15 +51,17 @@ export default function HomeSection3() {
             <ProjectCard key={index} />
           ))}
         </motion.div>
-        <motion.button
-          className="w-fit mt-10 justify-center text-sm border-3 cursor-pointer  transition-all transform duration-200 flex items-center gap-4 font-bold px-14 py-3 border-black text-black "
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          VOIR TOUS LES PROJETS
-        </motion.button>
+        <Link href="/projects" v>
+          <motion.button
+            className="w-fit mt-10 justify-center text-sm border-3 cursor-pointer  transition-all transform duration-200 flex items-center gap-4 font-bold px-14 py-3 border-black text-black "
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+          >
+            VOIR TOUS LES PROJETS
+          </motion.button>
+        </Link>
       </div>
     </motion.section>
   );

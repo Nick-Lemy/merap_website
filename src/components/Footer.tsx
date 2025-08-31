@@ -1,5 +1,13 @@
 import React from "react";
-import { MapPin, Phone, Mail, Facebook, Twitter, Linkedin } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+} from "lucide-react";
 
 export default function Footer() {
   return (
@@ -58,7 +66,7 @@ function ContactInfo() {
         {/* Social Media Icons */}
         <div className="flex w-full justify-center gap-25 items-center py-8 bg-[#404040]">
           <Facebook className="w-6 h-6 fill-white hover:fill-[#FFB400] text-white hover:text-[#FFB400]  cursor-pointer transition-colors duration-200" />
-          <Twitter className="w-6 h-6 fill-white hover:fill-[#FFB400] text-white hover:text-[#FFB400]  cursor-pointer transition-colors duration-200" />
+          <Instagram className="w-6 h-6  hover:fill-[#FFB400] text-white hover:text-[#FFB400]  cursor-pointer transition-colors duration-200" />
           <Linkedin className="w-6 h-6 fill-white hover:fill-[#FFB400] text-white hover:text-[#FFB400]  cursor-pointer transition-colors duration-200" />
         </div>
 

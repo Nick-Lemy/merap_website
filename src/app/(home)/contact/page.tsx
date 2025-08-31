@@ -18,7 +18,6 @@ import {
 export default function ContactPage() {
   return (
     <div className="min-h-screen">
-      <NavBar />
       <main>
         <HeroSection />
         <ContactSection />

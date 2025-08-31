@@ -4,6 +4,7 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import clsx from "clsx"; // Install with `npm install clsx`
 import { motion, AnimatePresence } from "framer-motion";
+import Logo from "@/assets/logo";
 
 // Reusable NavLink Component
 export interface NavLinkProps extends LinkProps {

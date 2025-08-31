@@ -9,7 +9,6 @@ import { Target, Users, Award, Lightbulb } from "lucide-react";
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
-      <NavBar />
       <main>
         <HeroSection />
         <StorySection />

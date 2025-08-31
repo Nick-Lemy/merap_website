@@ -17,7 +17,6 @@ import {
 export default function ServicesPage() {
   return (
     <div className="min-h-screen">
-      <NavBar />
       <main>
         <HeroSection />
         <ServicesGrid />

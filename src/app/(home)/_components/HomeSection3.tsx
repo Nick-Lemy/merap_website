@@ -29,7 +29,7 @@ export default function HomeSection3() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Projects Recents
+            Nos Projets Récents
           </motion.h1>
           <motion.div
             className="w-16 sm:w-20 lg:w-25 h-2 lg:h-2.5 bg-[#FFB400] mt-4"

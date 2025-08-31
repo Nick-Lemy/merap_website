@@ -45,11 +45,11 @@ const NavBar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const navItems = [
-    { href: "/service", label: "Services" },
-    { href: "/references", label: "References" },
-    { href: "/mission", label: "Missions" },
-    { href: "/partenaire", label: "Partenaires" },
-    { href: "/nous-joindre", label: "Nous Contacter" },
+    { href: "/", label: "Accueil" },
+    { href: "/about", label: "À Propos" },
+    { href: "/services", label: "Services" },
+    { href: "/projects", label: "Projets" },
+    { href: "/contact", label: "Contact" },
   ];
 
   const toggleMenu = () => {

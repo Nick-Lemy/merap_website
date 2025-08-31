@@ -54,7 +54,7 @@ function LeftContent() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            Construction
+            MERAP
           </motion.h1>
         </motion.div>
 
@@ -64,9 +64,11 @@ function LeftContent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis
-          egestas pellentesque libero dolor in diam consequat ut. Mi nibh amet
-          viverra id aliquet neque odio.
+          Entreprise de BTP spécialisée dans la construction de bâtiments à
+          usage d&apos;habitation et commercial, ainsi que les travaux
+          d&apos;infrastructures. Notre mission est de transformer
+          l&apos;univers de la construction avec des pratiques durables et
+          innovantes.
         </motion.p>
 
         <motion.button
@@ -98,11 +100,11 @@ function RightContent() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
       >
-        Our Services
+        Nos Services
       </motion.h2>
 
       <div className="space-y-6 lg:space-y-10">
-        {/* Building Construction */}
+        {/* Construction de Bâtiments */}
         <motion.div
           className="flex items-center space-x-3 sm:space-x-4"
           initial={{ opacity: 0, x: 50 }}
@@ -113,15 +115,15 @@ function RightContent() {
           <BuildingIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
             <h3 className="text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
-              Building Construction
+              Construction de Bâtiments
             </h3>
             <p className="text-white text-base lg:text-lg">
-              Lorem ipsum dolor sit consectetur adipiscing elit.
+              Gros œuvre et second œuvre pour habitations et commerces
             </p>
           </div>
         </motion.div>
 
-        {/* Foundation Work */}
+        {/* Travaux d'Infrastructures */}
         <motion.div
           className="flex items-start space-x-3 sm:space-x-4"
           initial={{ opacity: 0, x: 50 }}
@@ -132,15 +134,15 @@ function RightContent() {
           <BricksIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
             <h3 className="text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
-              Foundation Work
+              Infrastructures
             </h3>
             <p className="text-white text-base lg:text-lg">
-              Lorem ipsum dolor sit consectetur adipiscing elit.
+              Construction de routes, terrassement et revêtement
             </p>
           </div>
         </motion.div>
 
-        {/* Site Management */}
+        {/* Études et Gestion */}
         <motion.div
           className="flex items-start space-x-3 sm:space-x-4"
           initial={{ opacity: 0, x: 50 }}
@@ -151,10 +153,10 @@ function RightContent() {
           <ConstructionIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
             <h3 className="text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
-              Site Management
+              Études & Gestion
             </h3>
             <p className="text-white text-base lg:text-lg">
-              Lorem ipsum dolor sit consectetur adipiscing elit.
+              Études et gestion de projets de A à Z
             </p>
           </div>
         </motion.div>

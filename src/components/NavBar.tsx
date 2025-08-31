@@ -4,7 +4,8 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import clsx from "clsx"; // Install with `npm install clsx`
 import { motion, AnimatePresence } from "framer-motion";
-import Logo from "@/assets/logo";
+import Logo from "@/assets/logo2.jpg";
+import Image from "next/image";
 
 // Reusable NavLink Component
 export interface NavLinkProps extends LinkProps {
@@ -58,10 +59,15 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <header className="container mx-auto flex justify-between items-center px-4 sm:px-6 py-4 sm:py-6 relative">
+    <header className="container mx-auto flex justify-between items-center px-4 sm:px-6 relative">
       <h1 className="text-lg sm:text-xl lg:text-2xl font-semibold text-gray-900 truncate pr-4">
-        <span className="text-[#FFB400]">MERAP</span>
-        {" Construction"}
+        <Image
+          src={Logo}
+          alt="Merap Logo"
+          className="w-full h-14 lg:h-18 my-2"
+          width={150}
+          height={50}
+        />
       </h1>
 
       {/* Desktop Navigation */}

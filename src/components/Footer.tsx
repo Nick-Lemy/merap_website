@@ -66,22 +66,20 @@ function ContactInfo() {
         <div className="flex-1 flex flex-col items-center text-[#404040] px-6 lg:px-0 py-20">
           <div className="space-y-8">
             <div className="flex items-start gap-4">
-              <MapPin className="w-5 h-5 text-[#FFB400] mt-1 flex-shrink-0" />
-              <p className="text-white text-sm lg:text-base">
-                Douala, Cameroun
-              </p>
+              <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
+              <p className="text-sm lg:text-base">Douala, Cameroun</p>
             </div>
 
             <div className="flex items-center gap-4">
-              <Phone className="w-5 h-5 text-[#FFB400] flex-shrink-0" />
-              <p className="text-white font-semibold text-sm lg:text-base">
+              <Phone className="w-5 h-5 flex-shrink-0" />
+              <p className="font-semibold text-sm lg:text-base">
                 +237 667055365 / 688687717
               </p>
             </div>
 
             <div className="flex items-center gap-4">
-              <Mail className="w-5 h-5 text-[#FFB400] flex-shrink-0" />
-              <p className="text-white font-semibold text-sm lg:text-base">
+              <Mail className="w-5 h-5 flex-shrink-0" />
+              <p className="font-semibold text-sm lg:text-base">
                 meraps25@gmail.com
               </p>
             </div>

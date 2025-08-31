@@ -15,7 +15,6 @@ export default function ProjectsPage() {
         <HeroSection />
         <ProjectsGrid />
       </main>
-      <Footer />
     </div>
   );
 }

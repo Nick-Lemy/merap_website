@@ -22,7 +22,6 @@ export default function ServicesPage() {
         <HeroSection />
         <ServicesGrid />
       </main>
-      <Footer />
     </div>
   );
 }

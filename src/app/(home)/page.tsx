@@ -23,7 +23,6 @@ export default function HomePage() {
         <HomeSection6 />
         <HomeSection7 />
       </main>
-      <Footer />
     </>
   );
 }

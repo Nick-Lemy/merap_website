@@ -24,7 +24,6 @@ export default function ContactPage() {
         <ContactSection />
         <MapSection />
       </main>
-      <Footer />
     </div>
   );
 }

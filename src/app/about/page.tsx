@@ -16,7 +16,6 @@ export default function AboutPage() {
         <MissionSection />
         <PartnersSection />
       </main>
-      <Footer />
     </div>
   );
 }

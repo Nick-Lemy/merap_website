@@ -145,7 +145,6 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
     >
       <motion.div
         className="relative overflow-hidden"
-        whileHover={{ scale: 1.05 }}
         transition={{ duration: 0.3 }}
       >
         <Image

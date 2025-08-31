@@ -160,7 +160,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
     >
       <motion.div
         className="w-16 h-16 bg-[#FFB400] rounded-lg flex items-center justify-center mb-6"
-        whileHover={{ scale: 1.1, rotate: 5 }}
+        whileHover={{ rotate: 5 }}
         transition={{ duration: 0.3 }}
       >
         <Icon className="w-8 h-8 text-white" />

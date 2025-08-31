@@ -80,14 +80,12 @@ export default function HomeSection2() {
                 </p>
                 <motion.button
                   className="border-2 lg:border-3 w-fit justify-center cursor-pointer hover:bg-[#404040] hover:text-white transition-all transform duration-200 flex items-center gap-2 lg:gap-4 font-bold p-3 lg:p-4 border-[#404040] text-[#404040] text-sm lg:text-base"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 1.2 }}
                 >
-                  <span>LEARN MORE</span>
+                  <span>EN SAVOIR PLUS</span>
                 </motion.button>
               </div>
             </motion.div>
@@ -101,8 +99,8 @@ export default function HomeSection2() {
           >
             <motion.div
               className="bg-[#FFB400] flex flex-col items-center justify-center gap-1 lg:gap-2 text-black flex-1 h-full py-12 lg:py-0"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
             >
@@ -115,11 +113,10 @@ export default function HomeSection2() {
             </motion.div>
             <motion.div
               className="bg-[#404040] flex flex-col items-center justify-center gap-1 lg:gap-2 text-white flex-1 h-full py-12 lg:py-0"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              whileHover={{ scale: 1.05 }}
             >
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
                 100%

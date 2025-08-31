@@ -15,7 +15,7 @@ function ContactForm() {
     <div className="bg-[#FFB400] lg:w-1/2 w-full px-6 lg:px-0 py-12 lg:py-16">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-2xl lg:text-3xl font-bold text-black mb-2">
-          Contact Us
+          Contactez-Nous
         </h2>
         <div className="w-16 h-1.5 bg-black mb-8"></div>
 
@@ -23,7 +23,7 @@ function ContactForm() {
           <div className="grid grid-cols-2 w-full flex-col lg:flex-row gap-4">
             <input
               type="text"
-              placeholder="Name"
+              placeholder="Nom"
               className="flex-1 px-4 py-3 border-none outline-none text-gray-700 placeholder-gray-500"
             />
             <input
@@ -43,7 +43,7 @@ function ContactForm() {
             type="submit"
             className="w-fit text-sm cursor-pointer self-end bg-transparent border-3 border-white text-white font-bold px-8 py-2.5 hover:bg-white hover:text-[#FFB400] transition-all duration-200"
           >
-            SEND MESSAGE
+            ENVOYER MESSAGE
           </button>
         </form>
       </div>

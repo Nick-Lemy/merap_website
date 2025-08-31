@@ -76,10 +76,8 @@ function LeftContent() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
         >
-          VIEW OUR WORK
+          DÉCOUVRIR NOS PROJETS
         </motion.button>
       </div>
     </div>
@@ -110,7 +108,7 @@ function RightContent() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          whileHover={{ scale: 1.02, x: 10 }}
+          whileHover={{ x: 10 }}
         >
           <BuildingIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
@@ -129,7 +127,7 @@ function RightContent() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 1.4 }}
-          whileHover={{ scale: 1.02, x: 10 }}
+          whileHover={{ x: 10 }}
         >
           <BricksIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
@@ -148,7 +146,7 @@ function RightContent() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 1.6 }}
-          whileHover={{ scale: 1.02, x: 10 }}
+          whileHover={{ x: 10 }}
         >
           <ConstructionIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>

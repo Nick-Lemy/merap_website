@@ -55,9 +55,9 @@ export default function HomeSection3() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.2 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
         >
-          VIEW ALL
+          VOIR TOUS LES PROJETS
         </motion.button>
       </div>
     </motion.section>
@@ -74,8 +74,8 @@ function ProjectCard() {
       transition={{ duration: 0.6, delay: 0.2 }}
     >
       <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
@@ -95,20 +95,20 @@ function ProjectCard() {
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <div className="space-y-5">
-          <h3 className="text-black text-xl font-[520]">Project Title</h3>
+          <h3 className="text-black text-xl font-[520]">Projet Résidentiel</h3>
 
           <p className="text-lg">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id et
-            euismod bibendum adipiscing et orci, fermentum. Cras tristique
-            viverra gravida et sit egestas.
+            Construction complète d&apos;une villa moderne avec piscine. Travaux
+            de gros œuvre, aménagement intérieur haut de gamme et finitions
+            personnalisées selon les exigences du client.
           </p>
         </div>
         <motion.button
-          className="w-fit justify-center text-xs border-3 cursor-pointer  transition-all transform duration-100 flex items-center gap-4 font-bold px-4 py-2 border-[#666666] text-[#666666]"
+          className="w-fit justify-center text-xs border-3 cursor-pointer  transition-all transform duration-200 flex items-center gap-4 font-bold px-4 py-2 border-[#666666] text-[#666666]"
           whileHover={{ borderColor: "#FFB400", color: "#FFB400" }}
-          transition={{ duration: 0.1 }}
+          transition={{ duration: 0.3 }}
         >
-          VIEW PROJECT
+          VOIR LE PROJET
         </motion.button>
       </motion.div>
     </motion.div>

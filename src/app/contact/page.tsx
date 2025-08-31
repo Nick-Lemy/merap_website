@@ -143,7 +143,6 @@ function ContactSection() {
               <motion.button
                 type="submit"
                 className="w-full bg-[#FFB400] hover:bg-yellow-600 text-white font-bold py-4 px-8 rounded-lg transition-colors duration-300"
-                whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 Envoyer le message
@@ -218,7 +217,6 @@ function ContactSection() {
                 <motion.a
                   href="#"
                   className="w-12 h-12 bg-[#FFB400] rounded-lg flex items-center justify-center text-white hover:bg-yellow-600 transition-colors"
-                  whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Facebook className="w-6 h-6" />
@@ -226,7 +224,6 @@ function ContactSection() {
                 <motion.a
                   href="#"
                   className="w-12 h-12 bg-[#FFB400] rounded-lg flex items-center justify-center text-white hover:bg-yellow-600 transition-colors"
-                  whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Instagram className="w-6 h-6" />
@@ -234,7 +231,6 @@ function ContactSection() {
                 <motion.a
                   href="#"
                   className="w-12 h-12 bg-[#FFB400] rounded-lg flex items-center justify-center text-white hover:bg-yellow-600 transition-colors"
-                  whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Twitter className="w-6 h-6" />
@@ -242,7 +238,6 @@ function ContactSection() {
                 <motion.a
                   href="#"
                   className="w-12 h-12 bg-[#FFB400] rounded-lg flex items-center justify-center text-white hover:bg-yellow-600 transition-colors"
-                  whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Linkedin className="w-6 h-6" />

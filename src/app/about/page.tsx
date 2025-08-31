@@ -204,7 +204,7 @@ function MissionCard({ mission, index }: { mission: Mission; index: number }) {
       <div className="flex items-start gap-6">
         <motion.div
           className="w-16 h-16 bg-[#FFB400] rounded-lg flex items-center justify-center flex-shrink-0"
-          whileHover={{ scale: 1.1, rotate: 5 }}
+          whileHover={{ rotate: 5 }}
           transition={{ duration: 0.3 }}
         >
           <Icon className="w-8 h-8 text-white" />
@@ -259,11 +259,10 @@ function PartnersSection() {
             <motion.div
               key={index}
               className="bg-gray-100 p-6 rounded-lg text-center hover:bg-[#FFB400] hover:text-white transition-colors duration-300"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ scale: 1.05 }}
             >
               <h3 className="font-bold text-lg">{partner}</h3>
             </motion.div>

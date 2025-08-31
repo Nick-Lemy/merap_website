@@ -10,21 +10,21 @@ const LeftSection = () => {
       <div className="px-4 sm:px-6 lg:px-10 py-12 lg:py-30 space-y-6 sm:space-y-8 lg:space-y-15">
         <div className="space-y-4 sm:space-y-6 lg:space-y-8">
           <h1 className="text-2xl sm:text-3xl lg:text-[42px] font-bold text-gray-900 leading-tight">
-            Let&apos;s Build Something Together
+            Construisons Ensemble Votre Projet
           </h1>
           <div className="w-16 sm:w-20 lg:w-25 h-2 lg:h-2.5 bg-[#FFB400]" />
         </div>
 
         <div className="text-base sm:text-lg text-gray-600 max-w-md">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien,
-            dignissim tristique tellus sed faucibus nullam. Tincidunt mauris ut
-            quam sed mauris proin feugiat.
+            Vous avez des questions sur nos services ? Découvrez les réponses
+            aux questions les plus fréquemment posées par nos clients ou
+            contactez-nous directement pour plus d&apos;informations.
           </p>
         </div>
 
         <button className="border-2 lg:border-3 w-fit text-sm justify-center cursor-pointer hover:bg-[#FFB400] hover:text-white transition-all transform duration-200 flex items-center gap-2 lg:gap-4 font-bold px-4 lg:px-5 py-3 border-[#FFB400] text-[#FFB400] mt-6 lg:mt-8">
-          <span>GET IN TOUCH</span>
+          <span>NOUS CONTACTER</span>
         </button>
       </div>
     </div>
@@ -60,11 +60,7 @@ const FAQItem = ({
         <h3 className="text-base lg:text-lg font-semibold text-gray-900 pr-4 leading-tight">
           {question}
         </h3>
-        <motion.div
-          className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-[#FFB400] rounded-full flex items-center justify-center"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-        >
+        <motion.div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-[#FFB400] rounded-full flex items-center justify-center">
           <motion.div
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.3 }}
@@ -102,29 +98,29 @@ const RightSection = () => {
 
   const faqData = [
     {
-      question: "Donec rutrum congue leo eget malesuada?",
+      question: "Quels types de projets MERAP peut-elle réaliser ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, dignissim tristique tellus sed faucibus nullam. Tincidunt mauris ut quam sed mauris proin feugiat.",
+        "MERAP est spécialisée dans la construction de bâtiments à usage d'habitation et commercial, les travaux d'infrastructures routières, les rénovations, l'installation sanitaire, électrique et les finitions. Nous proposons également des services d'études et de gestion de projets.",
     },
     {
-      question: "Vivamus suscipit tortor eget felis porttitor volutpat?",
+      question: "Dans quelles zones géographiques MERAP intervient-elle ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, dignissim tristique tellus sed faucibus nullam. Tincidunt mauris ut quam sed mauris proin feugiat.",
+        "MERAP est basée à Douala et intervient principalement au Cameroun. Nous couvrons l'ensemble du territoire camerounais pour tous types de projets de construction et d'infrastructure.",
     },
     {
-      question: "Curabitur non nulla sit amet nisl tempus?",
+      question: "Comment obtenir un devis pour mon projet ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, dignissim tristique tellus sed faucibus nullam. Tincidunt mauris ut quam sed mauris proin feugiat.",
+        "Vous pouvez nous contacter par téléphone au +237 667055365 ou +237 688687717, par email à meraps25@gmail.com, ou utiliser notre formulaire de contact en ligne. Nous étudierons votre projet et vous fournirons un devis détaillé gratuitement.",
     },
     {
-      question: "Pellentesque in ipsum id orci porta dapibus?",
+      question: "Quels sont les délais moyens de réalisation ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, dignissim tristique tellus sed faucibus nullam. Tincidunt mauris ut quam sed mauris proin feugiat.",
+        "Les délais varient selon la complexité et la taille du projet. MERAP s'engage à respecter les délais convenus lors de la signature du contrat. Nous fournissons un planning détaillé pour chaque projet avec des étapes claires.",
     },
     {
-      question: "Curabitur non nulla sit amet nisl?",
+      question: "MERAP propose-t-elle des garanties sur ses travaux ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, dignissim tristique tellus sed faucibus nullam. Tincidunt mauris ut quam sed mauris proin feugiat.",
+        "Oui, MERAP garantit la qualité de tous ses travaux. Nous respectons les normes en vigueur et utilisons des matériaux durables. Les garanties spécifiques sont détaillées dans chaque contrat selon le type de projet.",
     },
   ];
 

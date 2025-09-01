@@ -108,7 +108,7 @@ export default function ProjectModal({
                 src={allImages[currentImageIndex]}
                 alt={`${project.titre} - Image ${currentImageIndex + 1}`}
                 fill
-                className="object-contain rounded-lg"
+                className="object-cover rounded-lg"
               />
 
               {/* Navigation Arrows - Only show if there are multiple images */}

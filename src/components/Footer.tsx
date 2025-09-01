@@ -64,9 +64,9 @@ function ContactInfo() {
       <div className="flex flex-col h-full">
         {/* Social Media Icons */}
         <div className="flex w-full justify-center gap-25 items-center py-8 bg-primary">
-          <Facebook className="w-6 h-6 fill-tertiary hover:fill-secondary text-tertiary hover:text-secondary cursor-pointer transition-colors duration-200" />
-          <Instagram className="w-6 h-6 fill-tertiary hover:fill-secondary text-tertiary hover:text-secondary cursor-pointer transition-colors duration-200" />
-          <Linkedin className="w-6 h-6 fill-tertiary hover:fill-secondary text-tertiary hover:text-secondary cursor-pointer transition-colors duration-200" />
+          <Facebook className="w-6 h-6 fill-transparent hover:fill-secondary text-tertiary hover:text-secondary cursor-pointer transition-colors duration-200" />
+          <Instagram className="w-6 h-6 fill-transparent hover:fill-secondary text-tertiary hover:text-secondary cursor-pointer transition-colors duration-200" />
+          <Linkedin className="w-6 h-6 fill-transparent hover:fill-secondary text-tertiary hover:text-secondary cursor-pointer transition-colors duration-200" />
         </div>
 
         {/* Contact Information */}

@@ -4,6 +4,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import CambuildSarl from "@/assets/partners/cambuildsarl.png";
 import PortDeDouala from "@/assets/partners/portededouala.png";
+import AfricLand from "@/assets/partners/africland.png";
+import Sorepco from "@/assets/partners/sorepco.png";
+import GeoFoundation from "@/assets/partners/geofoundation.png";
+import Maestria from "@/assets/partners/maestria.png";
 import { Target, Users, Award, Lightbulb } from "lucide-react";
 import Image from "next/image";
 
@@ -223,13 +227,20 @@ function MissionCard({ mission, index }: { mission: Mission; index: number }) {
 }
 
 function PartnersSection() {
-  const partners = [CambuildSarl, PortDeDouala];
+  const partners = [
+    CambuildSarl,
+    PortDeDouala,
+    AfricLand,
+    Sorepco,
+    GeoFoundation,
+    Maestria,
+  ];
 
   return (
     <section className="py-20 lg:py-32 bg-white">
       <div className="container mx-auto px-6 lg:px-20">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-8"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -245,13 +256,13 @@ function PartnersSection() {
           </p>
         </motion.div>
 
-        <div className="flex justify-center gap-8 lg:gap-25 items-center">
+        <div className="flex justify-center flex-wrap md:flex-nowrap gap-8 lg:gap-25 items-center">
           {partners.map((partner, index) => (
             <motion.div key={index}>
               <Image
                 src={partner}
                 alt={`Partenaire ${index + 1}`}
-                className="w-full h-auto"
+                className="w-50 h-auto"
               />
             </motion.div>
           ))}

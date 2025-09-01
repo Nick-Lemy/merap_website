@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
@@ -8,14 +8,37 @@ import Image from "next/image";
 import ProjectImage from "@/assets/project-card.png";
 import { projects } from "@/utils/dummydata";
 import { MapPin } from "lucide-react";
+import ProjectModal from "@/components/ProjectModal";
 
 export default function ProjectsPage() {
+  const [selectedProject, setSelectedProject] = useState<
+    (typeof projects)[0] | null
+  >(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleProjectClick = (project: (typeof projects)[0]) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
+
   return (
     <div className="min-h-screen">
       <main>
         <HeroSection />
-        <ProjectsGrid />
+        <ProjectsGrid onProjectClick={handleProjectClick} />
       </main>
+
+      {/* Project Modal */}
+      <ProjectModal
+        project={selectedProject}
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     </div>
   );
 }
@@ -57,7 +80,11 @@ function HeroSection() {
   );
 }
 
-function ProjectsGrid() {
+function ProjectsGrid({
+  onProjectClick,
+}: {
+  onProjectClick: (project: (typeof projects)[0]) => void;
+}) {
   return (
     <section className="py-20 lg:py-32 bg-gray-50">
       <div className="container mx-auto px-6 lg:px-20">
@@ -80,7 +107,12 @@ function ProjectsGrid() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} index={index} />
+            <ProjectCard
+              key={index}
+              project={project}
+              index={index}
+              onProjectClick={onProjectClick}
+            />
           ))}
         </div>
       </div>
@@ -98,7 +130,15 @@ interface Project {
   autresImages: string[];
 }
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
+function ProjectCard({
+  project,
+  index,
+  onProjectClick,
+}: {
+  project: Project;
+  index: number;
+  onProjectClick: (project: Project) => void;
+}) {
   return (
     <motion.div
       className="bg-white rounded-lg border border-secondary overflow-hidden  transition-all duration-300"
@@ -113,7 +153,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         transition={{ duration: 0.3 }}
       >
         <Image
-          src={ProjectImage}
+          src={project.imageDeCouverture || ProjectImage}
           alt={project.titre}
           className="w-full h-48 object-cover"
           width={400}
@@ -140,6 +180,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         </p>
 
         <motion.button
+          onClick={() => onProjectClick(project)}
           className="text-[var(--color-secondary)] font-semibold hover:text-[var(--color-primary)] transition-colors duration-300"
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}

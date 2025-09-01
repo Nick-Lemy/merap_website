@@ -1,15 +1,31 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ProjectImage from "@/assets/project-card.png";
 import Link from "next/link";
 import { projects } from "@/utils/dummydata";
+import ProjectModal from "@/components/ProjectModal";
+import { MapPin } from "lucide-react";
 
 export default function HomeSection3() {
   // Get first 3 projects for homepage display
   const featuredProjects = projects.slice(0, 3);
+  const [selectedProject, setSelectedProject] = useState<
+    (typeof projects)[0] | null
+  >(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleProjectClick = (project: (typeof projects)[0]) => {
+    setSelectedProject(project);
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
   return (
     <motion.section
       className=" lg:px-20"
@@ -51,7 +67,12 @@ export default function HomeSection3() {
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           {featuredProjects.map((project, index) => (
-            <ProjectCard key={project.id} project={project} index={index} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              index={index}
+              onProjectClick={handleProjectClick}
+            />
           ))}
         </motion.div>
         <Link href="/projects">
@@ -65,6 +86,13 @@ export default function HomeSection3() {
             VOIR TOUS LES PROJETS
           </motion.button>
         </Link>
+
+        {/* Project Modal */}
+        <ProjectModal
+          project={selectedProject}
+          isOpen={isModalOpen}
+          onClose={handleCloseModal}
+        />
       </div>
     </motion.section>
   );
@@ -80,7 +108,15 @@ interface Project {
   autresImages: string[];
 }
 
-function ProjectCard({ project, index }: { project: Project; index: number }) {
+function ProjectCard({
+  project,
+  index,
+  onProjectClick,
+}: {
+  project: Project;
+  index: number;
+  onProjectClick: (project: Project) => void;
+}) {
   return (
     <motion.div
       className="flex flex-col gap-4"
@@ -96,7 +132,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         transition={{ duration: 0.5 }}
       >
         <Image
-          src={ProjectImage}
+          src={project.imageDeCouverture}
           className="aspect-2/1 object-cover"
           alt={project.titre}
           width={500}
@@ -118,14 +154,16 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             <h3 className="text-primary text-xl font-[520] line-clamp-2">
               {project.titre}
             </h3>
-            <p className="text-sm text-gray-600 font-medium">
-              📍 {project.lieu}
+            <p className="text-sm flex gap-1 items-center text-gray-600 font-medium">
+              <MapPin className="size-5" />
+              {project.lieu}
             </p>
           </div>
 
           <p className="text-lg line-clamp-3">{project.description}</p>
         </div>
         <motion.button
+          onClick={() => onProjectClick(project)}
           className="w-fit justify-center text-xs border-3 cursor-pointer hover:bg-secondary hover:text-tertiary transition-all transform duration-200 flex items-center gap-4 font-bold px-4 py-2 border-primary text-primary"
           transition={{ duration: 0.3 }}
         >

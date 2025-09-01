@@ -9,7 +9,11 @@ export const projects = [
       "Installations électriques et enduit au mortier de ciment pour un bâtiment de 4 étages.",
     imageDeCouverture:
       "https://example.com/images/second-oeuvre-couverture.jpg",
-    autresImages: [],
+    autresImages: [
+      "https://example.com/images/second-oeuvre-1.jpg",
+      "https://example.com/images/second-oeuvre-2.jpg",
+      "https://example.com/images/second-oeuvre-3.jpg",
+    ],
   },
   {
     id: 2,
@@ -19,7 +23,10 @@ export const projects = [
     description:
       "Installation d'un système d'alimentation avec nourrice pour une douche.",
     imageDeCouverture: "https://example.com/images/plomberie-couverture.jpg",
-    autresImages: [],
+    autresImages: [
+      "https://example.com/images/plomberie-1.jpg",
+      "https://example.com/images/plomberie-2.jpg",
+    ],
   },
   {
     id: 3,
@@ -29,7 +36,12 @@ export const projects = [
     description:
       "Travaux de rénovation pour un bâtiment résidentiel de 3 étages.",
     imageDeCouverture: "https://example.com/images/renovation-couverture.jpg",
-    autresImages: [],
+    autresImages: [
+      "https://example.com/images/renovation-1.jpg",
+      "https://example.com/images/renovation-2.jpg",
+      "https://example.com/images/renovation-3.jpg",
+      "https://example.com/images/renovation-4.jpg",
+    ],
   },
   {
     id: 4,
@@ -39,26 +51,32 @@ export const projects = [
     description:
       "Essais de pénétration réalisés en collaboration avec Geo Fondation à l'Ambassade de France.",
     imageDeCouverture: "https://example.com/images/geotechnique-couverture.jpg",
-    autresImages: [],
+    autresImages: [
+      "https://example.com/images/geotechnique-1.jpg",
+      "https://example.com/images/geotechnique-2.jpg",
+    ],
   },
   {
     id: 5,
-    titre: "Construction d'un complexe commercial moderne",
+    titre: "Construction d'un villa moderne",
     lieu: "Akwa, Douala",
     catégorie: "Construction",
     description:
-      "Édification d'un centre commercial avec espaces de vente et parking souterrain.",
-    imageDeCouverture: "https://example.com/images/commercial-couverture.jpg",
-    autresImages: [],
+      "Conception et realisation d'une villa triplex 08 pieces modele nuage d'elegance a Douala au lieu dit logpom",
+    imageDeCouverture: "https://i.postimg.cc/sX594d5W/image.png",
+    autresImages: ["https://i.postimg.cc/sX594d5W/image.png"],
   },
   {
     id: 6,
-    titre: "Réhabilitation de voirie urbaine",
-    lieu: "Bonapriso, Douala",
+    titre: "Realisation (gros oeuvre) d'une villa triplex duplex 6 pieces a ",
+    lieu: "Douala, japoma",
     catégorie: "Infrastructure",
     description:
-      "Travaux de réfection complète d'un tronçon de route avec amélioration du drainage.",
+      "Realisation (gros oeuvre) d'une villa triplex duplex 6 pieces a Douala /japoma.",
     imageDeCouverture: "https://example.com/images/voirie-couverture.jpg",
-    autresImages: [],
+    autresImages: [
+      "https://example.com/images/voirie-1.jpg",
+      "https://example.com/images/voirie-2.jpg",
+    ],
   },
 ];

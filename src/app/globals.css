@@ -28,3 +28,31 @@ textarea {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Modal specific styles */
+.modal-overlay {
+  backdrop-filter: blur(8px);
+}
+
+/* Prevent scrolling when modal is open */
+.modal-open {
+  overflow: hidden;
+}
+
+/* Smooth scrollbar for modal content */
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 3px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}

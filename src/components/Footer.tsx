@@ -6,7 +6,10 @@ import {
   Facebook,
   Linkedin,
   Instagram,
+  Twitter,
+  TwitterIcon,
 } from "lucide-react";
+import XIcon from "./icons/XIcon";
 
 export default function Footer() {
   return (
@@ -64,9 +67,18 @@ function ContactInfo() {
       <div className="flex flex-col h-full">
         {/* Social Media Icons */}
         <div className="flex w-full justify-center gap-25 items-center py-8 bg-primary">
-          <Facebook className="w-6 h-6 fill-transparent hover:fill-secondary text-tertiary hover:text-secondary cursor-pointer transition-colors duration-200" />
-          <Instagram className="w-6 h-6 fill-transparent hover:fill-secondary text-tertiary hover:text-secondary cursor-pointer transition-colors duration-200" />
-          <Linkedin className="w-6 h-6 fill-transparent hover:fill-secondary text-tertiary hover:text-secondary cursor-pointer transition-colors duration-200" />
+          <div className="bg-white p-1.5 flex items-center justify-center rounded-full">
+            <Facebook className="w-6 h-6 fill-primary text-primary hover:fill-secondary  hover:text-secondary cursor-pointer transition-colors duration-200" />
+          </div>
+          <div className="bg-white p-1.5 flex items-center justify-center rounded-full">
+            <Instagram className="w-6 font-bold h-6 fill-transparent text-primary hover:text-secondary cursor-pointer transition-colors duration-200" />
+          </div>
+          <div className="bg-white p-2 flex items-center justify-center rounded-full">
+            <XIcon className="w-5 h-5 fill-primary hover:fill-secondary text-primary hover:text-secondary cursor-pointer transition-colors duration-200" />
+          </div>
+          <div className="bg-white p-2 flex items-center justify-center rounded-full">
+            <Linkedin className="w-5 h-5 border rounded-sm p-0.5 border-primary fill-primary hover:fill-secondary hover:border-secondary text-primary hover:text-secondary cursor-pointer transition-colors duration-200" />
+          </div>
         </div>
 
         {/* Contact Information */}

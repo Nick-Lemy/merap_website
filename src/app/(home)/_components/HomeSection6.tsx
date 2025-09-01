@@ -41,11 +41,11 @@ export default function HomeSection6() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <h1 className="text-2xl sm:text-4xl lg:text-[42px] font-bold text-gray-900 text-center">
+          <h1 className="text-2xl sm:text-4xl lg:text-[42px] font-bold text-primary text-center">
             Témoignages Clients
           </h1>
           <motion.div
-            className="w-16 sm:w-20 lg:w-25 h-2 lg:h-2.5 bg-[#FFB400] mt-4"
+            className="w-16 sm:w-20 lg:w-25 h-2 lg:h-2.5 bg-secondary mt-4"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
@@ -87,7 +87,7 @@ interface TestimonialCardProps {
 function TestimonialCard({ quote, author, rating }: TestimonialCardProps) {
   return (
     <motion.div
-      className="bg-white border border-gray-200 p-6 lg:p-8 flex flex-col gap-6 transition-shadow duration-300 hover:shadow-md"
+      className="bg-white border border-gray-200 p-6 lg:p-8 flex flex-col gap-6 transition-all duration-300 hover:border-gray-300"
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
       {/* Star Rating */}
@@ -102,7 +102,7 @@ function TestimonialCard({ quote, author, rating }: TestimonialCardProps) {
             <Star
               className={`w-5 h-5 ${
                 index < rating
-                  ? "text-[#FFB400] fill-[#FFB400]"
+                  ? "text-secondary fill-secondary"
                   : "text-gray-300 fill-gray-300"
               }`}
             />

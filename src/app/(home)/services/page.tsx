@@ -149,7 +149,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
 
   return (
     <motion.div
-      className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+      className="bg-white p-8 rounded-lg border border-gray-200 hover:border-gray-300 transition-all duration-300"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

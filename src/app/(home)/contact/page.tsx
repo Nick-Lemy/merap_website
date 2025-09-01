@@ -270,7 +270,7 @@ function MapSection() {
         </motion.div>
 
         <motion.div
-          className="bg-white p-4 rounded-lg shadow-lg"
+          className="bg-white p-4 rounded-lg border border-gray-200"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

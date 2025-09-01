@@ -43,7 +43,7 @@ function LeftContent() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.div
-            className="w-2 sm:w-3 h-10 sm:h-18 lg:h-25 bg-[#FFB400]"
+            className="w-2 sm:w-3 h-10 sm:h-18 lg:h-25 bg-secondary"
             initial={{ scaleY: 0 }}
             animate={{ scaleY: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -72,7 +72,7 @@ function LeftContent() {
         </motion.p>
 
         <motion.button
-          className="bg-[#FFB400] hover:bg-yellow-600 text-white cursor-pointer font-semibold px-6 sm:px-8 py-3 sm:py-4 transition-colors duration-300 uppercase tracking-wide text-sm sm:text-base"
+          className="bg-primary hover:bg-secondary text-tertiary cursor-pointer font-semibold px-6 sm:px-8 py-3 sm:py-4 transition-colors duration-300 uppercase tracking-wide text-sm sm:text-base"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
@@ -87,13 +87,13 @@ function LeftContent() {
 function RightContent() {
   return (
     <motion.div
-      className="bg-[#FFB400] flex-1 lg:flex-4 p-5 flex flex-col gap-6 lg:gap-8 justify-center lg:py-30"
+      className="bg-secondary flex-1 lg:flex-4 p-5 flex flex-col gap-6 lg:gap-8 justify-center lg:py-30"
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1, delay: 0.8 }}
     >
       <motion.h2
-        className="text-2xl md:text-3xl lg:text-5xl font-bold text-[#404040] leading-tight"
+        className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary leading-tight"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
@@ -112,10 +112,10 @@ function RightContent() {
         >
           <BuildingIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
-            <h3 className="text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
+            <h3 className="text-lg lg:text-xl font-semibold text-primary mb-1">
               Construction de Bâtiments
             </h3>
-            <p className="text-white text-base lg:text-lg">
+            <p className="text-tertiary text-base lg:text-lg">
               Gros œuvre et second œuvre pour habitations et commerces
             </p>
           </div>
@@ -131,10 +131,10 @@ function RightContent() {
         >
           <BricksIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
-            <h3 className="text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
+            <h3 className="text-lg lg:text-xl font-semibold text-primary mb-1">
               Infrastructures
             </h3>
-            <p className="text-white text-base lg:text-lg">
+            <p className="text-tertiary text-base lg:text-lg">
               Construction de routes, terrassement et revêtement
             </p>
           </div>
@@ -150,10 +150,10 @@ function RightContent() {
         >
           <ConstructionIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
-            <h3 className="text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
+            <h3 className="text-lg lg:text-xl font-semibold text-primary mb-1">
               Études & Gestion
             </h3>
-            <p className="text-white text-base lg:text-lg">
+            <p className="text-tertiary text-base lg:text-lg">
               Études et gestion de projets de A à Z
             </p>
           </div>

@@ -134,7 +134,7 @@ interface Project {
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <motion.div
-      className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+      className="bg-white rounded-lg border border-secondary overflow-hidden  transition-all duration-300"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

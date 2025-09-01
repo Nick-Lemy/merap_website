@@ -12,7 +12,7 @@ export default function HomeSection4() {
               <h1 className="text-2xl sm:text-3xl lg:text-[42px] font-bold leading-tight">
                 MERAP - Innovation et Excellence depuis 2025
               </h1>
-              <div className="w-16 sm:w-20 lg:w-25 h-2 lg:h-2.5 bg-[#FFB400]" />
+              <div className="w-16 sm:w-20 lg:w-25 h-2 lg:h-2.5 bg-secondary" />
             </div>
 
             <div className="text-base sm:text-lg text-gray-300 max-w-md">
@@ -24,7 +24,7 @@ export default function HomeSection4() {
               </p>
             </div>
 
-            <button className="text-sm border-2 lg:border-3 w-fit justify-center cursor-pointer hover:bg-[#FFB400] hover:text-white transition-all transform duration-200 flex items-center gap-2 lg:gap-4 font-bold px-4 lg:px-5 py-2 border-[#FFB400] text-[#FFB400] mt-6 lg:mt-8">
+            <button className="text-sm border-2 lg:border-3 w-fit justify-center cursor-pointer bg-secondary hover:bg-primary text-tertiary transition-all transform duration-200 flex items-center gap-2 lg:gap-4 font-bold px-4 lg:px-5 py-2 border-secondary mt-6 lg:mt-8">
               <span>À PROPOS</span>
             </button>
           </div>
@@ -56,7 +56,7 @@ export default function HomeSection4() {
             </div>
           </div>
           <div className="flex w-full flex-col lg:flex-row flex-1 h-full lg:flex-2">
-            <div className="bg-[#FFB400] flex flex-col items-center justify-center gap-1 sm:gap-2 text-black flex-1 h-full py-8 lg:py-0">
+            <div className="bg-secondary flex flex-col items-center justify-center gap-1 sm:gap-2 text-tertiary flex-1 h-full py-8 lg:py-0">
               <h2 className="text-lg sm:text-2xl lg:text-3xl font-bold text-center px-2">
                 Appelez pour un Devis
               </h2>
@@ -64,8 +64,8 @@ export default function HomeSection4() {
                 +237 667055365
               </p>
             </div>
-            <div className=" bg-white flex flex-col items-center justify-center gap-1 sm:gap-2 text-black flex-1 h-full py-8 lg:py-0">
-              <button className="text-xs sm:text-sm border-2 border-black px-3 sm:px-4 lg:px-6 py-2 lg:py-3 font-bold hover:bg-black hover:text-white transition-all duration-200 text-center">
+            <div className="bg-tertiary flex flex-col items-center justify-center gap-1 sm:gap-2 text-primary flex-1 h-full py-8 lg:py-0">
+              <button className="text-xs sm:text-sm border-2 border-primary px-3 sm:px-4 lg:px-6 py-2 lg:py-3 font-bold hover:bg-primary hover:text-tertiary transition-all duration-200 text-center">
                 DEMANDER UN DEVIS EN LIGNE
               </button>
             </div>

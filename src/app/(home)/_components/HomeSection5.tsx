@@ -10,10 +10,10 @@ const LeftSection = () => {
     <div className="flex flex-col w-full flex-1 lg:flex-6">
       <div className="px-4 sm:px-6 lg:px-10 py-12 lg:py-30 space-y-6 sm:space-y-8 lg:space-y-15">
         <div className="space-y-4 sm:space-y-6 lg:space-y-8">
-          <h1 className="text-2xl sm:text-3xl lg:text-[42px] font-bold text-gray-900 leading-tight">
+          <h1 className="text-2xl sm:text-3xl lg:text-[42px] font-bold text-primary leading-tight">
             Construisons Ensemble Votre Projet
           </h1>
-          <div className="w-16 sm:w-20 lg:w-25 h-2 lg:h-2.5 bg-[#FFB400]" />
+          <div className="w-16 sm:w-20 lg:w-25 h-2 lg:h-2.5 bg-secondary" />
         </div>
 
         <div className="text-base sm:text-lg text-gray-600 max-w-md">
@@ -25,7 +25,7 @@ const LeftSection = () => {
         </div>
 
         <Link href="/contact">
-          <button className="border-2 lg:border-3 w-fit text-sm justify-center cursor-pointer hover:bg-[#FFB400] hover:text-white transition-all transform duration-200 flex items-center gap-2 lg:gap-4 font-bold px-4 lg:px-5 py-3 border-[#FFB400] text-[#FFB400] mt-6 lg:mt-8">
+          <button className="border-2 lg:border-3 w-fit text-sm justify-center cursor-pointer hover:bg-primary hover:text-tertiary transition-all transform duration-200 flex items-center gap-2 lg:gap-4 font-bold px-4 lg:px-5 py-3 border-primary text-primary mt-6 lg:mt-8">
             <span>NOUS CONTACTER</span>
           </button>
         </Link>
@@ -55,23 +55,22 @@ const FAQItem = ({
       transition={{ duration: 0.5 }}
     >
       <motion.button
-        className="w-full flex items-center justify-between py-4 sm:py-6 text-left hover:bg-gray-50 transition-colors duration-200"
+        className="w-full cursor-pointer flex items-center justify-between py-4 sm:py-6 text-left hover:bg-gray-50 transition-colors duration-200"
         onClick={onToggle}
-        whileHover={{ x: 5 }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
       >
-        <h3 className="text-base lg:text-lg font-semibold text-gray-900 pr-4 leading-tight">
+        <h3 className="text-base lg:text-lg font-semibold text-gray-600 pr-4 leading-tight">
           {question}
         </h3>
-        <motion.div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-[#FFB400] rounded-full flex items-center justify-center">
+        <motion.div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-secondary rounded-full flex items-center justify-center">
           <motion.div
             animate={{ rotate: isOpen ? 180 : 0 }}
             transition={{ duration: 0.3 }}
           >
             {isOpen ? (
-              <Minus className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+              <Minus className="w-3 h-3 sm:w-4 sm:h-4 text-tertiary" />
             ) : (
-              <Plus className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
+              <Plus className="w-3 h-3 sm:w-4 sm:h-4 text-tertiary" />
             )}
           </motion.div>
         </motion.div>

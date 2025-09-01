@@ -36,7 +36,7 @@ export default function HomeSection2() {
         >
           <div className="px-4 sm:px-6 lg:px-30.5 py-8 sm:py-12 lg:py-28.5 space-y-4 sm:space-y-6 flex-8">
             <motion.h1
-              className="text-2xl sm:text-3xl lg:text-[42px] font-bold leading-tight"
+              className="text-2xl text-primary sm:text-3xl lg:text-[42px] font-bold leading-tight"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -46,7 +46,7 @@ export default function HomeSection2() {
             </motion.h1>
 
             <motion.div
-              className="w-16 sm:w-20 lg:w-25 h-2 lg:h-2.5 bg-[#FFB400]"
+              className="w-16 sm:w-20 lg:w-25 h-2 lg:h-2.5 bg-secondary"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
@@ -80,7 +80,7 @@ export default function HomeSection2() {
                   environnementales et à utiliser des matériaux durables.
                 </p>
                 <motion.button
-                  className="border-2 lg:border-3 w-fit justify-center cursor-pointer hover:bg-[#404040] hover:text-white transition-all transform duration-200 flex items-center gap-2 lg:gap-4 font-bold p-3 lg:p-4 border-[#404040] text-[#404040] text-sm lg:text-base"
+                  className="border-2 lg:border-3 w-fit justify-center cursor-pointer hover:bg-secondary hover:text-tertiary transition-all transform duration-200 flex items-center gap-2 lg:gap-4 font-bold p-3 lg:p-4  bg-primary text-white text-sm lg:text-base"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -99,7 +99,7 @@ export default function HomeSection2() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <motion.div
-              className="bg-[#FFB400] flex flex-col items-center justify-center gap-1 lg:gap-2 text-black flex-1 h-full py-12 lg:py-0"
+              className="bg-secondary flex flex-col items-center justify-center gap-1 lg:gap-2 text-tertiary flex-1 h-full py-12 lg:py-0"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -113,7 +113,7 @@ export default function HomeSection2() {
               </p>
             </motion.div>
             <motion.div
-              className="bg-[#404040] flex flex-col items-center justify-center gap-1 lg:gap-2 text-white flex-1 h-full py-12 lg:py-0"
+              className="bg-primary flex flex-col items-center justify-center gap-1 lg:gap-2 text-tertiary flex-1 h-full py-12 lg:py-0"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

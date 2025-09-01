@@ -20,12 +20,12 @@ export default function Footer() {
 
 function ContactForm() {
   return (
-    <div className="bg-[#FFB400] lg:w-1/2 w-full px-6 lg:px-0 py-12 lg:py-16">
+    <div className="bg-secondary lg:w-1/2 w-full px-6 lg:px-0 py-12 lg:py-16">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl lg:text-3xl font-bold text-black mb-2">
+        <h2 className="text-2xl lg:text-3xl font-bold text-tertiary mb-2">
           Contactez-Nous
         </h2>
-        <div className="w-16 h-1.5 bg-black mb-8"></div>
+        <div className="w-16 h-1.5 bg-tertiary mb-8"></div>
 
         <form className="flex flex-col w-full space-y-4">
           <div className="grid grid-cols-2 w-full flex-col lg:flex-row gap-4">
@@ -49,7 +49,7 @@ function ContactForm() {
 
           <button
             type="submit"
-            className="w-fit text-sm cursor-pointer self-end bg-transparent border-3 border-white text-white font-bold px-8 py-2.5 hover:bg-white hover:text-[#FFB400] transition-all duration-200"
+            className="w-fit text-sm cursor-pointer self-end bg-transparent border-3 border-tertiary text-tertiary font-bold px-8 py-2.5 hover:bg-tertiary hover:text-primary transition-all duration-200"
           >
             ENVOYER MESSAGE
           </button>
@@ -64,18 +64,20 @@ function ContactInfo() {
     <div className="lg:w-1/2 w-full ">
       <div className="flex flex-col h-full">
         {/* Social Media Icons */}
-        <div className="flex w-full justify-center gap-25 items-center py-8 bg-[#404040]">
-          <Facebook className="w-6 h-6 fill-white hover:fill-[#FFB400] text-white hover:text-[#FFB400]  cursor-pointer transition-colors duration-200" />
-          <Instagram className="w-6 h-6  hover:fill-[#FFB400] text-white hover:text-[#FFB400]  cursor-pointer transition-colors duration-200" />
-          <Linkedin className="w-6 h-6 fill-white hover:fill-[#FFB400] text-white hover:text-[#FFB400]  cursor-pointer transition-colors duration-200" />
+        <div className="flex w-full justify-center gap-25 items-center py-8 bg-primary">
+          <Facebook className="w-6 h-6 fill-tertiary hover:fill-secondary text-tertiary hover:text-secondary cursor-pointer transition-colors duration-200" />
+          <Instagram className="w-6 h-6 fill-tertiary hover:fill-secondary text-tertiary hover:text-secondary cursor-pointer transition-colors duration-200" />
+          <Linkedin className="w-6 h-6 fill-tertiary hover:fill-secondary text-tertiary hover:text-secondary cursor-pointer transition-colors duration-200" />
         </div>
 
         {/* Contact Information */}
-        <div className="flex-1 flex flex-col items-center text-[#404040] px-6 lg:px-0 py-20">
+        <div className="flex-1 flex flex-col items-center text-primary px-6 lg:px-0 py-20 bg-tertiary">
           <div className="space-y-8">
             <div className="flex items-start gap-4">
               <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
-              <p className="text-sm lg:text-base">Douala, Cameroun</p>
+              <p className="font-semibold text-sm lg:text-base">
+                Douala, Cameroun
+              </p>
             </div>
 
             <div className="flex items-center gap-4">

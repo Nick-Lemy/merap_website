@@ -10,7 +10,7 @@ export default function HomeLayout({
   return (
     <>
       <NavBar />
-      {children}
+      <div className="pt-10">{children}</div>
       <footer className="bg-secondary-700">
         <Footer />
       </footer>

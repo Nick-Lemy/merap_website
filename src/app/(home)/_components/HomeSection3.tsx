@@ -24,7 +24,7 @@ export default function HomeSection3() {
           transition={{ duration: 0.6 }}
         >
           <motion.h1
-            className="text-2xl sm:text-4xl lg:text-[42px] font-bold text-gray-900 text-center"
+            className="text-2xl sm:text-4xl lg:text-[42px] font-bold text-primary text-center"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -33,7 +33,7 @@ export default function HomeSection3() {
             Nos Projets Récents
           </motion.h1>
           <motion.div
-            className="w-16 sm:w-20 lg:w-25 h-2 lg:h-2.5 bg-[#FFB400] mt-4"
+            className="w-16 sm:w-20 lg:w-25 h-2 lg:h-2.5 bg-secondary mt-4"
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true }}
@@ -51,9 +51,9 @@ export default function HomeSection3() {
             <ProjectCard key={index} />
           ))}
         </motion.div>
-        <Link href="/projects" v>
+        <Link href="/projects">
           <motion.button
-            className="w-fit mt-10 justify-center text-sm border-3 cursor-pointer  transition-all transform duration-200 flex items-center gap-4 font-bold px-14 py-3 border-black text-black "
+            className="w-fit mt-10 justify-center text-sm border-3 cursor-pointer  transition-all transform duration-200 flex items-center gap-4 font-bold px-14 py-3 border-primary text-primary"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -91,14 +91,16 @@ function ProjectCard() {
         />
       </motion.div>
       <motion.div
-        className="border-3 flex gap-10 flex-col lg:py-10 lg:px-7 px-5 py-8 border-[#666666]"
+        className="border-3 flex gap-10 flex-col lg:py-10 lg:px-7 px-5 py-8 border-gray-500"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <div className="space-y-5">
-          <h3 className="text-black text-xl font-[520]">Projet Résidentiel</h3>
+          <h3 className="text-primary text-xl font-[520]">
+            Projet Résidentiel
+          </h3>
 
           <p className="text-lg">
             Construction complète d&apos;une villa moderne avec piscine. Travaux
@@ -107,8 +109,7 @@ function ProjectCard() {
           </p>
         </div>
         <motion.button
-          className="w-fit justify-center text-xs border-3 cursor-pointer  transition-all transform duration-200 flex items-center gap-4 font-bold px-4 py-2 border-[#666666] text-[#666666]"
-          whileHover={{ borderColor: "#FFB400", color: "#FFB400" }}
+          className="w-fit justify-center text-xs border-3 cursor-pointer hover:bg-secondary hover:text-tertiary transition-all transform duration-200 flex items-center gap-4 font-bold px-4 py-2 border-primary text-primary"
           transition={{ duration: 0.3 }}
         >
           VOIR LE PROJET

@@ -192,7 +192,7 @@ function MissionCard({ mission, index }: { mission: Mission; index: number }) {
 
   return (
     <motion.div
-      className="bg-white p-8 rounded-lg shadow-lg"
+      className="bg-white p-8 rounded-lg border border-gray-200 hover:border-gray-300 transition-all duration-300"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}

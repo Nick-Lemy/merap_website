@@ -141,12 +141,11 @@ function ProjectCard({
 }) {
   return (
     <motion.div
-      className="bg-white rounded-lg border border-secondary overflow-hidden  transition-all duration-300"
+      className="bg-white rounded-sm border border-secondary overflow-hidden  transition-all duration-300"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      whileHover={{ y: -10 }}
     >
       <motion.div
         className="relative overflow-hidden"
@@ -181,7 +180,7 @@ function ProjectCard({
 
         <motion.button
           onClick={() => onProjectClick(project)}
-          className="text-[var(--color-secondary)] font-semibold hover:text-[var(--color-primary)] transition-colors duration-300"
+          className="text-[var(--color-secondary)] cursor-pointer font-semibold hover:text-[var(--color-primary)] transition-colors duration-300"
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}
         >

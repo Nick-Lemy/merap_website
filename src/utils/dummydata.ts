@@ -1,3 +1,29 @@
+import Project1Cover from "@/assets/projects/project1-cover.png";
+import Project1Other1 from "@/assets/projects/project1-other1.png";
+import Project1Other2 from "@/assets/projects/project1-other2.png";
+import Project1Other3 from "@/assets/projects/project1-other3.png";
+
+import Project2Cover from "@/assets/projects/project2-cover.png";
+import Project2Other1 from "@/assets/projects/project2-other1.png";
+import Project2Other2 from "@/assets/projects/project2-other2.png";
+
+import Project3Cover from "@/assets/projects/project3-cover.png";
+import Project3Other1 from "@/assets/projects/project3-other1.png";
+import Project3Other2 from "@/assets/projects/project3-other2.png";
+import Project3Other3 from "@/assets/projects/project3-other3.png";
+
+import Project4Cover from "@/assets/projects/project4-cover.png";
+import Project4Other1 from "@/assets/projects/project4-other1.png";
+import Project4Other2 from "@/assets/projects/project4-other2.png";
+import Project4Other3 from "@/assets/projects/project4-other3.png";
+
+import Project5Cover from "@/assets/projects/project5-cover.png";
+import Project5Other1 from "@/assets/projects/project5-other1.png";
+import Project5Other2 from "@/assets/projects/project5-other2.png";
+
+import Project6Cover from "@/assets/projects/project6-cover.png";
+import Project6Other1 from "@/assets/projects/project6-other1.png";
+
 export const projects = [
   {
     id: 1,
@@ -7,13 +33,8 @@ export const projects = [
     catégorie: "Second Œuvre",
     description:
       "Installations électriques et enduit au mortier de ciment pour un bâtiment de 4 étages.",
-    imageDeCouverture:
-      "https://example.com/images/second-oeuvre-couverture.jpg",
-    autresImages: [
-      "https://example.com/images/second-oeuvre-1.jpg",
-      "https://example.com/images/second-oeuvre-2.jpg",
-      "https://example.com/images/second-oeuvre-3.jpg",
-    ],
+    imageDeCouverture: Project1Cover,
+    autresImages: [Project1Other1, Project1Other2, Project1Other3],
   },
   {
     id: 2,
@@ -22,11 +43,8 @@ export const projects = [
     catégorie: "Plomberie",
     description:
       "Installation d'un système d'alimentation avec nourrice pour une douche.",
-    imageDeCouverture: "https://example.com/images/plomberie-couverture.jpg",
-    autresImages: [
-      "https://example.com/images/plomberie-1.jpg",
-      "https://example.com/images/plomberie-2.jpg",
-    ],
+    imageDeCouverture: Project2Cover,
+    autresImages: [Project2Other1, Project2Other2],
   },
   {
     id: 3,
@@ -35,13 +53,8 @@ export const projects = [
     catégorie: "Rénovation",
     description:
       "Travaux de rénovation pour un bâtiment résidentiel de 3 étages.",
-    imageDeCouverture: "https://example.com/images/renovation-couverture.jpg",
-    autresImages: [
-      "https://example.com/images/renovation-1.jpg",
-      "https://example.com/images/renovation-2.jpg",
-      "https://example.com/images/renovation-3.jpg",
-      "https://example.com/images/renovation-4.jpg",
-    ],
+    imageDeCouverture: Project3Cover,
+    autresImages: [Project3Other1, Project3Other2, Project3Other3],
   },
   {
     id: 4,
@@ -50,11 +63,8 @@ export const projects = [
     catégorie: "Tests Géotechniques",
     description:
       "Essais de pénétration réalisés en collaboration avec Geo Fondation à l'Ambassade de France.",
-    imageDeCouverture: "https://example.com/images/geotechnique-couverture.jpg",
-    autresImages: [
-      "https://example.com/images/geotechnique-1.jpg",
-      "https://example.com/images/geotechnique-2.jpg",
-    ],
+    imageDeCouverture: Project4Cover,
+    autresImages: [Project4Other1, Project4Other2, Project4Other3],
   },
   {
     id: 5,
@@ -63,8 +73,8 @@ export const projects = [
     catégorie: "Construction",
     description:
       "Conception et realisation d'une villa triplex 08 pieces modele nuage d'elegance a Douala au lieu dit logpom",
-    imageDeCouverture: "https://i.postimg.cc/sX594d5W/image.png",
-    autresImages: ["https://i.postimg.cc/sX594d5W/image.png"],
+    imageDeCouverture: Project5Cover,
+    autresImages: [Project5Other1, Project5Other2],
   },
   {
     id: 6,
@@ -73,10 +83,7 @@ export const projects = [
     catégorie: "Infrastructure",
     description:
       "Realisation (gros oeuvre) d'une villa triplex duplex 6 pieces a Douala /japoma.",
-    imageDeCouverture: "https://example.com/images/voirie-couverture.jpg",
-    autresImages: [
-      "https://example.com/images/voirie-1.jpg",
-      "https://example.com/images/voirie-2.jpg",
-    ],
+    imageDeCouverture: Project6Cover,
+    autresImages: [Project6Other1],
   },
 ];

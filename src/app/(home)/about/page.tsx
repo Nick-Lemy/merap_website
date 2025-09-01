@@ -2,9 +2,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
+import CambuildSarl from "@/assets/partners/cambuildsarl.png";
+import PortDeDouala from "@/assets/partners/portededouala.png";
 import { Target, Users, Award, Lightbulb } from "lucide-react";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -69,7 +70,7 @@ function StorySection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl lg:text-5xl font-bold text-primary mb-6">
               Notre Histoire
             </h2>
             <div className="w-24 h-1 bg-[var(--color-secondary)] mb-8" />
@@ -102,10 +103,12 @@ function StorySection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="bg-[var(--color-secondary)] p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-[var(--color-tertiary)] mb-6">Fondateur</h3>
+            <div className="bg-[var(--color-primary)] p-8 rounded-lg">
+              <h3 className="text-2xl font-bold text-[var(--color-tertiary)] mb-6">
+                Fondateur
+              </h3>
               <div className="bg-white p-6 rounded-lg">
-                <h4 className="text-xl font-bold text-gray-900 mb-2">
+                <h4 className="text-xl font-bold text-secondary mb-2">
                   M. Armel Nlend
                 </h4>
                 <p className="text-gray-600">
@@ -160,7 +163,7 @@ function MissionSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl lg:text-5xl font-bold text-primary mb-6">
             Nos Missions
           </h2>
           <div className="w-24 h-1 bg-[var(--color-secondary)] mx-auto mb-8" />
@@ -197,15 +200,14 @@ function MissionCard({ mission, index }: { mission: Mission; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
-      whileHover={{ y: -5 }}
     >
       <div className="flex items-start gap-6">
         <motion.div
-          className="w-16 h-16 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center flex-shrink-0"
+          className="w-16 h-16 bg-[var(--color-primary)] rounded-lg flex items-center justify-center flex-shrink-0"
           whileHover={{ rotate: 5 }}
           transition={{ duration: 0.3 }}
         >
-          <Icon className="w-8 h-8 text-[var(--color-tertiary)]" />
+          <Icon className="w-8 h-8 text-white" />
         </motion.div>
 
         <div>
@@ -221,16 +223,7 @@ function MissionCard({ mission, index }: { mission: Mission; index: number }) {
 }
 
 function PartnersSection() {
-  const partners = [
-    "SCB",
-    "CABUILD",
-    "MAESTRIA",
-    "GEO FONDATION",
-    "SOREPCO",
-    "QUIFEROU",
-    "ROAD VISION",
-    "COMAR",
-  ];
+  const partners = [CambuildSarl, PortDeDouala];
 
   return (
     <section className="py-20 lg:py-32 bg-white">
@@ -242,7 +235,7 @@ function PartnersSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl lg:text-5xl font-bold text-primary mb-6">
             Nos Partenaires
           </h2>
           <div className="w-24 h-1 bg-[var(--color-secondary)] mx-auto mb-8" />
@@ -252,17 +245,14 @@ function PartnersSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="flex justify-center gap-8 lg:gap-25 items-center">
           {partners.map((partner, index) => (
-            <motion.div
-              key={index}
-              className="bg-gray-100 p-6 rounded-lg text-center hover:bg-[var(--color-secondary)] hover:text-[var(--color-tertiary)] transition-colors duration-300"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <h3 className="font-bold text-lg">{partner}</h3>
+            <motion.div key={index}>
+              <Image
+                src={partner}
+                alt={`Partenaire ${index + 1}`}
+                className="w-full h-auto"
+              />
             </motion.div>
           ))}
         </div>

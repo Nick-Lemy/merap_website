@@ -108,7 +108,6 @@ function RightContent() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          whileHover={{ x: 10 }}
         >
           <BuildingIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>

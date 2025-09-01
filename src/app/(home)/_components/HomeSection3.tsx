@@ -57,7 +57,7 @@ export default function HomeSection3() {
           />
         </motion.div>
         <motion.div
-          className="px-6 lg:px-0 grid grid-cols-1 lg:grid-cols-3 text-lg gap-10 text-[#666666] *:flex-1"
+          className="px-6 lg:px-0 grid grid-cols-1 h-full lg:grid-cols-3 text-lg gap-10 text-[#666666] *:flex-1"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -74,7 +74,7 @@ export default function HomeSection3() {
         </motion.div>
         <Link href="/projects">
           <motion.button
-            className="w-fit mt-10 justify-center text-sm border-3 cursor-pointer  transition-all transform duration-200 flex items-center gap-4 font-bold px-14 py-3 border-primary text-primary"
+            className="w-fit mt-10 justify-center text-sm border-3 cursor-pointer  transition-all transform duration-200 flex items-center gap-4 font-bold px-14 py-3 border-primary text-primary hover:text-white hover:border-secondary hover:bg-secondary"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -137,7 +137,7 @@ function ProjectCard({
         />
       </motion.div>
       <motion.div
-        className="border-3 flex gap-10 flex-col lg:py-10 lg:px-7 px-5 py-8 border-gray-500"
+        className="border-3 flex gap-10 h-full justify-between flex-col lg:py-10 lg:px-7 px-5 py-8 border-gray-500"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -161,7 +161,7 @@ function ProjectCard({
         </div>
         <motion.button
           onClick={() => onProjectClick(project)}
-          className="w-fit justify-center text-xs border-3 cursor-pointer hover:bg-secondary hover:text-tertiary transition-all transform duration-200 flex items-center gap-4 font-bold px-4 py-2 border-primary text-primary"
+          className="w-fit justify-center text-xs border-3 cursor-pointer hover:bg-primary hover:text-tertiary transition-all transform duration-200 flex items-center gap-4 font-bold px-4 py-2 border-primary text-primary"
           transition={{ duration: 0.3 }}
         >
           VOIR LE PROJET

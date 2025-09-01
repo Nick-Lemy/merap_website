@@ -4,10 +4,8 @@ import {
   Phone,
   Mail,
   Facebook,
-  Linkedin,
+  // Linkedin,
   Instagram,
-  Twitter,
-  TwitterIcon,
 } from "lucide-react";
 import XIcon from "./icons/XIcon";
 
@@ -67,39 +65,54 @@ function ContactInfo() {
       <div className="flex flex-col h-full">
         {/* Social Media Icons */}
         <div className="flex w-full justify-center gap-25 items-center py-8 bg-primary">
-          <div className="bg-white p-1.5 flex items-center justify-center rounded-full">
+          <a
+            href="https://www.facebook.com/share/14MSyy3abJ6/?mibextid=wwXIfr"
+            target="_blank"
+            className="bg-white p-1.5 flex items-center justify-center rounded-full"
+          >
             <Facebook className="w-6 h-6 fill-primary text-primary hover:fill-secondary  hover:text-secondary cursor-pointer transition-colors duration-200" />
-          </div>
-          <div className="bg-white p-1.5 flex items-center justify-center rounded-full">
+          </a>
+          <a
+            href="https://www.instagram.com/merapsarl"
+            target="_blank"
+            className="bg-white p-1.5 flex items-center justify-center rounded-full"
+          >
             <Instagram className="w-6 font-bold h-6 fill-transparent text-primary hover:text-secondary cursor-pointer transition-colors duration-200" />
-          </div>
-          <div className="bg-white p-2 flex items-center justify-center rounded-full">
+          </a>
+          <a
+            href="https://x.com/merap_sarl"
+            target="_blank"
+            className="bg-white p-2 flex items-center justify-center rounded-full"
+          >
             <XIcon className="w-5 h-5 fill-primary hover:fill-secondary text-primary hover:text-secondary cursor-pointer transition-colors duration-200" />
-          </div>
-          <div className="bg-white p-2 flex items-center justify-center rounded-full">
+          </a>
+          {/* <a
+            href=""
+            className="bg-white p-2 flex items-center justify-center rounded-full"
+          >
             <Linkedin className="w-5 h-5 border rounded-sm p-0.5 border-primary fill-primary hover:fill-secondary hover:border-secondary text-primary hover:text-secondary cursor-pointer transition-colors duration-200" />
-          </div>
+          </a> */}
         </div>
 
         {/* Contact Information */}
         <div className="flex-1 flex flex-col items-center text-primary px-6 lg:px-0 py-20 bg-tertiary">
           <div className="space-y-8">
-            <div className="flex items-start gap-4">
-              <MapPin className="w-5 h-5 mt-1 flex-shrink-0" />
+            <div className="flex items-center gap-2">
+              <MapPin className="w-5 h-5 stroke-2 mt-1 flex-shrink-0" />
               <p className="font-semibold text-sm lg:text-base">
                 Douala, Cameroun
               </p>
             </div>
 
-            <div className="flex items-center gap-4">
-              <Phone className="w-5 h-5 flex-shrink-0" />
+            <div className="flex items-center gap-2">
+              <Phone className="w-5 h-5 stroke-2 flex-shrink-0" />
               <p className="font-semibold text-sm lg:text-base">
                 +237 667055365 / 688687717
               </p>
             </div>
 
-            <div className="flex items-center gap-4">
-              <Mail className="w-5 h-5 flex-shrink-0" />
+            <div className="flex items-center gap-2">
+              <Mail className="w-5 h-5 stroke-2 flex-shrink-0" />
               <p className="font-semibold text-sm lg:text-base">
                 meraps25@gmail.com
               </p>

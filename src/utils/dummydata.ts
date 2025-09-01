@@ -28,8 +28,7 @@ import Project6Other1 from "@/assets/projects/project6-other1.png";
 export const projects: Project[] = [
   {
     id: 1,
-    titre:
-      "Travaux de second œuvre (électricité et enduit au mortier de ciment) - Bâtiment R+4",
+    titre: "Travaux second œuvre - Bâtiment R+4",
     lieu: "Bonamoussadi/Denver, Douala",
     catégorie: "Second Œuvre",
     description:
@@ -39,7 +38,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    titre: "Installation d'un système d'alimentation avec nourrice pour douche",
+    titre: "Système d'alimentation avec nourrice pour douche",
     lieu: "Sawa, Douala",
     catégorie: "Plomberie",
     description:
@@ -49,7 +48,7 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    titre: "Rénovation d'un bâtiment R+3 à usage d'habitation",
+    titre: "Rénovation Bâtiment R+3",
     lieu: "Logbessou, Douala",
     catégorie: "Rénovation",
     description:
@@ -59,7 +58,7 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    titre: "Essais de pénétromètre en collaboration avec Geo Fondation",
+    titre: "Pénétromètre en collaboration avec Geo Fondation",
     lieu: "Ambassade de France, Yaoundé",
     catégorie: "Tests Géotechniques",
     description:
@@ -69,7 +68,7 @@ export const projects: Project[] = [
   },
   {
     id: 5,
-    titre: "Construction d'un villa moderne",
+    titre: "Construction d'une villa moderne",
     lieu: "Akwa, Douala",
     catégorie: "Construction",
     description:
@@ -79,11 +78,11 @@ export const projects: Project[] = [
   },
   {
     id: 6,
-    titre: "Realisation (gros oeuvre) d'une villa triplex duplex 6 pieces a ",
+    titre: "Réalisation (gros œuvre) d'une villa triplex duplex",
     lieu: "Douala, japoma",
     catégorie: "Infrastructure",
     description:
-      "Realisation (gros oeuvre) d'une villa triplex duplex 6 pieces a Douala /japoma.",
+      "Réalisation (gros œuvre) d'une villa triplex duplex 6 pièces à Douala /japoma.",
     imageDeCouverture: Project6Cover,
     autresImages: [Project6Other1],
   },

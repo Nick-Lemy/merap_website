@@ -28,14 +28,14 @@ export default function ServicesPage() {
 function HeroSection() {
   return (
     <motion.section
-      className="bg-[#404040] py-20 lg:py-32"
+      className="bg-[var(--color-primary)] py-20 lg:py-32"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
       <div className="container mx-auto px-6 lg:px-20 text-center">
         <motion.h1
-          className="text-4xl lg:text-6xl font-bold text-white mb-6"
+          className="text-4xl lg:text-6xl font-bold text-[var(--color-tertiary)] mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -43,7 +43,7 @@ function HeroSection() {
           Nos Services
         </motion.h1>
         <motion.div
-          className="w-24 h-1 bg-[#FFB400] mx-auto mb-8"
+          className="w-24 h-1 bg-[var(--color-secondary)] mx-auto mb-8"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -118,10 +118,10 @@ function ServicesGrid() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl lg:text-5xl font-bold text-[var(--color-primary)] mb-6">
             Notre Expertise
           </h2>
-          <div className="w-24 h-1 bg-[#FFB400] mx-auto mb-8" />
+          <div className="w-24 h-1 bg-[var(--color-secondary)] mx-auto mb-8" />
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Découvrez nos domaines d&apos;expertise et laissez-nous transformer
             vos projets en réalité.
@@ -157,11 +157,11 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
       whileHover={{ y: -10 }}
     >
       <motion.div
-        className="w-16 h-16 bg-[#FFB400] rounded-lg flex items-center justify-center mb-6"
+        className="w-16 h-16 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center mb-6"
         whileHover={{ rotate: 5 }}
         transition={{ duration: 0.3 }}
       >
-        <Icon className="w-8 h-8 text-white" />
+        <Icon className="w-8 h-8 text-[var(--color-tertiary)]" />
       </motion.div>
 
       <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
@@ -169,7 +169,7 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
       <p className="text-gray-600 leading-relaxed">{service.description}</p>
 
       <motion.button
-        className="mt-6 text-[#FFB400] font-semibold hover:text-[#404040] transition-colors duration-300"
+        className="mt-6 text-[var(--color-secondary)] font-semibold hover:text-[var(--color-primary)] transition-colors duration-300"
         whileHover={{ x: 5 }}
         transition={{ duration: 0.2 }}
       >

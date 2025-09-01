@@ -21,14 +21,14 @@ export default function ProjectsPage() {
 function HeroSection() {
   return (
     <motion.section
-      className="bg-[#404040] py-20 lg:py-32"
+      className="bg-[var(--color-primary)] py-20 lg:py-32"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
       <div className="container mx-auto px-6 lg:px-20 text-center">
         <motion.h1
-          className="text-4xl lg:text-6xl font-bold text-white mb-6"
+          className="text-4xl lg:text-6xl font-bold text-[var(--color-tertiary)] mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -36,7 +36,7 @@ function HeroSection() {
           Nos Projets
         </motion.h1>
         <motion.div
-          className="w-24 h-1 bg-[#FFB400] mx-auto mb-8"
+          className="w-24 h-1 bg-[var(--color-secondary)] mx-auto mb-8"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -105,10 +105,10 @@ function ProjectsGrid() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl lg:text-5xl font-bold text-[var(--color-primary)] mb-6">
             Nos Réalisations
           </h2>
-          <div className="w-24 h-1 bg-[#FFB400] mx-auto mb-8" />
+          <div className="w-24 h-1 bg-[var(--color-secondary)] mx-auto mb-8" />
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Chaque projet est unique et reflète notre engagement à fournir des
             solutions de construction de haute qualité.
@@ -153,7 +153,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           height={300}
         />
         <div className="absolute top-4 left-4">
-          <span className="bg-[#FFB400] text-white px-3 py-1 rounded-full text-sm font-semibold">
+          <span className="bg-[var(--color-secondary)] text-[var(--color-tertiary)] px-3 py-1 rounded-full text-sm font-semibold">
             {project.category}
           </span>
         </div>
@@ -169,7 +169,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         </p>
 
         <motion.button
-          className="text-[#FFB400] font-semibold hover:text-[#404040] transition-colors duration-300"
+          className="text-[var(--color-secondary)] font-semibold hover:text-[var(--color-primary)] transition-colors duration-300"
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}
         >

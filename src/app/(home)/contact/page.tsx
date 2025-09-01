@@ -30,14 +30,14 @@ export default function ContactPage() {
 function HeroSection() {
   return (
     <motion.section
-      className="bg-[#404040] py-20 lg:py-32"
+      className="bg-[var(--color-primary)] py-20 lg:py-32"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
       <div className="container mx-auto px-6 lg:px-20 text-center">
         <motion.h1
-          className="text-4xl lg:text-6xl font-bold text-white mb-6"
+          className="text-4xl lg:text-6xl font-bold text-[var(--color-tertiary)] mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -45,7 +45,7 @@ function HeroSection() {
           Contactez-Nous
         </motion.h1>
         <motion.div
-          className="w-24 h-1 bg-[#FFB400] mx-auto mb-8"
+          className="w-24 h-1 bg-[var(--color-secondary)] mx-auto mb-8"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -76,10 +76,10 @@ function ContactSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[var(--color-primary)] mb-6">
               Envoyez-nous un message
             </h2>
-            <div className="w-24 h-1 bg-[#FFB400] mb-8" />
+            <div className="w-24 h-1 bg-[var(--color-secondary)] mb-8" />
 
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -89,7 +89,7 @@ function ContactSection() {
                   </label>
                   <input
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-transparent outline-none transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--color-secondary)] focus:border-transparent outline-none transition-all"
                     placeholder="Votre nom"
                   />
                 </div>
@@ -99,7 +99,7 @@ function ContactSection() {
                   </label>
                   <input
                     type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-transparent outline-none transition-all"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--color-secondary)] focus:border-transparent outline-none transition-all"
                     placeholder="votre@email.com"
                   />
                 </div>
@@ -111,7 +111,7 @@ function ContactSection() {
                 </label>
                 <input
                   type="tel"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--color-secondary)] focus:border-transparent outline-none transition-all"
                   placeholder="+237 xxx xxx xxx"
                 />
               </div>
@@ -122,7 +122,7 @@ function ContactSection() {
                 </label>
                 <input
                   type="text"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-transparent outline-none transition-all"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--color-secondary)] focus:border-transparent outline-none transition-all"
                   placeholder="Sujet de votre message"
                 />
               </div>
@@ -133,14 +133,14 @@ function ContactSection() {
                 </label>
                 <textarea
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FFB400] focus:border-transparent outline-none transition-all resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--color-secondary)] focus:border-transparent outline-none transition-all resize-none"
                   placeholder="Décrivez votre projet ou votre demande..."
                 ></textarea>
               </div>
 
               <motion.button
                 type="submit"
-                className="w-full bg-[#FFB400] hover:bg-yellow-600 text-white font-bold py-4 px-8 rounded-lg transition-colors duration-300"
+                className="w-full bg-[var(--color-secondary)] hover:bg-[var(--color-primary)] text-[var(--color-tertiary)] font-bold py-4 px-8 rounded-lg transition-colors duration-300"
                 whileTap={{ scale: 0.98 }}
               >
                 Envoyer le message
@@ -158,12 +158,12 @@ function ContactSection() {
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
               Informations de contact
             </h2>
-            <div className="w-24 h-1 bg-[#FFB400] mb-8" />
+            <div className="w-24 h-1 bg-[var(--color-secondary)] mb-8" />
 
             <div className="space-y-8">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#FFB400] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-[var(--color-tertiary)]" />
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">Adresse</h3>
@@ -172,8 +172,8 @@ function ContactSection() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#FFB400] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-6 h-6 text-[var(--color-tertiary)]" />
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">Téléphone</h3>
@@ -185,8 +185,8 @@ function ContactSection() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#FFB400] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-[var(--color-tertiary)]" />
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">Email</h3>
@@ -195,8 +195,8 @@ function ContactSection() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#FFB400] rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Clock className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-6 h-6 text-[var(--color-tertiary)]" />
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">Horaires</h3>
@@ -214,28 +214,28 @@ function ContactSection() {
               <div className="flex gap-4">
                 <motion.a
                   href="#"
-                  className="w-12 h-12 bg-[#FFB400] rounded-lg flex items-center justify-center text-white hover:bg-yellow-600 transition-colors"
+                  className="w-12 h-12 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center text-[var(--color-tertiary)] hover:bg-[var(--color-primary)] transition-colors"
                   whileTap={{ scale: 0.95 }}
                 >
                   <Facebook className="w-6 h-6" />
                 </motion.a>
                 <motion.a
                   href="#"
-                  className="w-12 h-12 bg-[#FFB400] rounded-lg flex items-center justify-center text-white hover:bg-yellow-600 transition-colors"
+                  className="w-12 h-12 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center text-[var(--color-tertiary)] hover:bg-[var(--color-primary)] transition-colors"
                   whileTap={{ scale: 0.95 }}
                 >
                   <Instagram className="w-6 h-6" />
                 </motion.a>
                 <motion.a
                   href="#"
-                  className="w-12 h-12 bg-[#FFB400] rounded-lg flex items-center justify-center text-white hover:bg-yellow-600 transition-colors"
+                  className="w-12 h-12 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center text-[var(--color-tertiary)] hover:bg-[var(--color-primary)] transition-colors"
                   whileTap={{ scale: 0.95 }}
                 >
                   <Twitter className="w-6 h-6" />
                 </motion.a>
                 <motion.a
                   href="#"
-                  className="w-12 h-12 bg-[#FFB400] rounded-lg flex items-center justify-center text-white hover:bg-yellow-600 transition-colors"
+                  className="w-12 h-12 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center text-[var(--color-tertiary)] hover:bg-[var(--color-primary)] transition-colors"
                   whileTap={{ scale: 0.95 }}
                 >
                   <Linkedin className="w-6 h-6" />
@@ -263,7 +263,7 @@ function MapSection() {
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
             Notre Localisation
           </h2>
-          <div className="w-24 h-1 bg-[#FFB400] mx-auto mb-8" />
+          <div className="w-24 h-1 bg-[var(--color-secondary)] mx-auto mb-8" />
           <p className="text-xl text-gray-600">
             Nous sommes situés au cœur de Douala pour mieux vous servir.
           </p>

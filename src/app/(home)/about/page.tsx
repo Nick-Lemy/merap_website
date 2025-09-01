@@ -22,14 +22,14 @@ export default function AboutPage() {
 function HeroSection() {
   return (
     <motion.section
-      className="bg-[#404040] py-20 lg:py-32"
+      className="bg-[var(--color-primary)] py-20 lg:py-32"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
       <div className="container mx-auto px-6 lg:px-20 text-center">
         <motion.h1
-          className="text-4xl lg:text-6xl font-bold text-white mb-6"
+          className="text-4xl lg:text-6xl font-bold text-[var(--color-tertiary)] mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -37,7 +37,7 @@ function HeroSection() {
           À Propos de MERAP
         </motion.h1>
         <motion.div
-          className="w-24 h-1 bg-[#FFB400] mx-auto mb-8"
+          className="w-24 h-1 bg-[var(--color-secondary)] mx-auto mb-8"
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -72,7 +72,7 @@ function StorySection() {
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
               Notre Histoire
             </h2>
-            <div className="w-24 h-1 bg-[#FFB400] mb-8" />
+            <div className="w-24 h-1 bg-[var(--color-secondary)] mb-8" />
             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
               <p>
                 MERAP a été créée le 20 janvier 2025 à Douala par M. Armel
@@ -102,8 +102,8 @@ function StorySection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="bg-[#FFB400] p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-white mb-6">Fondateur</h3>
+            <div className="bg-[var(--color-secondary)] p-8 rounded-lg">
+              <h3 className="text-2xl font-bold text-[var(--color-tertiary)] mb-6">Fondateur</h3>
               <div className="bg-white p-6 rounded-lg">
                 <h4 className="text-xl font-bold text-gray-900 mb-2">
                   M. Armel Nlend
@@ -163,7 +163,7 @@ function MissionSection() {
           <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
             Nos Missions
           </h2>
-          <div className="w-24 h-1 bg-[#FFB400] mx-auto mb-8" />
+          <div className="w-24 h-1 bg-[var(--color-secondary)] mx-auto mb-8" />
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             MERAP a pour missions principales de concevoir, réaliser et rénover
             des infrastructures avec un suivi rigoureux de la planification à la
@@ -201,11 +201,11 @@ function MissionCard({ mission, index }: { mission: Mission; index: number }) {
     >
       <div className="flex items-start gap-6">
         <motion.div
-          className="w-16 h-16 bg-[#FFB400] rounded-lg flex items-center justify-center flex-shrink-0"
+          className="w-16 h-16 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center flex-shrink-0"
           whileHover={{ rotate: 5 }}
           transition={{ duration: 0.3 }}
         >
-          <Icon className="w-8 h-8 text-white" />
+          <Icon className="w-8 h-8 text-[var(--color-tertiary)]" />
         </motion.div>
 
         <div>
@@ -245,7 +245,7 @@ function PartnersSection() {
           <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
             Nos Partenaires
           </h2>
-          <div className="w-24 h-1 bg-[#FFB400] mx-auto mb-8" />
+          <div className="w-24 h-1 bg-[var(--color-secondary)] mx-auto mb-8" />
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             MERAP collabore avec des partenaires de confiance pour garantir
             l&apos;excellence dans tous nos projets.
@@ -256,7 +256,7 @@ function PartnersSection() {
           {partners.map((partner, index) => (
             <motion.div
               key={index}
-              className="bg-gray-100 p-6 rounded-lg text-center hover:bg-[#FFB400] hover:text-white transition-colors duration-300"
+              className="bg-gray-100 p-6 rounded-lg text-center hover:bg-[var(--color-secondary)] hover:text-[var(--color-tertiary)] transition-colors duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

@@ -113,15 +113,12 @@ export default function ProjectModal({
             transition={{ duration: 0.3 }}
           >
             <div className="relative aspect-video">
-              {allImages.map((image, index) => (
-                <Image
-                  key={index}
-                  src={image}
-                  alt={`${project.titre} - Image ${index + 1}`}
-                  fill
-                  className="object-cover rounded-lg"
-                />
-              ))}
+              <Image
+                src={allImages[currentImageIndex]}
+                alt={`${project.titre} - Image ${currentImageIndex + 1}`}
+                fill
+                className="object-contain rounded-lg"
+              />
 
               {/* Navigation Arrows - Only show if there are multiple images */}
               {allImages.length > 1 && (

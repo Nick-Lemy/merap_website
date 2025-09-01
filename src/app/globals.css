@@ -2,9 +2,57 @@
 
 @theme {
   --font-sans: "Poppins", sans-serif;
+  --color-primary: #9f2b02;
+  --color-secondary: #ff8b00;
+  --color-tertiary: white;
 }
 
 input,
 textarea {
   background-color: white;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Modal specific styles */
+.modal-overlay {
+  backdrop-filter: blur(8px);
+}
+
+/* Prevent scrolling when modal is open */
+.modal-open {
+  overflow: hidden;
+}
+
+/* Smooth scrollbar for modal content */
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 3px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
 }

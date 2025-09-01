@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className="bg-white font-sans">{children}</body>
+      <body className="bg-white font-sans relative">{children}</body>
     </html>
   );
 }

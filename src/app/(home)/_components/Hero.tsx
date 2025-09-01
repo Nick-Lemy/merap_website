@@ -43,7 +43,7 @@ function LeftContent() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.div
-            className="w-2 sm:w-3 h-10 sm:h-18 lg:h-25 bg-[#FFB400]"
+            className="w-2 sm:w-3 h-10 sm:h-18 lg:h-25 bg-secondary"
             initial={{ scaleY: 0 }}
             animate={{ scaleY: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -54,7 +54,7 @@ function LeftContent() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            Construction
+            MERAP
           </motion.h1>
         </motion.div>
 
@@ -64,20 +64,20 @@ function LeftContent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.7 }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis
-          egestas pellentesque libero dolor in diam consequat ut. Mi nibh amet
-          viverra id aliquet neque odio.
+          Entreprise de BTP spécialisée dans la construction de bâtiments à
+          usage d&apos;habitation et commercial, ainsi que les travaux
+          d&apos;infrastructures. Notre mission est de transformer
+          l&apos;univers de la construction avec des pratiques durables et
+          innovantes.
         </motion.p>
 
         <motion.button
-          className="bg-[#FFB400] hover:bg-yellow-600 text-white cursor-pointer font-semibold px-6 sm:px-8 py-3 sm:py-4 transition-colors duration-300 uppercase tracking-wide text-sm sm:text-base"
+          className="bg-primary hover:bg-secondary text-tertiary cursor-pointer font-semibold px-6 sm:px-8 py-3 sm:py-4 transition-colors duration-300 uppercase tracking-wide text-sm sm:text-base"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.9 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
         >
-          VIEW OUR WORK
+          DÉCOUVRIR NOS PROJETS
         </motion.button>
       </div>
     </div>
@@ -87,74 +87,74 @@ function LeftContent() {
 function RightContent() {
   return (
     <motion.div
-      className="bg-[#FFB400] flex-1 lg:flex-4 p-5 flex flex-col gap-6 lg:gap-8 justify-center lg:py-30"
+      className="bg-secondary flex-1 lg:flex-4 p-5 flex flex-col gap-6 lg:gap-8 justify-center lg:py-30"
       initial={{ opacity: 0, x: 100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 1, delay: 0.8 }}
     >
       <motion.h2
-        className="text-2xl md:text-3xl lg:text-5xl font-bold text-[#404040] leading-tight"
+        className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary leading-tight"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 1 }}
       >
-        Our Services
+        Nos Services
       </motion.h2>
 
       <div className="space-y-6 lg:space-y-10">
-        {/* Building Construction */}
+        {/* Construction de Bâtiments */}
         <motion.div
           className="flex items-center space-x-3 sm:space-x-4"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          whileHover={{ scale: 1.02, x: 10 }}
+          whileHover={{ x: 10 }}
         >
           <BuildingIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
-            <h3 className="text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
-              Building Construction
+            <h3 className="text-lg lg:text-xl font-semibold text-primary mb-1">
+              Construction de Bâtiments
             </h3>
-            <p className="text-white text-base lg:text-lg">
-              Lorem ipsum dolor sit consectetur adipiscing elit.
+            <p className="text-tertiary text-base lg:text-lg">
+              Gros œuvre et second œuvre pour habitations et commerces
             </p>
           </div>
         </motion.div>
 
-        {/* Foundation Work */}
+        {/* Travaux d'Infrastructures */}
         <motion.div
           className="flex items-start space-x-3 sm:space-x-4"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 1.4 }}
-          whileHover={{ scale: 1.02, x: 10 }}
+          whileHover={{ x: 10 }}
         >
           <BricksIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
-            <h3 className="text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
-              Foundation Work
+            <h3 className="text-lg lg:text-xl font-semibold text-primary mb-1">
+              Infrastructures
             </h3>
-            <p className="text-white text-base lg:text-lg">
-              Lorem ipsum dolor sit consectetur adipiscing elit.
+            <p className="text-tertiary text-base lg:text-lg">
+              Construction de routes, terrassement et revêtement
             </p>
           </div>
         </motion.div>
 
-        {/* Site Management */}
+        {/* Études et Gestion */}
         <motion.div
           className="flex items-start space-x-3 sm:space-x-4"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 1.6 }}
-          whileHover={{ scale: 1.02, x: 10 }}
+          whileHover={{ x: 10 }}
         >
           <ConstructionIcon className="size-12 sm:size-16 lg:size-20 flex-shrink-0" />
           <div>
-            <h3 className="text-lg lg:text-xl font-semibold text-[#2A2A2A] mb-1">
-              Site Management
+            <h3 className="text-lg lg:text-xl font-semibold text-primary mb-1">
+              Études & Gestion
             </h3>
-            <p className="text-white text-base lg:text-lg">
-              Lorem ipsum dolor sit consectetur adipiscing elit.
+            <p className="text-tertiary text-base lg:text-lg">
+              Études et gestion de projets de A à Z
             </p>
           </div>
         </motion.div>

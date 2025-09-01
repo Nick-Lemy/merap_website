@@ -3,7 +3,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import ProjectImage from "@/assets/project-card.png";
 import Link from "next/link";
 import { projects } from "@/utils/dummydata";
 import ProjectModal from "@/components/ProjectModal";

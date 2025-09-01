@@ -4,7 +4,6 @@ import {
   Phone,
   Mail,
   Facebook,
-  Twitter,
   Linkedin,
   Instagram,
 } from "lucide-react";

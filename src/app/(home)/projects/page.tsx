@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
 import Image from "next/image";
 import ProjectImage from "@/assets/project-card.png";
 import { projects } from "@/utils/dummydata";

@@ -7,6 +7,7 @@ import ProjectImage from "@/assets/project-card.png";
 import { projects } from "@/utils/dummydata";
 import { MapPin } from "lucide-react";
 import ProjectModal from "@/components/ProjectModal";
+import { Project } from "../_components/HomeSection3";
 
 export default function ProjectsPage() {
   const [selectedProject, setSelectedProject] = useState<
@@ -116,16 +117,6 @@ function ProjectsGrid({
       </div>
     </section>
   );
-}
-
-interface Project {
-  id: number;
-  titre: string;
-  lieu: string;
-  catégorie: string;
-  description: string;
-  imageDeCouverture: string;
-  autresImages: string[];
 }
 
 function ProjectCard({

@@ -4,16 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
-
-interface Project {
-  id: number;
-  titre: string;
-  lieu: string;
-  catégorie: string;
-  description: string;
-  imageDeCouverture: string;
-  autresImages: string[];
-}
+import { Project } from "@/app/(home)/_components/HomeSection3";
 
 interface ProjectModalProps {
   project: Project | null;

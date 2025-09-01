@@ -1,3 +1,4 @@
+import { Project } from "@/app/(home)/_components/HomeSection3";
 import Project1Cover from "@/assets/projects/project1-cover.png";
 import Project1Other1 from "@/assets/projects/project1-other1.png";
 import Project1Other2 from "@/assets/projects/project1-other2.png";
@@ -24,7 +25,7 @@ import Project5Other2 from "@/assets/projects/project5-other2.png";
 import Project6Cover from "@/assets/projects/project6-cover.png";
 import Project6Other1 from "@/assets/projects/project6-other1.png";
 
-export const projects = [
+export const projects: Project[] = [
   {
     id: 1,
     titre:

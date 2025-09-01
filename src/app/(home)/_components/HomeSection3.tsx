@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -11,12 +11,10 @@ import { MapPin } from "lucide-react";
 export default function HomeSection3() {
   // Get first 3 projects for homepage display
   const featuredProjects = projects.slice(0, 3);
-  const [selectedProject, setSelectedProject] = useState<
-    (typeof projects)[0] | null
-  >(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleProjectClick = (project: (typeof projects)[0]) => {
+  const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
     setIsModalOpen(true);
   };
@@ -97,14 +95,14 @@ export default function HomeSection3() {
   );
 }
 
-interface Project {
+export interface Project {
   id: number;
   titre: string;
   lieu: string;
   catégorie: string;
   description: string;
-  imageDeCouverture: string;
-  autresImages: string[];
+  imageDeCouverture: string | StaticImageData;
+  autresImages: (string | StaticImageData)[];
 }
 
 function ProjectCard({

@@ -6,6 +6,8 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import ProjectImage from "@/assets/project-card.png";
+import { projects } from "@/utils/dummydata";
+import { MapPin } from "lucide-react";
 
 export default function ProjectsPage() {
   return (
@@ -56,45 +58,6 @@ function HeroSection() {
 }
 
 function ProjectsGrid() {
-  const projects = [
-    {
-      title: "Résidence Les Palmiers",
-      category: "Bâtiment Résidentiel",
-      description:
-        "Construction d'un immeuble résidentiel moderne de 6 étages avec 24 appartements.",
-    },
-    {
-      title: "Centre Commercial Akwa",
-      category: "Bâtiment Commercial",
-      description:
-        "Réalisation d'un centre commercial avec espaces de vente et parking souterrain.",
-    },
-    {
-      title: "Route Douala-Yaoundé",
-      category: "Infrastructure",
-      description:
-        "Travaux de réfection et d'amélioration d'un tronçon de 15km.",
-    },
-    {
-      title: "Villa Moderne Bonanjo",
-      category: "Rénovation",
-      description:
-        "Rénovation complète d'une villa avec aménagement intérieur et extérieur.",
-    },
-    {
-      title: "Complexe Scolaire",
-      category: "Bâtiment Public",
-      description:
-        "Construction d'un complexe scolaire avec 12 salles de classe et laboratoires.",
-    },
-    {
-      title: "Pont de Wouri",
-      category: "Infrastructure",
-      description:
-        "Travaux de maintenance et renforcement du pont avec nouvelles normes de sécurité.",
-    },
-  ];
-
   return (
     <section className="py-20 lg:py-32 bg-gray-50">
       <div className="container mx-auto px-6 lg:px-20">
@@ -126,9 +89,13 @@ function ProjectsGrid() {
 }
 
 interface Project {
-  title: string;
-  category: string;
+  id: number;
+  titre: string;
+  lieu: string;
+  catégorie: string;
   description: string;
+  imageDeCouverture: string;
+  autresImages: string[];
 }
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
@@ -147,24 +114,28 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
       >
         <Image
           src={ProjectImage}
-          alt={project.title}
+          alt={project.titre}
           className="w-full h-48 object-cover"
           width={400}
           height={300}
         />
         <div className="absolute top-4 left-4">
           <span className="bg-[var(--color-secondary)] text-[var(--color-tertiary)] px-3 py-1 rounded-full text-sm font-semibold">
-            {project.category}
+            {project.catégorie}
           </span>
         </div>
       </motion.div>
 
       <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-3">
-          {project.title}
+        <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+          {project.titre}
         </h3>
 
-        <p className="text-gray-600 leading-relaxed mb-4">
+        <p className="text-sm flex gap-1 items-center text-primary font-medium mb-2">
+          <MapPin /> {project.lieu}
+        </p>
+
+        <p className="text-gray-600 leading-relaxed mb-4 line-clamp-3">
           {project.description}
         </p>
 

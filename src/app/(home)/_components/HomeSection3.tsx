@@ -5,8 +5,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import ProjectImage from "@/assets/project-card.png";
 import Link from "next/link";
+import { projects } from "@/utils/dummydata";
 
 export default function HomeSection3() {
+  // Get first 3 projects for homepage display
+  const featuredProjects = projects.slice(0, 3);
   return (
     <motion.section
       className=" lg:px-20"
@@ -47,8 +50,8 @@ export default function HomeSection3() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          {Array.from({ length: 3 }).map((_, index) => (
-            <ProjectCard key={index} />
+          {featuredProjects.map((project, index) => (
+            <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </motion.div>
         <Link href="/projects">
@@ -67,14 +70,24 @@ export default function HomeSection3() {
   );
 }
 
-function ProjectCard() {
+interface Project {
+  id: number;
+  titre: string;
+  lieu: string;
+  catégorie: string;
+  description: string;
+  imageDeCouverture: string;
+  autresImages: string[];
+}
+
+function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
     <motion.div
       className="flex flex-col gap-4"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: 0.2 }}
+      transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
     >
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -85,7 +98,7 @@ function ProjectCard() {
         <Image
           src={ProjectImage}
           className="aspect-2/1 object-cover"
-          alt="Project Image"
+          alt={project.titre}
           width={500}
           height={500}
         />
@@ -98,15 +111,19 @@ function ProjectCard() {
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <div className="space-y-5">
-          <h3 className="text-primary text-xl font-[520]">
-            Projet Résidentiel
-          </h3>
+          <div className="flex flex-col gap-2">
+            <span className="text-secondary text-sm font-medium">
+              {project.catégorie}
+            </span>
+            <h3 className="text-primary text-xl font-[520] line-clamp-2">
+              {project.titre}
+            </h3>
+            <p className="text-sm text-gray-600 font-medium">
+              📍 {project.lieu}
+            </p>
+          </div>
 
-          <p className="text-lg">
-            Construction complète d&apos;une villa moderne avec piscine. Travaux
-            de gros œuvre, aménagement intérieur haut de gamme et finitions
-            personnalisées selon les exigences du client.
-          </p>
+          <p className="text-lg line-clamp-3">{project.description}</p>
         </div>
         <motion.button
           className="w-fit justify-center text-xs border-3 cursor-pointer hover:bg-secondary hover:text-tertiary transition-all transform duration-200 flex items-center gap-4 font-bold px-4 py-2 border-primary text-primary"

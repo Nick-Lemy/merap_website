@@ -41,4 +41,24 @@ export const projects = [
     imageDeCouverture: "https://example.com/images/geotechnique-couverture.jpg",
     autresImages: [],
   },
+  {
+    id: 5,
+    titre: "Construction d'un complexe commercial moderne",
+    lieu: "Akwa, Douala",
+    catégorie: "Construction",
+    description:
+      "Édification d'un centre commercial avec espaces de vente et parking souterrain.",
+    imageDeCouverture: "https://example.com/images/commercial-couverture.jpg",
+    autresImages: [],
+  },
+  {
+    id: 6,
+    titre: "Réhabilitation de voirie urbaine",
+    lieu: "Bonapriso, Douala",
+    catégorie: "Infrastructure",
+    description:
+      "Travaux de réfection complète d'un tronçon de route avec amélioration du drainage.",
+    imageDeCouverture: "https://example.com/images/voirie-couverture.jpg",
+    autresImages: [],
+  },
 ];

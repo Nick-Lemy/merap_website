@@ -26,14 +26,22 @@ export default function ServicesPage() {
 function HeroSection() {
   return (
     <motion.section
-      className="bg-[var(--color-primary)] py-20 lg:py-32"
+      className="relative py-20 lg:py-32"
+      style={{
+        backgroundImage:
+          "url('https://img.freepik.com/free-photo/african-american-worker-standing-uniform-wearing-safety-hat-factory_1303-30616.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
     >
-      <div className="container mx-auto px-6 lg:px-20 text-center">
+      {/* Black overlay */}
+      <div className="absolute inset-0 bg-[#1F1F1F]/85 z-0 pointer-events-none" />
+      <div className="container mx-auto px-6 lg:px-20 text-center relative z-10">
         <motion.h1
-          className="text-4xl lg:text-6xl font-bold text-[var(--color-tertiary)] mb-6"
+          className="text-3xl lg:text-6xl font-bold text-[var(--color-tertiary)] mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -47,7 +55,7 @@ function HeroSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
         />
         <motion.p
-          className="text-xl text-gray-300 max-w-3xl mx-auto"
+          className="text-lg text-gray-300 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}

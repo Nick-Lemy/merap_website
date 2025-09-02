@@ -9,9 +9,8 @@ import {
   Palette,
   Droplets,
   Zap,
-  FileText,
 } from "lucide-react";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 export default function ServicesPage() {
   return (

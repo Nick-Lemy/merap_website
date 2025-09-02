@@ -15,17 +15,23 @@ export default function HomeSection2() {
     >
       <div className="flex flex-col lg:flex-row h-full justify-stretch items-stretch">
         <motion.div
-          className="flex-1 lg:flex-4 order-2 lg:order-1"
+          className="flex-1 lg:flex-4 order-2 lg:order-1 relative"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <Image
-            src={Section2Img}
+            src={
+              "https://i.pinimg.com/736x/76/24/f1/7624f199ebe1b420198bfa16c5771d97.jpg"
+            }
+            width={1000}
+            height={1000}
             alt="Section 2"
             className="w-full aspect-[2/1.5] lg:aspect-auto h-auto lg:h-full object-cover"
           />
+          {/* Black overlay */}
+          <div className="absolute inset-0 bg-black/60 pointer-events-none" />
         </motion.div>
         <motion.div
           className="flex flex-col w-full flex-1 lg:flex-10 order-1 lg:order-2"

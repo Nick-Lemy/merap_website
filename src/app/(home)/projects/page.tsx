@@ -148,7 +148,7 @@ function ProjectCard({
           height={300}
         />
         <div className="absolute top-4 left-4">
-          <span className="bg-[var(--color-secondary)] text-[var(--color-tertiary)] px-3 py-1 rounded-full text-sm font-semibold">
+          <span className="bg-[var(--color-primary)] text-[var(--color-tertiary)] px-3 py-1 rounded-full text-sm font-semibold">
             {project.catégorie}
           </span>
         </div>
@@ -160,7 +160,7 @@ function ProjectCard({
         </h3>
 
         <p className="text-sm flex gap-1 items-center text-primary font-medium mb-2">
-          <MapPin /> {project.lieu}
+          <MapPin className="w-6" /> {project.lieu}
         </p>
 
         <p className="text-gray-600 leading-relaxed mb-4 line-clamp-3">
@@ -173,7 +173,7 @@ function ProjectCard({
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}
         >
-          Voir les détails →
+          Voir Plus →
         </motion.button>
       </div>
     </motion.div>

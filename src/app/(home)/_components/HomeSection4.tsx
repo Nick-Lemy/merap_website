@@ -1,6 +1,7 @@
 import React from "react";
 import { Play } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HomeSection4() {
   return (
@@ -24,9 +25,12 @@ export default function HomeSection4() {
               </p>
             </div>
 
-            <button className="text-sm border-2 lg:border-3 w-fit justify-center cursor-pointer bg-secondary hover:bg-primary text-tertiary transition-all transform duration-200 flex items-center gap-2 lg:gap-4 font-bold px-4 lg:px-5 py-2 border-secondary mt-6 lg:mt-8">
+            <Link
+              href={"/about"}
+              className="text-sm border-2 lg:border-3 w-fit justify-center cursor-pointer bg-secondary hover:bg-primary text-tertiary transition-all transform duration-200 flex items-center gap-2 lg:gap-4 font-bold px-4 lg:px-5 py-2 border-secondary mt-6 lg:mt-8"
+            >
               <span>À PROPOS</span>
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -65,9 +69,12 @@ export default function HomeSection4() {
               </p>
             </div>
             <div className="bg-tertiary flex flex-col items-center justify-center gap-1 sm:gap-2 text-primary flex-1 h-full py-8 lg:py-0">
-              <button className="text-xs sm:text-sm border-2 border-primary px-3 sm:px-4 lg:px-6 py-2 lg:py-3 font-bold hover:bg-primary hover:text-tertiary transition-all duration-200 text-center">
+              <Link
+                href={"/contact"}
+                className="text-xs sm:text-sm border-2 border-primary px-3 sm:px-4 lg:px-6 py-2 lg:py-3 font-bold hover:bg-primary hover:text-tertiary transition-all duration-200 text-center"
+              >
                 DEMANDER UN DEVIS EN LIGNE
-              </button>
+              </Link>
             </div>
           </div>
         </div>

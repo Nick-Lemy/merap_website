@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import BuildingIcon from "@/components/icons/BuildingIcon";
 import BricksIcon from "@/components/icons/BricksIcon";
 import ConstructionIcon from "@/components/icons/ConstructionIcon";
+import Link from "next/link";
 
 // Simple icon components as placeholders
 
@@ -70,15 +71,16 @@ function LeftContent() {
           l&apos;univers de la construction avec des pratiques durables et
           innovantes.
         </motion.p>
-
-        <motion.button
-          className="bg-primary hover:bg-secondary text-tertiary cursor-pointer font-semibold px-6 sm:px-8 py-3 sm:py-4 transition-colors duration-300 uppercase tracking-wide text-sm sm:text-base"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-        >
-          DÉCOUVRIR NOS PROJETS
-        </motion.button>
+        <Link href="/projects">
+          <motion.button
+            className="bg-primary hover:bg-secondary text-tertiary cursor-pointer font-semibold px-6 sm:px-8 py-3 sm:py-4 transition-colors duration-300 uppercase tracking-wide text-sm sm:text-base"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+          >
+            DÉCOUVRIR NOS PROJETS
+          </motion.button>
+        </Link>
       </div>
     </div>
   );

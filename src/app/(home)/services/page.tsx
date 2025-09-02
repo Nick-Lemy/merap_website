@@ -11,6 +11,7 @@ import {
   Zap,
   FileText,
 } from "lucide-react";
+import Image, { StaticImageData } from "next/image";
 
 export default function ServicesPage() {
   return (
@@ -63,42 +64,56 @@ function HeroSection() {
 function ServicesGrid() {
   const services = [
     {
-      icon: FileText,
+      image:
+        "https://i.pinimg.com/1200x/cf/20/40/cf2040adb09f1db8684cf921c31bc2f6.jpg",
+      icon: null,
       title: "Études et Gestion de Projets",
       description:
         "Conception, planification et gestion complète de vos projets de construction avec un suivi rigoureux de A à Z.",
     },
     {
+      image:
+        "https://i.pinimg.com/1200x/42/28/24/42282462f38c8cae0035f69733a9ef7f.jpg",
       icon: Building,
       title: "Construction de Bâtiments",
       description:
         "Gros œuvre et second œuvre pour bâtiments à usage d'habitation et commercial avec des matériaux de qualité.",
     },
     {
+      image:
+        "https://static.vecteezy.com/system/resources/thumbnails/038/972/123/small_2x/ai-generated-construction-site-is-laying-new-asphalt-pavement-road-construction-workers-and-road-construction-machinery-scene-highway-construction-site-scene-photo.jpg",
       icon: Construction,
       title: "Construction de Routes",
       description:
         "Terrassement et revêtement routier avec expertise technique pour des infrastructures durables.",
     },
     {
+      image:
+        "https://www.btpcfa-na.fr/wp-content/uploads/2023/07/BUT-GENIE-CIVIL-CONSTRUCTION-DURABLE-BUREAU-DETUDES-ET-CONCEPTION.jpeg",
       icon: Palette,
       title: "Travaux de Finitions",
       description:
         "Finitions de haute qualité pour donner à vos projets l'aspect final souhaité.",
     },
     {
+      image:
+        "https://i.pinimg.com/736x/a9/74/a8/a974a845a33b1b9205b01bbd09ae3078.jpg",
       icon: Wrench,
       title: "Rénovations et Réhabilitation",
       description:
         "Travaux de rénovation, réhabilitation et aménagement intérieur (peinture, carrelage, Pierre de Pouma).",
     },
     {
+      image:
+        "https://i0.wp.com/www.construction-travaux.com/wp-content/uploads/2021/08/pipes-2672184_640.jpg",
       icon: Droplets,
       title: "Installation Sanitaire",
       description:
         "Conception et installation de systèmes de plomberie conformes aux normes en vigueur.",
     },
     {
+      image:
+        "https://i.pinimg.com/736x/20/f5/21/20f521248c2b9d07de1b59932871df30.jpg",
       icon: Zap,
       title: "Électricité",
       description:
@@ -137,41 +152,43 @@ function ServicesGrid() {
 }
 
 interface Service {
-  icon: React.ComponentType<{ className?: string }>;
+  image: string;
   title: string;
   description: string;
 }
 
 function ServiceCard({ service, index }: { service: Service; index: number }) {
-  const Icon = service.icon;
-
   return (
     <motion.div
-      className="bg-white p-8 rounded-lg border border-gray-200 hover:border-gray-300 transition-all duration-300"
+      className="p-8 relative rounded-md border border-gray-200 hover:border-gray-300 transition-all duration-300 overflow-hidden"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
     >
-      <motion.div
-        className="w-16 h-16 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center mb-6"
-        whileHover={{ rotate: 5 }}
-        transition={{ duration: 0.3 }}
-      >
-        <Icon className="w-8 h-8 text-[var(--color-tertiary)]" />
-      </motion.div>
-
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
-
-      <p className="text-gray-600 leading-relaxed">{service.description}</p>
-
-      <motion.button
-        className="mt-6 text-[var(--color-secondary)] font-semibold hover:text-[var(--color-primary)] transition-colors duration-300"
-        whileHover={{ x: 5 }}
-        transition={{ duration: 0.2 }}
-      >
-        En savoir plus →
-      </motion.button>
+      {/* Background Image */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <Image
+          src={service.image}
+          alt={service.title}
+          fill
+          className="object-cover w-full h-full"
+        />
+        {/* Black overlay */}
+        <div className="absolute inset-0 bg-black/60 z-10" />
+      </div>
+      {/* Content */}
+      <div className="space-y-2 relative z-20 flex flex-col items-start">
+        <h3 className="text-xl font-bold text-primary mb-4">{service.title}</h3>
+        <p className="text-gray-200 leading-relaxed">{service.description}</p>
+        <motion.button
+          className="mt-6 cursor-pointer text-[var(--color-secondary)] font-semibold hover:text-[var(--color-primary)] transition-colors duration-300"
+          whileHover={{ x: 5 }}
+          transition={{ duration: 0.2 }}
+        >
+          En savoir plus →
+        </motion.button>
+      </div>
     </motion.div>
   );
 }

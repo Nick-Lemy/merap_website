@@ -112,7 +112,7 @@ const RightSection = () => {
     {
       question: "Comment obtenir un devis pour mon projet ?",
       answer:
-        "Vous pouvez nous contacter par téléphone au +237 667055365 ou +237 688687717, par email à meraps25@gmail.com, ou utiliser notre formulaire de contact en ligne. Nous étudierons votre projet et vous fournirons un devis détaillé gratuitement.",
+        "Vous pouvez nous contacter par téléphone au +237 657055365 ou +237 688687717, par email à meraps25@gmail.com, ou utiliser notre formulaire de contact en ligne. Nous étudierons votre projet et vous fournirons un devis détaillé gratuitement.",
     },
     {
       question: "Quels sont les délais moyens de réalisation ?",

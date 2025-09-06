@@ -1,125 +1,240 @@
 import React from "react";
+import Link from "next/link";
 import {
   MapPin,
   Phone,
   Mail,
   Facebook,
-  // Linkedin,
   Instagram,
+  ArrowRight,
+  Building2,
+  Users,
+  Award,
+  Shield,
 } from "lucide-react";
 import XIcon from "./icons/XIcon";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col lg:flex-row w-full">
-      <ContactForm />
-      <ContactInfo />
+    <footer className="bg-gray-900 text-white">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Top Section - Company Info & Contact */}
+        <div className="py-16 border-b border-gray-800">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            {/* Company Information */}
+            <div className="lg:col-span-1">
+              <div className="flex items-center mb-6">
+                <Building2 className="w-8 h-8 text-secondary mr-3" />
+                <h3 className="text-2xl font-bold text-white">MERAP SARL</h3>
+              </div>
+              <p className="text-gray-300 text-sm leading-relaxed mb-6">
+                Votre partenaire de confiance pour tous vos projets de
+                construction, d&apos;infrastructure et d&apos;ingénierie au
+                Cameroun. Nous offrons des solutions innovantes et durables pour
+                bâtir l&apos;avenir.
+              </p>
+
+              {/* Key Stats */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="text-center p-3 bg-gray-800 rounded-lg">
+                  <Users className="w-6 h-6 text-secondary mx-auto mb-2" />
+                  <div className="text-lg font-bold text-white">50+</div>
+                  <div className="text-xs text-gray-400">Employés</div>
+                </div>
+                <div className="text-center p-3 bg-gray-800 rounded-lg">
+                  <Award className="w-6 h-6 text-secondary mx-auto mb-2" />
+                  <div className="text-lg font-bold text-white">100+</div>
+                  <div className="text-xs text-gray-400">Projets</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div className="lg:col-span-1">
+              <h4 className="text-lg font-semibold text-white mb-6">
+                Liens Rapides
+              </h4>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-3">
+                  <Link
+                    href="/"
+                    className="block text-gray-300 hover:text-secondary transition-colors text-sm"
+                  >
+                    Accueil
+                  </Link>
+                  <Link
+                    href="/about"
+                    className="block text-gray-300 hover:text-secondary transition-colors text-sm"
+                  >
+                    À Propos
+                  </Link>
+                  <Link
+                    href="/services"
+                    className="block text-gray-300 hover:text-secondary transition-colors text-sm"
+                  >
+                    Services
+                  </Link>
+                  <Link
+                    href="/projects"
+                    className="block text-gray-300 hover:text-secondary transition-colors text-sm"
+                  >
+                    Projets
+                  </Link>
+                </div>
+                <div className="space-y-3">
+                  <Link
+                    href="/contact"
+                    className="block text-gray-300 hover:text-secondary transition-colors text-sm"
+                  >
+                    Contact
+                  </Link>
+                  <a
+                    href="#"
+                    className="block text-gray-300 hover:text-secondary transition-colors text-sm"
+                  >
+                    Carrières
+                  </a>
+                  <a
+                    href="#"
+                    className="block text-gray-300 hover:text-secondary transition-colors text-sm"
+                  >
+                    Actualités
+                  </a>
+                  <a
+                    href="#"
+                    className="block text-gray-300 hover:text-secondary transition-colors text-sm"
+                  >
+                    Téléchargements
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Information */}
+            <div className="lg:col-span-1">
+              <h4 className="text-lg font-semibold text-white mb-6">
+                Contactez-Nous
+              </h4>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-gray-300 text-sm font-medium">Adresse</p>
+                    <p className="text-gray-400 text-sm">Douala, Cameroun</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Phone className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-gray-300 text-sm font-medium">
+                      Téléphone
+                    </p>
+                    <p className="text-gray-400 text-sm">+237 657055365</p>
+                    <p className="text-gray-400 text-sm">+237 688687717</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Mail className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
+                  <div>
+                    <p className="text-gray-300 text-sm font-medium">Email</p>
+                    <p className="text-gray-400 text-sm">meraps25@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Newsletter Signup */}
+              <div className="mt-8">
+                <h5 className="text-sm font-semibold text-white mb-3">
+                  Newsletter
+                </h5>
+                <div className="flex gap-2">
+                  <input
+                    type="email"
+                    placeholder="Votre email"
+                    className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-md text-sm text-white placeholder-gray-400 focus:outline-none focus:border-secondary"
+                  />
+                  <button className="px-4 py-2 bg-secondary text-white rounded-md hover:bg-orange-600 transition-colors">
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section - Social Media & Legal */}
+        <div className="py-8">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
+            {/* Social Media */}
+            <div className="flex items-center gap-4">
+              <span className="text-gray-400 text-sm">Suivez-nous:</span>
+              <div className="flex gap-3">
+                <a
+                  href="https://www.facebook.com/share/14MSyy3abJ6/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-secondary transition-colors group"
+                >
+                  <Facebook className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                </a>
+                <a
+                  href="https://www.instagram.com/merapsarl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-secondary transition-colors group"
+                >
+                  <Instagram className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                </a>
+                <a
+                  href="https://x.com/merap_sarl"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-secondary transition-colors group"
+                >
+                  <XIcon className="w-5 h-5 text-gray-400 group-hover:text-white" />
+                </a>
+              </div>
+            </div>
+
+            {/* Legal Links */}
+            <div className="flex flex-wrap items-center gap-6 text-sm">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Politique de Confidentialité
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Conditions d&apos;Utilisation
+              </a>
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Mentions Légales
+              </a>
+              <div className="flex items-center gap-2 text-gray-400">
+                <Shield className="w-4 h-4" />
+                <span>Certifié ISO 9001</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="py-6 border-t border-gray-800">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+            <p>&copy; 2024 MERAP SARL. Tous droits réservés.</p>
+            <p>Conçu avec ❤️ au Cameroun</p>
+          </div>
+        </div>
+      </div>
     </footer>
-  );
-}
-
-function ContactForm() {
-  return (
-    <div className="bg-secondary lg:w-1/2 w-full px-6 lg:px-0 py-12 lg:py-16">
-      <div className="max-w-2xl mx-auto">
-        <h2 className="text-2xl lg:text-3xl font-bold text-tertiary mb-2">
-          Contactez-Nous
-        </h2>
-        <div className="w-16 h-1.5 bg-tertiary mb-8"></div>
-
-        <form className="flex flex-col w-full space-y-4">
-          <div className="grid grid-cols-2 w-full flex-col lg:flex-row gap-4">
-            <input
-              type="text"
-              placeholder="Nom"
-              className="flex-1 px-4 py-3 border-none outline-none text-gray-700 placeholder-gray-500"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              className="flex-1 px-4 py-3 border-none outline-none text-gray-700 placeholder-gray-500"
-            />
-          </div>
-
-          <textarea
-            placeholder="Message"
-            rows={6}
-            className="w-full px-4 py-3 border-none outline-none resize-none text-gray-700 placeholder-gray-500"
-          />
-
-          <button
-            type="submit"
-            className="w-fit text-sm cursor-pointer self-end bg-transparent border-3 border-tertiary text-tertiary font-bold px-8 py-2.5 hover:bg-tertiary hover:text-primary transition-all duration-200"
-          >
-            ENVOYER MESSAGE
-          </button>
-        </form>
-      </div>
-    </div>
-  );
-}
-
-function ContactInfo() {
-  return (
-    <div className="lg:w-1/2 w-full ">
-      <div className="flex flex-col h-full">
-        {/* Social Media Icons */}
-        <div className="flex w-full justify-center gap-25 items-center py-8 bg-primary">
-          <a
-            href="https://www.facebook.com/share/14MSyy3abJ6/?mibextid=wwXIfr"
-            target="_blank"
-            className="bg-white p-1.5 flex items-center justify-center rounded-full"
-          >
-            <Facebook className="w-6 h-6 fill-primary text-primary hover:fill-secondary  hover:text-secondary cursor-pointer transition-colors duration-200" />
-          </a>
-          <a
-            href="https://www.instagram.com/merapsarl"
-            target="_blank"
-            className="bg-white p-1.5 flex items-center justify-center rounded-full"
-          >
-            <Instagram className="w-6 font-bold h-6 fill-transparent text-primary hover:text-secondary cursor-pointer transition-colors duration-200" />
-          </a>
-          <a
-            href="https://x.com/merap_sarl"
-            target="_blank"
-            className="bg-white p-2 flex items-center justify-center rounded-full"
-          >
-            <XIcon className="w-5 h-5 fill-primary hover:fill-secondary text-primary hover:text-secondary cursor-pointer transition-colors duration-200" />
-          </a>
-          {/* <a
-            href=""
-            className="bg-white p-2 flex items-center justify-center rounded-full"
-          >
-            <Linkedin className="w-5 h-5 border rounded-sm p-0.5 border-primary fill-primary hover:fill-secondary hover:border-secondary text-primary hover:text-secondary cursor-pointer transition-colors duration-200" />
-          </a> */}
-        </div>
-
-        {/* Contact Information */}
-        <div className="flex-1 flex flex-col items-center text-primary px-6 lg:px-0 py-20 bg-tertiary">
-          <div className="space-y-8">
-            <div className="flex items-center gap-2">
-              <MapPin className="w-5 h-5 stroke-2 mt-1 flex-shrink-0" />
-              <p className="font-semibold text-sm lg:text-base">
-                Douala, Cameroun
-              </p>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <Phone className="w-5 h-5 stroke-2 flex-shrink-0" />
-              <p className="font-semibold text-sm lg:text-base">
-                +237 667055365 / 688687717
-              </p>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <Mail className="w-5 h-5 stroke-2 flex-shrink-0" />
-              <p className="font-semibold text-sm lg:text-base">
-                meraps25@gmail.com
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   );
 }

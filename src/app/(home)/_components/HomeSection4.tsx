@@ -65,7 +65,7 @@ export default function HomeSection4() {
                 Appelez pour un Devis
               </h2>
               <p className="text-sm sm:text-xl lg:text-2xl font-bold">
-                +237 667055365
+                +237 657055365
               </p>
             </div>
             <div className="bg-tertiary flex flex-col items-center justify-center gap-1 sm:gap-2 text-primary flex-1 h-full py-8 lg:py-0">

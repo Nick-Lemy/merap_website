@@ -1,6 +1,5 @@
 import React from "react";
 import { PhoneIcon } from "lucide-react";
-import Link from "next/link";
 
 export default function HomeSection1() {
   return (
@@ -10,7 +9,7 @@ export default function HomeSection1() {
           Appellez Nous Pour Plus D&apos;infomation
         </h1>
         <a
-          href={"tel:+237667055365"}
+          href={"tel:+237657055365"}
           className="border-3 w-fit text-sm cursor-pointer bg-secondary text-tertiary transition-all transform duration-200 flex items-center gap-2 font-bold px-4 py-3"
         >
           <PhoneIcon className="fill-white w-4 h-4" />

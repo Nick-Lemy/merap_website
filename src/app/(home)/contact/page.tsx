@@ -184,7 +184,7 @@ function ContactSection() {
                 <div>
                   <h3 className="font-bold text-gray-900 mb-2">Téléphone</h3>
                   <p className="text-gray-600">
-                    +237 667055365 <br />
+                    +237 657055365 <br />
                     +237 688687717
                   </p>
                 </div>

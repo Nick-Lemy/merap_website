@@ -4,7 +4,7 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import clsx from "clsx"; // Install with `npm install clsx`
 import { motion, AnimatePresence } from "framer-motion";
-import Logo from "@/assets/logo.jpg";
+import Logo from "@/assets/logo2.jpg";
 import Image from "next/image";
 
 // Reusable NavLink Component
@@ -59,13 +59,13 @@ const NavBar: React.FC = () => {
   };
 
   return (
-    <header className="bg-primary fixed w-full z-50 shadow-md">
+    <header className="bg-white fixed w-full z-50 shadow-md">
       <div className="container  mx-auto flex justify-between items-center px-4 sm:px-6 relative">
         <Link href="/" className="">
           <Image
             src={Logo}
             alt="Merap Logo"
-            className="w-full h-14 lg:h-18 my-2"
+            className="w-full h-14 lg:h-16 my-2"
             width={150}
             height={50}
           />
@@ -73,7 +73,7 @@ const NavBar: React.FC = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:block">
-          <ul className="flex text-white font-semibold gap-4 xl:gap-6">
+          <ul className="flex text-primary *:*:font-medium gap-4 xl:gap-6">
             {navItems.map(({ href, label }) => (
               <li key={href}>
                 <NavLink
@@ -94,17 +94,17 @@ const NavBar: React.FC = () => {
           aria-label="Toggle menu"
         >
           <span
-            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
+            className={`block w-6 h-0.5 bg-primary transition-all duration-300 ${
               isMenuOpen ? "rotate-45 translate-y-1.5" : ""
             }`}
           />
           <span
-            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
+            className={`block w-6 h-0.5 bg-primary transition-all duration-300 ${
               isMenuOpen ? "opacity-0" : ""
             }`}
           />
           <span
-            className={`block w-6 h-0.5 bg-white transition-all duration-300 ${
+            className={`block w-6 h-0.5 bg-primary transition-all duration-300 ${
               isMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
             }`}
           />
@@ -114,7 +114,7 @@ const NavBar: React.FC = () => {
         <AnimatePresence>
           {isMenuOpen && (
             <motion.nav
-              className="lg:hidden absolute top-full left-0 right-0 text-white bg-primary shadow-lg border-t border-white z-50"
+              className="lg:hidden absolute top-full left-0 right-0 text-primary bg-white shadow-lg border-t border-white z-50"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}

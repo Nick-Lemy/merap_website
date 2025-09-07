@@ -7,10 +7,6 @@ import {
   Facebook,
   Instagram,
   ArrowRight,
-  Building2,
-  Users,
-  Award,
-  Shield,
 } from "lucide-react";
 import XIcon from "./icons/XIcon";
 
@@ -117,7 +113,7 @@ export default function Footer() {
                   <input
                     type="email"
                     placeholder="Votre email"
-                    className="flex-1 px-3 py-2 border border-primary rounded-md text-sm text-white placeholder-gray-400 focus:outline-none focus:border-secondary"
+                    className="flex-1 px-3 py-2 border border-primary rounded-md text-sm text-gray-900 focus:outline-none focus:border-secondary"
                   />
                   <button className="px-4 py-2 flex items-center w-full justify-center gap-2 bg-primary text-white rounded-md font-medium transition-colors">
                     Subscribe

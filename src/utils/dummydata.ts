@@ -27,6 +27,36 @@ import Project6Other1 from "@/assets/projects/project6-other1.png";
 
 export const projects: Project[] = [
   {
+    id: 6,
+    titre: "Réalisation (gros œuvre) d'une villa triplex duplex",
+    lieu: "Douala, japoma",
+    catégorie: "Construction",
+    description:
+      "Réalisation (gros œuvre) d'une villa triplex duplex 6 pièces à Douala /japoma.",
+    imageDeCouverture: Project6Cover,
+    autresImages: [Project6Other1],
+  },
+  {
+    id: 5,
+    titre: "Construction d'une villa moderne",
+    lieu: "Akwa, Douala",
+    catégorie: "Construction",
+    description:
+      "Conception et realisation d'une villa triplex 08 pieces modele nuage d'elegance a Douala au lieu dit logpom",
+    imageDeCouverture: Project5Cover,
+    autresImages: [Project5Other1, Project5Other2],
+  },
+  {
+    id: 3,
+    titre: "Rénovation Bâtiment R+3",
+    lieu: "Logbessou, Douala",
+    catégorie: "Rénovation",
+    description:
+      "Travaux de rénovation pour un bâtiment résidentiel de 3 étages.",
+    imageDeCouverture: Project3Cover,
+    autresImages: [Project3Other1, Project3Other2, Project3Other3],
+  },
+  {
     id: 1,
     titre: "Travaux second œuvre - Bâtiment R+4",
     lieu: "Bonamoussadi/Denver, Douala",
@@ -47,16 +77,6 @@ export const projects: Project[] = [
     autresImages: [Project2Other1, Project2Other2],
   },
   {
-    id: 3,
-    titre: "Rénovation Bâtiment R+3",
-    lieu: "Logbessou, Douala",
-    catégorie: "Rénovation",
-    description:
-      "Travaux de rénovation pour un bâtiment résidentiel de 3 étages.",
-    imageDeCouverture: Project3Cover,
-    autresImages: [Project3Other1, Project3Other2, Project3Other3],
-  },
-  {
     id: 4,
     titre: "Pénétromètre en collaboration avec Geo Fondation",
     lieu: "Ambassade de France, Yaoundé",
@@ -65,25 +85,5 @@ export const projects: Project[] = [
       "Essais de pénétration réalisés en collaboration avec Geo Fondation à l'Ambassade de France.",
     imageDeCouverture: Project4Cover,
     autresImages: [Project4Other1, Project4Other2, Project4Other3],
-  },
-  {
-    id: 5,
-    titre: "Construction d'une villa moderne",
-    lieu: "Akwa, Douala",
-    catégorie: "Construction",
-    description:
-      "Conception et realisation d'une villa triplex 08 pieces modele nuage d'elegance a Douala au lieu dit logpom",
-    imageDeCouverture: Project5Cover,
-    autresImages: [Project5Other1, Project5Other2],
-  },
-  {
-    id: 6,
-    titre: "Réalisation (gros œuvre) d'une villa triplex duplex",
-    lieu: "Douala, japoma",
-    catégorie: "Infrastructure",
-    description:
-      "Réalisation (gros œuvre) d'une villa triplex duplex 6 pièces à Douala /japoma.",
-    imageDeCouverture: Project6Cover,
-    autresImages: [Project6Other1],
   },
 ];

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Plus, Minus } from "lucide-react";
+import { Plus, Minus, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
@@ -8,7 +8,7 @@ import Link from "next/link";
 const LeftSection = () => {
   return (
     <div className="flex flex-col w-full flex-1 lg:flex-6">
-      <div className="px-4 sm:px-6 lg:px-10 py-12 lg:py-30 space-y-6 sm:space-y-8 lg:space-y-15">
+      <div className="lg:py-30 space-y-6 sm:space-y-8 lg:space-y-15">
         <div className="space-y-4 sm:space-y-6 lg:space-y-8">
           <h1 className="text-2xl sm:text-3xl lg:text-[42px] font-bold text-primary leading-tight">
             Construisons Ensemble Votre Projet
@@ -24,10 +24,14 @@ const LeftSection = () => {
           </p>
         </div>
 
-        <Link href="/contact">
-          <button className="border-2 lg:border-3 w-fit text-sm justify-center cursor-pointer hover:bg-primary hover:text-tertiary transition-all transform duration-200 flex items-center gap-2 lg:gap-4 font-bold px-4 lg:px-5 py-3 border-primary text-primary mt-6 lg:mt-8">
-            <span>NOUS CONTACTER</span>
-          </button>
+        <Link href="/projects">
+          <motion.button
+            className="group bg-secondary hover:bg-secondary/90 text-white font-semibold px-8 py-4 rounded-md transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl"
+            whileTap={{ scale: 0.95 }}
+          >
+            Nous contacter
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </motion.button>
         </Link>
       </div>
     </div>
@@ -59,7 +63,7 @@ const FAQItem = ({
         onClick={onToggle}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
       >
-        <h3 className="text-base lg:text-lg font-semibold text-gray-600 pr-4 leading-tight">
+        <h3 className="text-base lg:text-lg font-semibold text-gray-700 pr-4 leading-tight">
           {question}
         </h3>
         <motion.div className="flex-shrink-0 w-6 h-6 sm:w-8 sm:h-8 bg-secondary rounded-full flex items-center justify-center">
@@ -153,7 +157,7 @@ const RightSection = () => {
 export default function HomeSection5() {
   return (
     <section className="bg-gray-100">
-      <div className="flex h-full flex-col lg:flex-row justify-center w-full max-w-[88rem] mx-auto items-center">
+      <div className="flex h-full flex-col  mx-auto container px-4 lg:flex-row">
         <LeftSection />
         <RightSection />
       </div>

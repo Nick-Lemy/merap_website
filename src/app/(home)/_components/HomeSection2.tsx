@@ -31,9 +31,6 @@ export default function HomeSection2() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <span className="inline-block bg-secondary/10 text-secondary font-semibold px-4 py-2 rounded-full text-sm mb-4">
-                À Propos de MERAP
-              </span>
               <h2 className="text-4xl lg:text-5xl font-bold text-primary leading-tight mb-6">
                 Excellence et Innovation dans la{" "}
                 <span className="text-secondary">Construction</span>

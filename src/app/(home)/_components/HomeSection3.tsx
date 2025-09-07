@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { projects } from "@/utils/dummydata";
 import ProjectModal from "@/components/ProjectModal";
-import { MapPin } from "lucide-react";
+import { MapPin, ArrowRight } from "lucide-react";
 
 export default function HomeSection3() {
   // Get first 3 projects for homepage display
@@ -23,41 +23,45 @@ export default function HomeSection3() {
     setIsModalOpen(false);
     setSelectedProject(null);
   };
+
   return (
-    <motion.section
-      className=" lg:px-20"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-    >
-      <div className="lg:px-30.5 py-16 sm:py-20 lg:py-28.5 gap-6 lg:gap-8 flex-8 flex flex-col items-center justify-center">
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="flex items-center flex-col justify-center"
-          initial={{ opacity: 0, y: -30 }}
+          className="text-center mb-20"
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
         >
-          <motion.h1
-            className="text-2xl sm:text-4xl lg:text-[42px] font-bold text-primary text-center"
-            initial={{ opacity: 0, y: -20 }}
+          <motion.div
+            className="mb-8"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Nos Projets Récents
-          </motion.h1>
-          <motion.div
-            className="w-16 sm:w-20 lg:w-25 h-2 lg:h-2.5 bg-secondary mt-4"
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
+            <h2 className="text-4xl lg:text-5xl font-bold text-primary leading-tight mb-6">
+              Nos Projets Récents
+            </h2>
+            <div className="w-24 h-2 bg-secondary mx-auto"></div>
+          </motion.div>
+
+          <motion.p
+            className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
-          />
+          >
+            Découvrez quelques-uns de nos projets récents qui témoignent de
+            notre expertise et de notre engagement envers l&apos;excellence dans
+            la construction.
+          </motion.p>
         </motion.div>
+
         <motion.div
-          className="px-6 lg:px-0 grid grid-cols-1 h-full lg:grid-cols-3 text-lg gap-10 text-[#666666] *:flex-1"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -72,17 +76,24 @@ export default function HomeSection3() {
             />
           ))}
         </motion.div>
-        <Link href="/projects">
-          <motion.button
-            className="w-fit mt-10 justify-center text-sm border-3 cursor-pointer  transition-all transform duration-200 flex items-center gap-4 font-bold px-14 py-3 border-primary text-primary hover:text-white hover:border-secondary hover:bg-secondary"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-          >
-            VOIR TOUS LES PROJETS
-          </motion.button>
-        </Link>
+
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          <Link href="/projects">
+            <motion.button
+              className="bg-gray-900 text-white rounded-md font-medium px-8 py-3 text-sm flex items-center gap-2 border border-gray-900 mx-auto"
+              whileTap={{ scale: 0.98 }}
+            >
+              <span>Voir Tous les Projets</span>
+              <ArrowRight className="w-4 h-4" />
+            </motion.button>
+          </Link>
+        </motion.div>
 
         {/* Project Modal */}
         <ProjectModal
@@ -91,7 +102,7 @@ export default function HomeSection3() {
           onClose={handleCloseModal}
         />
       </div>
-    </motion.section>
+    </section>
   );
 }
 
@@ -116,13 +127,15 @@ function ProjectCard({
 }) {
   return (
     <motion.div
-      className="flex flex-col gap-4"
+      className="group bg-white border rounded-md border-gray-200 overflow-hidden"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
     >
+      {/* Image Container */}
       <motion.div
+        className="relative aspect-[4/3] overflow-hidden bg-gray-100"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -130,41 +143,53 @@ function ProjectCard({
       >
         <Image
           src={project.imageDeCouverture}
-          className="aspect-2/1 object-cover"
+          className="w-full h-full object-cover"
           alt={project.titre}
-          width={500}
-          height={500}
+          width={400}
+          height={300}
         />
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+
+        {/* Category Badge */}
+        <div className="absolute top-4 left-4">
+          <span className="bg-white/95 backdrop-blur-sm text-gray-800 text-xs font-medium px-3 py-1.5 border border-gray-200">
+            {project.catégorie}
+          </span>
+        </div>
       </motion.div>
+
+      {/* Content */}
       <motion.div
-        className="border-3 flex gap-10 h-full justify-between flex-col lg:py-10 lg:px-7 px-5 py-8 border-gray-500"
+        className="p-6 flex flex-col border-t border-red-900"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className="space-y-5">
-          <div className="flex flex-col gap-2">
-            <span className="text-secondary text-sm font-medium">
-              {project.catégorie}
-            </span>
-            <h3 className="text-primary text-xl font-[520] line-clamp-2">
-              {project.titre}
-            </h3>
-            <p className="text-sm flex gap-1 items-center text-gray-600 font-medium">
-              <MapPin className="size-5" />
-              {project.lieu}
-            </p>
+        {/* Title and Location */}
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2 leading-tight">
+            {project.titre}
+          </h3>
+          <div className="flex items-center gap-1.5 text-sm text-gray-500">
+            <MapPin className="w-4 h-4" />
+            <span>{project.lieu}</span>
           </div>
-
-          <p className="text-lg line-clamp-3">{project.description}</p>
         </div>
+
+        {/* Description */}
+        <p className="text-gray-600 text-sm line-clamp-3 leading-relaxed mb-6">
+          {project.description}
+        </p>
+
+        {/* Action Button */}
         <motion.button
           onClick={() => onProjectClick(project)}
-          className="w-fit justify-center text-xs border-3 cursor-pointer hover:bg-primary hover:text-tertiary transition-all transform duration-200 flex items-center gap-4 font-bold px-4 py-2 border-primary text-primary"
-          transition={{ duration: 0.3 }}
+          className="w-full bg-primary text-white font-medium px-4 py-2.5 text-sm flex items-center justify-center gap-2 border border-primary rounded-md"
+          whileTap={{ scale: 0.98 }}
         >
-          VOIR LE PROJET
+          <span>Voir le Projet</span>
+          <ArrowRight className="w-4 h-4" />
         </motion.button>
       </motion.div>
     </motion.div>

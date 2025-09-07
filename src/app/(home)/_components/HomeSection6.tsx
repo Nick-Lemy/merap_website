@@ -87,7 +87,7 @@ interface TestimonialCardProps {
 function TestimonialCard({ quote, author, rating }: TestimonialCardProps) {
   return (
     <motion.div
-      className="bg-white border h-full border-gray-200 p-6 lg:p-8 flex flex-col gap-6 transition-all duration-300 hover:border-gray-300"
+      className="bg-white rounded-md border h-full border-gray-200 p-6 lg:p-8 flex flex-col gap-6 transition-all duration-300 hover:shadow"
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
     >
       {/* Star Rating */}

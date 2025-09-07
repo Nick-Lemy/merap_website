@@ -16,7 +16,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row min-h-screen items-center">
+        <div className="flex flex-col-reverse pt-16 lg:flex-row min-h-screen items-center">
           <LeftContent />
           <RightContent />
         </div>
@@ -150,21 +150,21 @@ function RightContent() {
 
       {/* Floating Elements */}
       <motion.div
-        className="absolute -top-4 -right-4 w-20 h-20 bg-secondary rounded-full flex items-center justify-center shadow-lg"
+        className="absolute -top-4 -right-4 size-16 lg:size-20 bg-secondary rounded-full flex items-center justify-center shadow-lg"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 0.8 }}
       >
-        <Building2 className="w-10 h-10 text-white" />
+        <Building2 className="size-8 lg:size-10 text-white" />
       </motion.div>
 
       <motion.div
-        className="absolute -bottom-4 -left-4 w-16 h-16 bg-primary rounded-full flex items-center justify-center shadow-lg"
+        className="absolute -bottom-4 -left-4 size-12 lg:size-16 bg-primary rounded-full flex items-center justify-center shadow-lg"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6, delay: 1.0 }}
       >
-        <Award className="w-8 h-8 text-white" />
+        <Award className="size-6 lg:size-8 text-white" />
       </motion.div>
 
       {/* Testimonial Card */}

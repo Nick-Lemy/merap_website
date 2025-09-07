@@ -157,8 +157,10 @@ const RightSection = () => {
 export default function HomeSection5() {
   return (
     <section className="bg-gray-100">
-      <div className="flex h-full flex-col  mx-auto container px-4 lg:flex-row">
-        <LeftSection />
+      <div className="flex h-full flex-col gap-8 lg:gap-0 mx-auto container lg:flex-row">
+        <div className="px-4 lg:px-0">
+          <LeftSection />
+        </div>
         <RightSection />
       </div>
     </section>

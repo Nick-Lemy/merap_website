@@ -40,7 +40,7 @@ export default function Footer() {
               <h4 className="text-lg w-full text-start font-semibold mb-6 lg:text-center">
                 Liens Rapides
               </h4>
-              <div className="flex lg:justify-around lg:flex-col gap-10">
+              <div className="flex lg:justify-around lg:flex-col gap-10 lg:gap-0">
                 <div className="space-y-3">
                   <Link
                     href="/"
@@ -119,7 +119,7 @@ export default function Footer() {
                     placeholder="Votre email"
                     className="flex-1 px-3 py-2 border border-primary rounded-md text-sm text-white placeholder-gray-400 focus:outline-none focus:border-secondary"
                   />
-                  <button className="px-4 py-2 flex items-center gap-2 bg-primary text-white rounded-md font-medium transition-colors">
+                  <button className="px-4 py-2 flex items-center w-full justify-center gap-2 bg-primary text-white rounded-md font-medium transition-colors">
                     Subscribe
                     <ArrowRight className="w-4 h-4" />
                   </button>

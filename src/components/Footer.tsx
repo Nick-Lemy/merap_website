@@ -37,10 +37,10 @@ export default function Footer() {
 
             {/* Quick Links */}
             <div className="lg:col-span-1">
-              <h4 className="text-lg w-full text-center font-semibold  mb-6">
+              <h4 className="text-lg w-full text-start font-semibold mb-6 lg:text-center">
                 Liens Rapides
               </h4>
-              <div className="flex justify-around">
+              <div className="flex lg:justify-around lg:flex-col gap-10">
                 <div className="space-y-3">
                   <Link
                     href="/"
@@ -113,7 +113,7 @@ export default function Footer() {
               {/* Newsletter Signup */}
               <div className="mt-8">
                 <h5 className="text-sm font-semibold mb-3">Newsletter</h5>
-                <div className="flex gap-2">
+                <div className="flex gap-2 flex-col lg:flex-row">
                   <input
                     type="email"
                     placeholder="Votre email"

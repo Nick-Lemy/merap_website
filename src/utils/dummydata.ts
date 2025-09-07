@@ -39,7 +39,7 @@ export const projects: Project[] = [
   {
     id: 5,
     titre: "Construction d'une villa moderne",
-    lieu: "Akwa, Douala",
+    lieu: "japoma, Douala",
     catégorie: "Construction",
     description:
       "Conception et realisation d'une villa triplex 08 pieces modele nuage d'elegance a Douala au lieu dit logpom",

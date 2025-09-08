@@ -135,9 +135,9 @@ function StorySection() {
                     M. Armel Nlend
                   </h4>
                   <p className="text-gray-600 text-xs sm:text-base">
-                    Fondateur et Directeur Général de MERAP, expert en BTP avec
-                    une vision innovante pour le développement des
-                    infrastructures au Cameroun.
+                    Fondateur et Directeur Général de MERAP, avec une vision
+                    innovante pour le développement des infrastructures au
+                    Cameroun.
                   </p>
                 </div>
               </div>

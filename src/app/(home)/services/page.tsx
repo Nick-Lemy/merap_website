@@ -10,7 +10,9 @@ import {
   Droplets,
   Zap,
 } from "lucide-react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import RenovationImage from "@/assets/renovation.png";
+import Etude from "@/assets/etude.jpg";
 
 export default function ServicesPage() {
   return (
@@ -72,14 +74,6 @@ function ServicesGrid() {
   const services = [
     {
       image:
-        "https://i.pinimg.com/1200x/cf/20/40/cf2040adb09f1db8684cf921c31bc2f6.jpg",
-      icon: null,
-      title: "Études et Gestion de Projets",
-      description:
-        "Conception, planification et gestion complète de vos projets de construction avec un suivi rigoureux de A à Z.",
-    },
-    {
-      image:
         "https://i.pinimg.com/1200x/42/28/24/42282462f38c8cae0035f69733a9ef7f.jpg",
       icon: Building,
       title: "Construction de Bâtiments",
@@ -87,24 +81,14 @@ function ServicesGrid() {
         "Gros œuvre et second œuvre pour bâtiments à usage d'habitation et commercial avec des matériaux de qualité.",
     },
     {
-      image:
-        "https://static.vecteezy.com/system/resources/thumbnails/038/972/123/small_2x/ai-generated-construction-site-is-laying-new-asphalt-pavement-road-construction-workers-and-road-construction-machinery-scene-highway-construction-site-scene-photo.jpg",
-      icon: Construction,
-      title: "Construction de Routes",
+      image: Etude,
+      icon: null,
+      title: "Études et Gestion de Projets",
       description:
-        "Terrassement et revêtement routier avec expertise technique pour des infrastructures durables.",
+        "Conception, planification et gestion complète de vos projets de construction avec un suivi rigoureux de A à Z.",
     },
     {
-      image:
-        "https://www.btpcfa-na.fr/wp-content/uploads/2023/07/BUT-GENIE-CIVIL-CONSTRUCTION-DURABLE-BUREAU-DETUDES-ET-CONCEPTION.jpeg",
-      icon: Palette,
-      title: "Travaux de Finitions",
-      description:
-        "Finitions de haute qualité pour donner à vos projets l'aspect final souhaité.",
-    },
-    {
-      image:
-        "https://i.pinimg.com/736x/a9/74/a8/a974a845a33b1b9205b01bbd09ae3078.jpg",
+      image: RenovationImage,
       icon: Wrench,
       title: "Rénovations et Réhabilitation",
       description:
@@ -112,7 +96,23 @@ function ServicesGrid() {
     },
     {
       image:
-        "https://i0.wp.com/www.construction-travaux.com/wp-content/uploads/2021/08/pipes-2672184_640.jpg",
+        "https://img.freepik.com/photos-premium/pelle-niveleuse-se-tiennent-cote-cote-contre-ciel-bleu-engins-terrassement-construction-lourde-construction-routes-communications-souterraines-industrie-construction_331695-519.jpg",
+      icon: Construction,
+      title: "Construction de Routes",
+      description:
+        "Terrassement et revêtement routier avec expertise technique pour des infrastructures durables.",
+    },
+    {
+      image:
+        "https://comparateurtravaux.fr/wp-content/uploads/2017/10/cr%C3%A9pis-8.jpg",
+      icon: Palette,
+      title: "Travaux de Finitions",
+      description:
+        "Finitions de haute qualité pour donner à vos projets l'aspect final souhaité.",
+    },
+    {
+      image:
+        "https://img.freepik.com/premium-photo/closeup-african-plumber-showing-one-dirty-one-clean-filters-changing-water-filters_404612-2338.jpg",
       icon: Droplets,
       title: "Installation Sanitaire",
       description:
@@ -159,7 +159,7 @@ function ServicesGrid() {
 }
 
 interface Service {
-  image: string;
+  image: string | StaticImageData;
   title: string;
   description: string;
 }

@@ -5,6 +5,7 @@ import Project1Other2 from "@/assets/projects/project1-other2.png";
 import Project1Other3 from "@/assets/projects/project1-other3.png";
 
 import Project2Cover from "@/assets/projects/project2-cover.png";
+import Project2Other0 from "@/assets/projects/project2-other0.png";
 import Project2Other1 from "@/assets/projects/project2-other1.png";
 import Project2Other2 from "@/assets/projects/project2-other2.png";
 
@@ -61,8 +62,7 @@ export const projects: Project[] = [
     titre: "Travaux second œuvre - Bâtiment R+4",
     lieu: "Bonamoussadi/Denver, Douala",
     catégorie: "Second Œuvre",
-    description:
-      "Installations électriques et enduit au mortier de ciment pour un bâtiment de 4 étages.",
+    description: "Installations électriques pour un bâtiment de 4 étages.",
     imageDeCouverture: Project1Cover,
     autresImages: [Project1Other1, Project1Other2, Project1Other3],
   },
@@ -73,8 +73,8 @@ export const projects: Project[] = [
     catégorie: "Plomberie",
     description:
       "Installation d'un système d'alimentation avec nourrice pour une douche.",
-    imageDeCouverture: Project2Cover,
-    autresImages: [Project2Other1, Project2Other2],
+    imageDeCouverture: Project2Other0,
+    autresImages: [Project2Cover, Project2Other1, Project2Other2],
   },
   {
     id: 4,
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     catégorie: "Tests Géotechniques",
     description:
       "Essais de pénétration réalisés en collaboration avec Geo Fondation à l'Ambassade de France.",
-    imageDeCouverture: Project4Cover,
-    autresImages: [Project4Other1, Project4Other2, Project4Other3],
+    imageDeCouverture: Project4Other2,
+    autresImages: [Project4Other3],
   },
 ];

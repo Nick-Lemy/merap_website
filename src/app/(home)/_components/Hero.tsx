@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import HeroImage from "@/assets/hero.jpg";
 import {
   ArrowRight,
   CheckCircle,
@@ -139,7 +140,7 @@ function RightContent() {
         transition={{ duration: 0.8, delay: 0.6 }}
       >
         <Image
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80"
+          src={HeroImage}
           alt="Construction Excellence"
           width={600}
           height={600}

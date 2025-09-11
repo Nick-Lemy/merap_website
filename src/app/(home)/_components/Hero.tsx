@@ -49,8 +49,8 @@ function LeftContent() {
           transition={{ duration: 0.8, delay: 0.4 }}
         >
           MERAP SARL - Votre partenaire de confiance pour des projets de
-          construction d&apos;excellence, d&apos;infrastructures durables et
-          d&apos;innovations architecturales au Cameroun.
+          construction, d&apos;étude de terrain et de rénovations et
+          réhabilitation au Cameroun.
         </motion.p>
 
         {/* Key Benefits */}

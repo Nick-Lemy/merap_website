@@ -85,7 +85,7 @@ function ServicesGrid() {
       icon: null,
       title: "Études et Gestion de Projets",
       description:
-        "Conception, planification et gestion complète de vos projets de construction avec un suivi rigoureux de A à Z.",
+        "Conception, planification et gestion complète de vos projets de construction avec un suivi rigoureux Du debut jusqu'a la fin.",
     },
     {
       image: RenovationImage,

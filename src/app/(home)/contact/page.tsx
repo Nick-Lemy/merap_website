@@ -12,6 +12,7 @@ import {
   Linkedin,
   Instagram,
 } from "lucide-react";
+import XIcon from "@/components/icons/XIcon";
 
 export default function ContactPage() {
   return (
@@ -200,7 +201,7 @@ function ContactSection() {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
+              {/* <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center flex-shrink-0">
                   <Clock className="w-6 h-6 text-[var(--color-tertiary)]" />
                 </div>
@@ -211,7 +212,7 @@ function ContactSection() {
                     Samedi: 8h00 - 12h00
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Social Media */}
@@ -219,32 +220,25 @@ function ContactSection() {
               <h3 className="font-bold text-gray-900 mb-4">Suivez-nous</h3>
               <div className="flex gap-4">
                 <motion.a
-                  href="#"
+                  href="https://www.facebook.com/share/14MSyy3abJ6/?mibextid=wwXIfr"
                   className="w-12 h-12 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center text-[var(--color-tertiary)] hover:bg-[var(--color-primary)] transition-colors"
                   whileTap={{ scale: 0.95 }}
                 >
                   <Facebook className="w-6 h-6" />
                 </motion.a>
                 <motion.a
-                  href="#"
+                  href="https://www.instagram.com/merapsarl"
                   className="w-12 h-12 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center text-[var(--color-tertiary)] hover:bg-[var(--color-primary)] transition-colors"
                   whileTap={{ scale: 0.95 }}
                 >
                   <Instagram className="w-6 h-6" />
                 </motion.a>
                 <motion.a
-                  href="#"
-                  className="w-12 h-12 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center text-[var(--color-tertiary)] hover:bg-[var(--color-primary)] transition-colors"
+                  href="https://x.com/merap_sarl"
+                  className="w-12 h-12 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center *:fill-[var(--color-tertiary)] hover:bg-[var(--color-primary)] transition-colors"
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Twitter className="w-6 h-6" />
-                </motion.a>
-                <motion.a
-                  href="#"
-                  className="w-12 h-12 bg-[var(--color-secondary)] rounded-lg flex items-center justify-center text-[var(--color-tertiary)] hover:bg-[var(--color-primary)] transition-colors"
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Linkedin className="w-6 h-6" />
+                  <XIcon className="w-6 h-6" />
                 </motion.a>
               </div>
             </div>

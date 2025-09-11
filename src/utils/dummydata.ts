@@ -53,7 +53,7 @@ export const projects: Project[] = [
     lieu: "Logbessou, Douala",
     catégorie: "Rénovation",
     description:
-      "Travaux de rénovation pour un bâtiment résidentiel de 3 étages.",
+      "Travaux de renovation type carrelage d'un bâtiment R+3 a usage residentiel.",
     imageDeCouverture: Project3Cover,
     autresImages: [Project3Other1, Project3Other2, Project3Other3],
   },

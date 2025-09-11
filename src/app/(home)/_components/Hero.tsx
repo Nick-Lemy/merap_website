@@ -48,9 +48,8 @@ function LeftContent() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          MERAP SARL - Votre partenaire de confiance pour des projets de
-          construction, d&apos;étude de terrain et de rénovations et
-          réhabilitation au Cameroun.
+          {`MERAP SARL - Votre partenaire de confiance pour des projets de
+          construction d'excellence et d'infrastructures durables au Cameroun.`}
         </motion.p>
 
         {/* Key Benefits */}

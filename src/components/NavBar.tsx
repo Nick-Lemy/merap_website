@@ -65,7 +65,7 @@ const NavBar: React.FC = () => {
           <Image
             src={Logo}
             alt="Merap Logo"
-            className="w-full h-14 lg:h-16 my-2"
+            className="w-auto h-14 lg:h-16 my-2"
             width={150}
             height={50}
           />

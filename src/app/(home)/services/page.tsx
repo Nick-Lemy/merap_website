@@ -190,13 +190,13 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
           {service.title}
         </h3>
         <p className="text-gray-200 leading-relaxed">{service.description}</p>
-        {/* <motion.button
+        <motion.button
           className="mt-6 cursor-pointer text-[var(--color-secondary)] font-semibold hover:text-[var(--color-primary)] transition-colors duration-300"
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}
         >
           En savoir plus →
-        </motion.button> */}
+        </motion.button>
       </div>
     </motion.div>
   );

@@ -29,11 +29,11 @@ import Project6Other1 from "@/assets/projects/project6-other1.png";
 export const projects: Project[] = [
   {
     id: 6,
-    titre: "Réalisation (gros œuvre) d'une villa triplex duplex",
+    titre: "Réalisation (gros œuvre) d'une villa triplex",
     lieu: "Douala, japoma",
     catégorie: "Construction",
     description:
-      "Réalisation (gros œuvre) d'une villa triplex duplex 6 pièces à Douala /japoma.",
+      "Réalisation (gros œuvre) d'une villa triplex 6 pièces à Douala /japoma.",
     imageDeCouverture: Project6Cover,
     autresImages: [Project6Other1],
   },

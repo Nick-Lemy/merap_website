@@ -124,7 +124,7 @@ function ServicesGrid() {
       icon: Zap,
       title: "Électricité",
       description:
-        "Conception et installation d'installations électriques sécurisées et aux normes.",
+        "Conception et installation électrique sécurisées et aux normes.",
     },
   ];
 
@@ -186,15 +186,17 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
       </div>
       {/* Content */}
       <div className="space-y-2 relative z-20 flex flex-col items-start">
-        <h3 className="text-xl font-bold text-primary mb-4">{service.title}</h3>
+        <h3 className="text-xl font-bold text-secondary mb-4">
+          {service.title}
+        </h3>
         <p className="text-gray-200 leading-relaxed">{service.description}</p>
-        <motion.button
+        {/* <motion.button
           className="mt-6 cursor-pointer text-[var(--color-secondary)] font-semibold hover:text-[var(--color-primary)] transition-colors duration-300"
           whileHover={{ x: 5 }}
           transition={{ duration: 0.2 }}
         >
           En savoir plus →
-        </motion.button>
+        </motion.button> */}
       </div>
     </motion.div>
   );

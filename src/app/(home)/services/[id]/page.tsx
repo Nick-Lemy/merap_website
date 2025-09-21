@@ -3,13 +3,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import { ArrowLeft, CheckCircle, Users, Clock, Shield } from "lucide-react";
 import { services, Service } from "../../../../utils/servicesData";
+import Link from "next/link";
 
 export default function ServiceDetailsPage() {
   const params = useParams();
-  const router = useRouter();
   const serviceId = params?.id as string;
 
   const service = services.find((s: Service) => s.id === serviceId);
@@ -21,12 +21,12 @@ export default function ServiceDetailsPage() {
           <h1 className="text-2xl font-bold text-[var(--color-primary)] mb-4">
             Service non trouvé
           </h1>
-          <button
-            onClick={() => router.push("/services")}
+          <Link
+            href="/services"
             className="text-[var(--color-secondary)] hover:text-[var(--color-primary)] transition-colors"
           >
             Retour aux services
-          </button>
+          </Link>
         </div>
       </div>
     );
@@ -45,8 +45,6 @@ export default function ServiceDetailsPage() {
 }
 
 function HeroSection({ service }: { service: Service }) {
-  const router = useRouter();
-
   return (
     <motion.section
       className="relative py-20 lg:py-32"
@@ -68,17 +66,17 @@ function HeroSection({ service }: { service: Service }) {
 
       <div className="container mx-auto px-6 lg:px-20 relative z-20">
         {/* Back Button */}
-        <motion.button
-          onClick={() => router.push("/services")}
-          className="flex items-center gap-2 text-white hover:text-[var(--color-secondary)] transition-colors mb-8"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          whileHover={{ x: -5 }}
-        >
-          <ArrowLeft size={20} />
-          Retour aux services
-        </motion.button>
+        <Link href="/services">
+          <motion.div
+            className="flex items-center gap-2 text-white hover:text-[var(--color-secondary)] transition-colors mb-8"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <ArrowLeft size={20} />
+            Retour aux services
+          </motion.div>
+        </Link>
 
         <div className="text-center">
           <motion.h1

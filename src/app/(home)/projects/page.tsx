@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import ProjectImage from "@/assets/project-card.png";
 import { projects } from "@/utils/dummydata";
-import { MapPin } from "lucide-react";
+import { ArrowRight, MapPin } from "lucide-react";
 import ProjectModal from "@/components/ProjectModal";
 import { Project } from "../_components/HomeSection3";
 
@@ -138,52 +138,71 @@ function ProjectCard({
 }) {
   return (
     <motion.div
-      className="bg-white rounded-sm border border-secondary overflow-hidden  transition-all duration-300"
-      initial={{ opacity: 0, y: 50 }}
+      className="group bg-white border rounded-md border-gray-200 overflow-hidden"
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
+      transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
     >
+      {/* Image Container */}
       <motion.div
-        className="relative overflow-hidden"
-        transition={{ duration: 0.3 }}
+        className="relative aspect-[4/3] overflow-hidden bg-gray-100"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
       >
         <Image
-          src={project.imageDeCouverture || ProjectImage}
+          src={project.imageDeCouverture}
+          className="w-full h-full object-cover"
           alt={project.titre}
-          className="w-full h-48 object-cover"
           width={400}
           height={300}
         />
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+
+        {/* Category Badge */}
         <div className="absolute top-4 left-4">
-          <span className="bg-[var(--color-primary)] text-[var(--color-tertiary)] px-3 py-1 rounded-full text-sm font-semibold">
+          <span className="bg-white/95 backdrop-blur-sm text-gray-800 text-xs font-medium px-3 py-1.5 border border-gray-200">
             {project.catégorie}
           </span>
         </div>
       </motion.div>
 
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-          {project.titre}
-        </h3>
+      {/* Content */}
+      <motion.div
+        className="p-6 flex flex-col"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        {/* Title and Location */}
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2 leading-tight">
+            {project.titre}
+          </h3>
+          <div className="flex items-center gap-1.5 text-sm text-gray-500">
+            <MapPin className="w-4 h-4" />
+            <span>{project.lieu}</span>
+          </div>
+        </div>
 
-        <p className="text-sm flex gap-1 items-center text-primary font-medium mb-2">
-          <MapPin className="w-6" /> {project.lieu}
-        </p>
-
-        <p className="text-gray-600 leading-relaxed mb-4 line-clamp-3">
+        {/* Description */}
+        <p className="text-gray-600 text-sm line-clamp-3 leading-relaxed mb-6">
           {project.description}
         </p>
 
+        {/* Action Button */}
         <motion.button
           onClick={() => onProjectClick(project)}
-          className="text-[var(--color-secondary)] cursor-pointer font-semibold hover:text-[var(--color-primary)] transition-colors duration-300"
-          whileHover={{ x: 5 }}
-          transition={{ duration: 0.2 }}
+          className="w-full bg-primary text-white font-medium px-4 py-2.5 text-sm flex items-center justify-center gap-2 border border-primary rounded-md"
+          whileTap={{ scale: 0.98 }}
         >
-          Voir Plus →
+          <span>Voir le Projet</span>
+          <ArrowRight className="w-4 h-4" />
         </motion.button>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

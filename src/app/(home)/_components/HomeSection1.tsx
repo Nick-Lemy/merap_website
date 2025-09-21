@@ -1,19 +1,23 @@
+"use client";
 import React from "react";
 import { PhoneIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function HomeSection1() {
   return (
     <section className="py-10">
       <div className="flex flex-col lg:flex-row items-center text-center gap-3 lg:justify-evenly lg:gap-50">
-        <h1 className="text-2xl text-primary lg:text-3xl font-bold">
+        <h1 className="text-2xl text-gray-700 lg:text-3xl font-bold">
           Appellez Nous Pour Plus D&apos;infomation
         </h1>
-        <a
-          href={"tel:+237657055365"}
-          className="border-3 w-fit text-sm cursor-pointer bg-secondary text-tertiary transition-all transform duration-200 flex items-center gap-2 font-bold px-4 py-3"
-        >
-          <PhoneIcon className="fill-white w-4 h-4" />
-          <span>NOUS JOINDRE</span>
+        <a href={"tel:+237657055365"}>
+          <motion.button
+            className="group bg-secondary hover:bg-secondary/90 text-white font-semibold px-5  py-3 rounded-md transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl"
+            whileTap={{ scale: 0.95 }}
+          >
+            <PhoneIcon className="fill-white w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+            Nous Joindre
+          </motion.button>
         </a>
       </div>
     </section>

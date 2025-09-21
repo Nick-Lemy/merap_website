@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
+import { Outfit } from "next/font/google";
 import "./globals.css";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "MERAP",
@@ -13,7 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className="bg-white font-sans relative">{children}</body>
+      <body className={`bg-white font-sans relative ${outfit.className}`}>
+        {children}
+      </body>
     </html>
   );
 }

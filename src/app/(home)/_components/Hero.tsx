@@ -1,31 +1,25 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import BuildingIcon from "@/components/icons/BuildingIcon";
-import BricksIcon from "@/components/icons/BricksIcon";
-import ConstructionIcon from "@/components/icons/ConstructionIcon";
+import HeroImage from "@/assets/hero.jpg";
+import {
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Award,
+  Building2,
+} from "lucide-react";
 import Link from "next/link";
-
-// Simple icon components as placeholders
+import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center min-h-screen">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80')",
-        }}
-      >
-        <div className="absolute inset-0 bg-[#1F1F1F]/85" />
-      </div>
-
-      <div className="relative z-10 w-full">
-        <div className="flex flex-col lg:flex-row min-h-screen">
+    <section className="relative min-h-screen bg-white">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col-reverse pt-16 lg:flex-row min-h-screen items-center">
           <LeftContent />
-          {/* <RightContent /> */}
+          <RightContent />
         </div>
       </div>
     </section>
@@ -34,53 +28,96 @@ const Hero = () => {
 
 function LeftContent() {
   return (
-    <div className="flex-1 lg:flex-10 flex items-center px-4 sm:px-6 lg:px-16 py-12">
-      <div className="max-w-3xl mx-auto lg:mx-0 w-full">
-        {/* Yellow accent bar */}
-        <motion.div
-          className="flex items-center mb-7 gap-3 sm:gap-5"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <motion.div
-            className="w-2 sm:w-3 h-10 sm:h-18 lg:h-25 bg-secondary"
-            initial={{ scaleY: 0 }}
-            animate={{ scaleY: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          />
-          <motion.h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-white leading-tight"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            MERAP
-          </motion.h1>
-        </motion.div>
-
-        <motion.p
-          className="text-gray-200 text-base sm:text-lg lg:text-xl mb-6 lg:mb-8 leading-relaxed"
+    <div className="flex-1 lg:w-3/5 flex items-center py-16 lg:py-24">
+      <div className="w-full max-w-2xl">
+        {/* Main Heading */}
+        <motion.h1
+          className="text-3xl lg:text-4xl xl:text-5xl font-bold text-primary leading-tight mb-6"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Entreprise de BTP spécialisée dans la construction de bâtiments à
-          usage d&apos;habitation et commercial, ainsi que les travaux
-          d&apos;infrastructures. Notre mission est de transformer
-          l&apos;univers de la construction avec des pratiques durables et
-          innovantes.
+          Construisons l&apos;Avenir du{" "}
+          <span className="text-secondary">Cameroun</span>
+        </motion.h1>
+
+        {/* Subtitle */}
+        <motion.p
+          className="text-gray-600 text-lg sm:text-xl lg:text-2xl mb-8 leading-relaxed"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          {`MERAP SARL - Votre partenaire de confiance pour des projets de
+          construction d'excellence et d'infrastructures durables au Cameroun.`}
         </motion.p>
-        <Link href="/projects">
-          <motion.button
-            className="bg-primary hover:bg-secondary text-tertiary cursor-pointer font-semibold px-6 sm:px-8 py-3 sm:py-4 transition-colors duration-300 uppercase tracking-wide text-sm sm:text-base"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-          >
-            DÉCOUVRIR NOS PROJETS
-          </motion.button>
-        </Link>
+
+        {/* Key Benefits */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+        >
+          {[
+            "Expertise Certifiée",
+            "Matériaux Durables",
+            "Respect des Délais",
+            "Prix Compétitifs",
+          ].map((benefit, index) => (
+            <div key={index} className="flex items-center gap-3">
+              <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
+              <span className="text-gray-700 text-sm">{benefit}</span>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* CTA Buttons */}
+        <motion.div
+          className="flex flex-col sm:flex-row gap-4"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
+        >
+          <Link href="/projects">
+            <motion.button
+              className="group bg-secondary hover:bg-secondary/90 text-white font-semibold px-8 py-4 rounded-md transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-xl"
+              whileTap={{ scale: 0.95 }}
+            >
+              Découvrir nos Projets
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </motion.button>
+          </Link>
+          <Link href="/contact">
+            <motion.button
+              className="border-2 border-gray-900 hover:border-secondary text-gray-700 hover:text-secondary font-semibold px-8 py-4 rounded-md transition-all duration-300"
+              whileTap={{ scale: 0.95 }}
+            >
+              Demander un Devis
+            </motion.button>
+          </Link>
+        </motion.div>
+
+        {/* Trust Indicators */}
+        <motion.div
+          className="flex flex-wrap items-center gap-8 mt-12 pt-8 border-t border-gray-200"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1.0 }}
+        >
+          <div className="flex items-center gap-2">
+            <Users className="w-5 h-5 text-secondary" />
+            <span className="text-gray-600 text-sm">50+ Employés</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Award className="w-5 h-5 text-secondary" />
+            <span className="text-gray-600 text-sm">100+ Projets</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Star className="w-5 h-5 text-secondary" />
+            <span className="text-gray-600 text-sm">ISO 9001</span>
+          </div>
+        </motion.div>
       </div>
     </div>
   );
@@ -89,75 +126,73 @@ function LeftContent() {
 function RightContent() {
   return (
     <motion.div
-      className="bg-[#d87700] flex-1 lg:flex-4 p-5 flex flex-col gap-6 lg:gap-8 justify-center lg:py-30"
-      initial={{ opacity: 0, x: 100 }}
+      className="flex-1 lg:w-2/5 relative"
+      initial={{ opacity: 0, x: 50 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1, delay: 0.8 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
     >
-      <motion.h2
-        className="text-2xl md:text-3xl lg:text-5xl font-bold text-primary leading-tight"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1 }}
+      {/* Main Image */}
+      <motion.div
+        className="relative rounded-2xl overflow-hidden shadow-2xl"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
       >
-        Nos Services
-      </motion.h2>
+        <Image
+          src={HeroImage}
+          alt="Construction Excellence"
+          width={600}
+          height={600}
+          className="w-full h-[500px] lg:h-[600px] object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+      </motion.div>
 
-      <div className="space-y-6 lg:space-y-10">
-        {/* Construction de Bâtiments */}
-        <motion.div
-          className="flex items-center space-x-3 sm:space-x-4"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
-        >
-          <BuildingIcon className="fill-primary *:text-primary size-12 sm:size-16 lg:size-20 flex-shrink-0" />
-          <div>
-            <h3 className="text-lg lg:text-xl font-semibold text-primary mb-1">
-              Construction de Bâtiments
-            </h3>
-            <p className=" text-base text-black lg:text-lg">
-              Gros œuvre et second œuvre pour habitations et commerces
-            </p>
-          </div>
-        </motion.div>
+      {/* Floating Elements */}
+      <motion.div
+        className="absolute -top-4 -right-4 size-16 lg:size-20 bg-secondary rounded-full flex items-center justify-center shadow-lg"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+      >
+        <Building2 className="size-8 lg:size-10 text-white" />
+      </motion.div>
 
-        {/* Travaux d'Infrastructures */}
-        <motion.div
-          className="flex items-center space-x-3 sm:space-x-4"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 1.4 }}
-        >
-          <BricksIcon className="fill-primary *:text-primary size-12 sm:size-16 lg:size-20 flex-shrink-0" />
-          <div>
-            <h3 className="text-lg lg:text-xl font-semibold text-primary mb-1">
-              Infrastructures
-            </h3>
-            <p className=" text-base text-black lg:text-lg">
-              Construction de routes, terrassement et revêtement
-            </p>
-          </div>
-        </motion.div>
+      <motion.div
+        className="absolute -bottom-4 -left-4 size-12 lg:size-16 bg-primary rounded-full flex items-center justify-center shadow-lg"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 1.0 }}
+      >
+        <Award className="size-6 lg:size-8 text-white" />
+      </motion.div>
 
-        {/* Études et Gestion */}
-        <motion.div
-          className="flex items-center space-x-3 sm:space-x-4"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 1.6 }}
-        >
-          <ConstructionIcon className="fill-primary *:text-primary size-12 sm:size-16 lg:size-20 flex-shrink-0" />
-          <div>
-            <h3 className="text-lg lg:text-xl font-semibold text-primary mb-1">
-              Études & Gestion
-            </h3>
-            <p className=" text-base text-black lg:text-lg">
-              Études et gestion de projets de A à Z
-            </p>
+      {/* Testimonial Card */}
+      <motion.div
+        className="absolute bottom-6 right-6 bg-white rounded-xl p-4 shadow-xl max-w-xs"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 1.2 }}
+      >
+        <div className="flex items-center gap-3 mb-2">
+          <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center">
+            <span className="text-white font-bold text-sm">AN</span>
           </div>
-        </motion.div>
-      </div>
+          <div>
+            <p className="font-semibold text-gray-900 text-sm">Armel Nlend</p>
+            <p className="text-gray-600 text-xs">Fondateur & CEO</p>
+          </div>
+        </div>
+        <p className="text-gray-700 text-sm">
+          &quot;Construire l&apos;avenir du Cameroun avec excellence et
+          innovation&quot;
+        </p>
+        <div className="flex items-center gap-1 mt-2">
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} className="w-4 h-4 text-secondary fill-current" />
+          ))}
+        </div>
+      </motion.div>
     </motion.div>
   );
 }

@@ -3,11 +3,13 @@
 import React from "react";
 import { motion } from "framer-motion";
 import CambuildSarl from "@/assets/partners/cambuildsarl.png";
-import PortDeDouala from "@/assets/partners/portededouala.png";
+import RoadVision from "@/assets/partners/roadvision.png";
 import AfricLand from "@/assets/partners/africland.png";
+import Venus from "@/assets/partners/venus.png";
 import Sorepco from "@/assets/partners/sorepco.png";
 import GeoFoundation from "@/assets/partners/geofoundation.png";
 import Maestria from "@/assets/partners/maestria.png";
+import Founder from "@/assets/founder.png"; // ✅ Added founder image
 import { Target, Users, Award, Lightbulb } from "lucide-react";
 import Image from "next/image";
 
@@ -108,6 +110,7 @@ function StorySection() {
             </div>
           </motion.div>
 
+          {/* Founder Section */}
           <motion.div
             className="lg:w-1/2"
             initial={{ opacity: 0, x: 50 }}
@@ -119,15 +122,24 @@ function StorySection() {
               <h3 className="text-2xl font-bold text-[var(--color-tertiary)] mb-6">
                 Fondateur
               </h3>
-              <div className="bg-white p-6 rounded-lg">
-                <h4 className="text-xl font-bold text-secondary mb-2">
-                  M. Armel Nlend
-                </h4>
-                <p className="text-gray-600">
-                  Fondateur et Directeur Général de MERAP, expert en BTP avec
-                  une vision innovante pour le développement des infrastructures
-                  au Cameroun.
-                </p>
+              <div className=" rounded-lg relative flex justify-center items-center">
+                <Image
+                  src={Founder}
+                  alt="Fondateur MERAP"
+                  width={200}
+                  height={1000}
+                  className="rounded-md object-cover w-full max-h-150"
+                />
+                <div className="absolute -bottom-5 -right-4 p-3 sm:p-4 rounded-lg bg-white bg-opacity-80 max-w-[70%] sm:max-w-[50%]">
+                  <h4 className="text-base sm:text-xl font-bold text-[var(--color-secondary)] mb-2">
+                    M. Armel Nlend
+                  </h4>
+                  <p className="text-gray-600 text-xs sm:text-base">
+                    Fondateur et Directeur Général de MERAP, avec une vision
+                    innovante pour le développement des infrastructures au
+                    Cameroun.
+                  </p>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -237,7 +249,8 @@ function MissionCard({ mission, index }: { mission: Mission; index: number }) {
 function PartnersSection() {
   const partners = [
     CambuildSarl,
-    PortDeDouala,
+    RoadVision,
+    Venus,
     AfricLand,
     Sorepco,
     GeoFoundation,

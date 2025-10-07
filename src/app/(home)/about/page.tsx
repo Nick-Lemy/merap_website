@@ -246,7 +246,7 @@ function MissionCard({ mission, index }: { mission: Mission; index: number }) {
   );
 }
 
-function PartnersSection() {
+export function PartnersSection() {
   const partners = [
     CambuildSarl,
     RoadVision,

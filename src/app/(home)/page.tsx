@@ -5,6 +5,7 @@ import HomeSection3 from "./_components/HomeSection3";
 import HomeSection4 from "./_components/HomeSection4";
 import HomeSection5 from "./_components/HomeSection5";
 import HomeSection6 from "./_components/HomeSection6";
+import { PartnersSection } from "./about/page";
 
 export default function HomePage() {
   return (
@@ -16,7 +17,7 @@ export default function HomePage() {
         <HomeSection4 />
         <HomeSection5 />
         <HomeSection6 />
-        {/* <HomeSection7 /> */}
+        <PartnersSection />
         <div className="container mx-auto px-6">
           <HomeSection1 />
         </div>
